@@ -1,0 +1,68 @@
+/**
+ * Header Style Sheet
+ * Next site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Iliya Melishev
+ */
+
+ header {
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	display: block;
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	box-shadow: 0px 4px 11px -1px fade(@color_border, 50%);
+	border-left: 1px solid darken(@color_border, 50%);
+ }
+
+ header nav {
+ 	display: inline-table;
+ 	vertical-align: middle;
+ 	width: calc(~'100% - 300px');
+ 	padding: 1em 0;
+ }
+
+header nav a {
+	display: table-cell;
+	vertical-align: top;
+	text-align: center;
+	text-decoration: none;
+	color: @color_text;
+ 	width: calc(~'100% / 9 ');
+ 	padding: 0 0.5em;
+ 	box-sizing: border-box;
+ 	border-left: 1px solid @color_border_image;
+ 	transition: all 0.3s;
+ }
+
+header nav a:last-of-type {
+	border: none;
+}
+
+header nav a:hover {
+	color: red;
+}
+
+header nav a svg {
+	width: 1.5em;
+	height: 1.5em;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 0.5em;
+}
+
+header a.logo {
+	display: inline-block;
+	vertical-align: middle;
+	width: 200px;
+	padding-left: 100px;
+}
+
+header a.logo img {
+	display: block;
+	width: 200px;
+}
+

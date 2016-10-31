@@ -1,3 +1,12 @@
 {
-    "site_title": "Next site"
+    "site_title": "Next site",
+    "contact_link" : "צור קשר",
+    "info_link" : "אודותינו",
+    "promotion_link" : "קידום אורגני בגוגל",
+    "google_love_link" : "אתר שגוגל אוהב",
+    "funding_link" : "פרסום ממומן בגוגל",
+    "facebook_link" : "פרסום בפייסבוק",
+    "reputation_link" : "ניקוי מוניטין",
+    "branding_link" : "מיתוג ברשת",
+    "server_link" : "אחסון אתרים וניהול שרתים"
 }

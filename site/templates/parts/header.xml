@@ -1,0 +1,96 @@
+<document>
+			<!-- Logo image -->
+			<a
+				href="URL::make()"
+				cms:eval="href"
+				class="logo"
+				>
+				<img
+					src="_BASEURL.'/site/images/logo_color.svg'"
+					alt="next_site_logo"
+					cms:eval="src"
+					/>
+			</a>
+		<nav>
+			<!-- Contact link, image and constant -->
+			<a
+				href="URL::make(array(), 'contact.xml')"
+				cms:eval="href"
+				>
+				<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
+				<cms:text constant="contact_link"/>
+			</a>
+
+			<!-- About link, image and constant -->
+			<a
+				href="URL::make(array(), 'about.xml')"
+				cms:eval="href"
+				>
+				<cms:svg file="site-sprite.svg" symbol="icon-info"/>
+				<cms:text constant="info_link"/>
+			</a>
+
+			<!-- Promotion link, image and constant -->
+			<a
+				href="URL::make(array(), 'promotion.xml')"
+				cms:eval="href"
+				>
+				<cms:svg file="site-sprite.svg" symbol="icon-organicleaf"/>
+				<cms:text constant="promotion_link"/>
+			</a>
+
+			<!-- Google Love link, image and constant -->
+			<a
+				href="URL::make(array(), 'google_love.xml')"
+				cms:eval="href"
+				>
+				<cms:svg file="site-sprite.svg" symbol="icon-heart"/>
+				<cms:text constant="google_love_link"/>
+			</a>
+
+			<!-- Funding Promotion link, image and constant -->
+			<a
+				href="URL::make(array(), 'funding.xml')"
+				cms:eval="href"
+				>
+				<cms:svg file="site-sprite.svg" symbol="icon-brand"/>
+				<cms:text constant="funding_link"/>
+			</a>
+
+			<!-- Facebook  link, image and constant -->
+			<a
+				href="URL::make(array(), 'facebook.xml')"
+				cms:eval="href"
+				>
+				<cms:svg file="site-sprite.svg" symbol="icon-facebook"/>
+				<cms:text constant="facebook_link"/>
+			</a>
+
+			<!-- Reputation  link, image and constant -->
+			<a
+				href="URL::make(array(), 'reputation.xml')"
+				cms:eval="href"
+				>
+				<cms:svg file="site-sprite.svg" symbol="icon-clean"/>
+				<cms:text constant="reputation_link"/>
+			</a>
+
+			<!-- Branding  link, image and constant -->
+			<a
+				href="URL::make(array(), 'branding.xml')"
+				cms:eval="href"
+				>
+				<cms:svg file="site-sprite.svg" symbol="icon-advert"/>
+				<cms:text constant="branding_link"/>
+			</a>
+
+			<!-- Servers  link, image and constant -->
+			<a
+				href="URL::make(array(), 'servers.xml')"
+				cms:eval="href"
+				>
+				<cms:svg file="site-sprite.svg" symbol="icon-servers"/>
+				<cms:text constant="server_link"/>
+			</a>
+		</nav>
+</document>

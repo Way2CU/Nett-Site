@@ -9,11 +9,9 @@
 		</head>
 
 		<body>
-			<cms:template file="stock/header_generic.xml">
-				<param name="logo" value="logo_color.svg"/>
-				<param name="menu" value=""/>
-			</cms:template>
-			<h1>יצירת קשר</h1>
+			<header>
+				<cms:template file="parts/header.xml"/>
+			</header>
 		</body>
 	</html>
 </document>
