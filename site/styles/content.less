@@ -1,0 +1,149 @@
+/**
+ * Content Style Sheet
+ * Next site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors: Iliya Melishev
+ */
+
+section.laptop {
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+	background-image: url(../images/laptop_background.jpg);
+	background-size: 1920px 1100px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 1060px;
+	text-align: center;
+	position: relative;
+}
+
+section.laptop > img.logo_white {
+	width: 25%;
+	height: 25%;
+	display: block;
+	margin: 0 auto;
+	padding-top: 2em;
+}
+
+section.laptop h1 {
+	color: white;
+	font-weight: 400;
+}
+
+section.laptop div.laptop_screen_text {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	left: 50%;
+	padding-bottom: 120px;
+	width: 450px;
+}
+
+section.laptop div.laptop_screen_text a {
+	margin: 1em auto;
+	display: block;
+	width: 55%;
+	text-decoration: none;
+	color: white;
+	background-color: @color_button;
+	border-radius: 25px;
+	font-weight: 700;
+	padding: 1em 0;
+}
+
+
+/*
+*Section Features
+*/
+
+section.features {
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+}
+
+section.features h3 {
+	text-align: center;
+	margin: 3em 0;
+	font-weight: 400;
+}
+
+section.features ul {
+	list-style: none;
+	display: block;
+	margin: 0;
+	width: 100%;
+	padding: 0;
+}
+
+section.features ul li {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(~'100% / 4 ');
+	text-align: center;
+}
+
+section.features ul li svg {
+	display: block;
+	margin: 0 auto;
+	width: 5em;
+	height: 5em;
+}
+
+/*
+*Gallery Cliets logos
+*/
+
+section.gallery h3 {
+	text-align: center;
+	padding-top: 2em;
+	font-weight: 400;
+}
+
+section.gallery ul {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+section.gallery ul li {
+	display: inline-block;
+	vertical-align: top;
+	padding: 2em;
+	width: calc(~'100% / 9 ');
+	border: 1px solid @color_border_image;
+}
+
+section.gallery ul li img {
+	display: block;
+	margin: 0 auto;
+}
+
+/*
+*videos
+*/
+
+section.videos {
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+}
+
+section.videos h3 {
+	text-align: center;
+	font-weight: 400;
+	padding: 2em 0;
+}
+
+section.videos ul {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+}
+
+section.videos ul li {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(~'100% / 4 ');
+	padding-bottom: 1em;
+}
