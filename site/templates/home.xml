@@ -12,6 +12,80 @@
 			<header>
 				<cms:template file="parts/header.xml"/>
 			</header>
+
+			<!--Section laptop  -->
+			<section class="laptop">
+				<img
+					src="_BASEURL.'/site/images/logo_white.svg'"
+					alt="next_site_logo"
+					cms:eval="src"
+					class="logo_white"
+					/>
+				<h1><cms:text constant="logo_text"/></h1>
+
+				<!-- Absolutly positioned text and link inside laptop background screen -->
+				<div class="laptop_screen_text">
+					<h2><cms:text constant="solution"/></h2>
+					<a
+						href="#contact_form"
+						cms:eval="href" >
+						<cms:text constant="contact_now"/>
+					</a>
+				</div>
+			</section>
+
+			<!-- Features Section-->
+			<section class="features">
+				<!-- Constant header of features -->
+				<h3><cms:text constant="header_features"/></h3>
+
+				<!-- Module call for list of articles and svgs -->
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="home_features"
+						template="parts/article_list_svg.xml"
+						/>
+				</ul>
+			</section>
+
+			<!-- Section Gallery Logos -->
+			<section class="gallery">
+
+				<!-- Gallery Section header with constant -->
+				<h3><cms:text constant="header_gallery"/></h3>
+
+				<!-- Module call for list of images -->
+				<ul>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="clients_logos"
+						template="parts/gallery_list.xml"
+						/>
+				</ul>
+			</section>
+
+			<!-- Section videos -->
+			<section class="videos">
+
+			<!-- Section Header videos with constant -->
+			<h3><cms:text constant="header_youtube"/></h3>
+
+				<!-- You tube module call list -->
+				<ul>
+					<cms:module
+						name="youtube"
+						action="show_list"
+						group_text_id="videos"
+						template="parts/youtube.xml"
+						/>
+				</ul>
+			</section>
+			<footer>
+				<cms:template file="parts/footer.xml"/>
+			</footer>
 		</body>
 	</html>
 </document>
