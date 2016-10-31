@@ -13,8 +13,10 @@
  	right: 0;
  	display: block;
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
-	box-shadow: 0px 4px 11px -1px fade(@color_border, 50%);
+	box-shadow: 0px 4px 11px -1px fade(@color_border, 80%);
 	border-left: 1px solid darken(@color_border, 50%);
+	background-color: white;
+	z-index: 100000;
  }
 
  header nav {
@@ -41,6 +43,7 @@ header nav a:last-of-type {
 	border: none;
 }
 
+header nav a:active,
 header nav a:hover {
 	color: red;
 }
