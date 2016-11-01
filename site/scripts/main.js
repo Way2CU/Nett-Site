@@ -49,9 +49,9 @@ Site.is_mobile = function() {
 Site.scroll = function(event) {
 
 	if(window.scrollY > 0) {
-		Site.header.classList.add('floating');
+		Site.body.classList.add('floating');
 	}else {
-		Site.header.classList.remove('floating');
+		Site.body.classList.remove('floating');
 	}
 
 };
@@ -65,7 +65,7 @@ Site.on_load = function() {
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	//Definition of global var Header
-	Site.header = document.querySelector('header');
+	Site.body = document.querySelector('body');
 
 	//event listener and function call
 	window.addEventListener('scroll', Site.scroll);
