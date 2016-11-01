@@ -45,12 +45,31 @@ Site.is_mobile = function() {
 	return result;
 };
 
+//Scroll function definition
+Site.scroll = function(event) {
+
+	if(window.scrollY > 0) {
+		Site.header.classList.add('floating');
+	}else {
+		Site.header.classList.remove('floating');
+	}
+
+};
+
+
 /**
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	//Definition of global var Header
+	Site.header = document.querySelector('header');
+
+	//event listener and function call
+	window.addEventListener('scroll', Site.scroll);
+
 };
 
 
