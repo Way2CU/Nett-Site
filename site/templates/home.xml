@@ -9,9 +9,9 @@
 		</head>
 
 		<body>
-				<!-- 2 Header templates -->
-				<cms:template file="parts/header.xml"/>
-				<cms:template file="parts/header_floating.xml"/>
+			<!-- 2 Header templates -->
+			<cms:template file="parts/header.xml"/>
+			<cms:template file="parts/header_floating.xml"/>
 
 			<!--Section laptop  -->
 			<section class="laptop">
