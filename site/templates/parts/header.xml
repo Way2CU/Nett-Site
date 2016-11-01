@@ -1,16 +1,17 @@
 <document>
-			<!-- Logo image -->
-			<a
-				href="URL::make()"
-				cms:eval="href"
-				class="logo"
-				>
-				<img
-					src="_BASEURL.'/site/images/logo_color.svg'"
-					alt="next_site_logo"
-					cms:eval="src"
-					/>
-			</a>
+	<header>
+		<!-- Logo image -->
+		<a
+			href="URL::make()"
+			cms:eval="href"
+			class="logo"
+			>
+			<img
+				src="_BASEURL.'/site/images/logo_color.svg'"
+				alt="next_site_logo"
+				cms:eval="src"
+				/>
+		</a>
 		<nav>
 			<!-- Contact link, image and constant -->
 			<a
@@ -39,13 +40,13 @@
 				<cms:text constant="promotion_link"/>
 			</a>
 
-			<!-- Google Love link, image and constant -->
+			<!-- Site building, image and constant -->
 			<a
 				href="URL::make(array(), 'google_love.xml')"
 				cms:eval="href"
 				>
-				<cms:svg file="site-sprite.svg" symbol="icon-heart"/>
-				<cms:text constant="google_love_link"/>
+				<cms:svg file="site-sprite.svg" symbol="icon-globe"/>
+				<cms:text constant="site_bulding"/>
 			</a>
 
 			<!-- Funding Promotion link, image and constant -->
@@ -93,4 +94,5 @@
 				<cms:text constant="server_link"/>
 			</a>
 		</nav>
+	</header>
 </document>
