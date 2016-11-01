@@ -9,9 +9,14 @@
 		</head>
 
 		<body>
-			<!-- 2 Header templates -->
-			<cms:template file="parts/header.xml"/>
-			<cms:template file="parts/header_floating.xml"/>
+			<cms:desktop>
+				<!-- 2 Header templates -->
+				<cms:template file="parts/header.xml"/>
+				<cms:template file="parts/header_floating.xml"/>
+			</cms:desktop>
+			<cms:mobile>
+				<cms:template file="parts/header.xml"/>
+			</cms:mobile>
 
 			<!--Section laptop  -->
 			<section class="laptop">
@@ -75,12 +80,12 @@
 
 				<!-- You tube module call list -->
 				<ul>
-					<cms:module
+					<!-- <cms:module
 						name="youtube"
 						action="show_list"
 						group_text_id="videos"
 						template="parts/youtube.xml"
-						/>
+						/> -->
 				</ul>
 			</section>
 			<footer>
