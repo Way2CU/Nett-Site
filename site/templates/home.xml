@@ -9,9 +9,9 @@
 		</head>
 
 		<body>
-			<header>
+				<!-- <cms:template file="parts/header.xml"/> -->
 				<cms:template file="parts/header.xml"/>
-			</header>
+				<cms:template file="parts/header_floating.xml"/>
 
 			<!--Section laptop  -->
 			<section class="laptop">
@@ -74,14 +74,14 @@
 			<h3><cms:text constant="header_youtube"/></h3>
 
 				<!-- You tube module call list -->
-				<ul>
+			<!-- 	<ul>
 					<cms:module
 						name="youtube"
 						action="show_list"
 						group_text_id="videos"
 						template="parts/youtube.xml"
 						/>
-				</ul>
+				</ul> -->
 			</section>
 			<footer>
 				<cms:template file="parts/footer.xml"/>
