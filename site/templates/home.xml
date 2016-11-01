@@ -9,35 +9,57 @@
 		</head>
 
 		<body>
+
 			<cms:desktop>
-				<!-- 2 Header templates -->
+				<!-- 2 Header templates Desktop-->
 				<cms:template file="parts/header.xml"/>
 				<cms:template file="parts/header_floating.xml"/>
 			</cms:desktop>
+
+			<!-- Header template for mobile -->
 			<cms:mobile>
 				<cms:template file="parts/header.xml"/>
 			</cms:mobile>
 
 			<!--Section laptop  -->
 			<section class="laptop">
-				<img
-					src="_BASEURL.'/site/images/logo_white.svg'"
-					alt="next_site_logo"
-					cms:eval="src"
-					class="logo_white"
-					/>
+
+				<!-- White logo for Desktop -->
+				<cms:desktop>
+					<img
+						src="_BASEURL.'/site/images/logo_white.svg'"
+						alt="next_site_logo"
+						cms:eval="src"
+						class="logo_white"
+						/>
+				</cms:desktop>
+
 				<h1><cms:text constant="logo_text"/></h1>
 
 				<!-- Absolutly positioned text and link inside laptop background screen -->
-				<div class="laptop_screen_text">
-					<h2><cms:text constant="solution"/></h2>
-					<a
-						href="#contact_form"
-						cms:eval="href" >
-						<cms:text constant="contact_now"/>
-					</a>
-				</div>
+				<cms:desktop>
+					<div class="laptop_screen_text">
+						<h2><cms:text constant="solution"/></h2>
+						<a
+							href="#contact_form"
+							cms:eval="href" >
+							<cms:text constant="contact_now"/>
+						</a>
+					</div>
+				</cms:desktop>
 			</section>
+
+			<!-- Mobile Cotact Form -->
+			<cms:mobile>
+				<div class="contact_form">
+					<h4><cms:text constant="call_us_back"/></h4>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+			</cms:mobile>
 
 			<!-- Features Section-->
 			<section class="features">
@@ -80,7 +102,7 @@
 
 				<!-- You tube module call list -->
 				<ul>
-					<!-- <cms:module
+					 <!-- <cms:module
 						name="youtube"
 						action="show_list"
 						group_text_id="videos"
