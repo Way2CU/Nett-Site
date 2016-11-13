@@ -47,8 +47,7 @@ Site.is_mobile = function() {
 
 //Scroll function definition
 Site.scroll = function(event) {
-
-	if(window.scrollY > 0) {
+	if(window.scrollY > Site.animationTrigger) {
 		Site.body.classList.add('floating');
 	}else {
 		Site.body.classList.remove('floating');
@@ -67,8 +66,11 @@ Site.on_load = function() {
 	//Definition of global var Header
 	Site.body = document.querySelector('body');
 
+	Site.animationTrigger = document.querySelector('header').clientHeight;
 	//event listener and function call
 	window.addEventListener('scroll', Site.scroll);
+
+
 
 };
 
