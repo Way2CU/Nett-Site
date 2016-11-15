@@ -24,7 +24,6 @@ body.floating header {
 	opacity: 0;
 }
 
-
 header nav {
 	display: inline-table;
 	vertical-align: middle;
@@ -61,6 +60,10 @@ header nav a svg {
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom: 0.5em;
+}
+
+header nav a svg.phone_blue {
+	fill: #3498db;
 }
 
 header a.logo {
@@ -227,6 +230,10 @@ div.floating_header nav div.drop_down > a {
 	border-bottom: 1px solid fade(@color_border, 30%);
 	text-decoration: none;
 	color: @color_text;
+}
+
+div.floating_header nav div.drop_down > a svg.phone_blue {
+	fill: #3498db;
 }
 
 div.floating_header nav div.drop_down > a:hover,
