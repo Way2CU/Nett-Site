@@ -1,81 +1,22 @@
 <document>
+	<!-- Color Logo img  -->
+	<img
+		src="_BASEURL.'/site/images/logo_color.svg'"
+		alt="next_site_logo"
+		cms:eval="src"
+	/>
 
-	<!-- Section Contact -->
-	<section id="contact_form">
+	<!-- Constant with text from H1 -->
+	<h2><cms:text constant="logo_text"/></h2>
 
-				<!-- Contact form for mobile  -->
-				<cms:mobile>
-					<cms:module
-						name="articles"
-						action="show"
-						text_id="contact_article"
-						template="stock/article_generic.xml"
-						>
-						<param name="title" value=""/>
-					</cms:module>
-				</cms:mobile>
-
-		<!-- Div Contact information right -->
-		<div class="right">
-
-			<!-- Contact Form inside div on desktop fot style purpose -->
-			<cms:desktop>
-				<cms:module
-					name="articles"
-					action="show"
-					text_id="contact_article"
-					template="stock/article_generic.xml"
-					>
-					<param name="title" value=""/>
-				</cms:module>
-			</cms:desktop>
-
-				<!-- Links with svgs & constants -->
-				<!-- Google Maps -->
-				<a
-					href="https://www.google.com/maps/place/HaTa'asiya+St+21,+Ra'anana,+Israel/@32.1962942,34.8747758,17z/data=!3m1!4b1!4m5!3m4!1s0x151d3863906eac71:0x7f248d032c829c8a!8m2!3d32.1962942!4d34.8769645">
-					<cms:svg file="site-sprite.svg" symbol="icon-location"/>
-					<cms:text constant="google_map"/>
-				</a>
-
-				<!-- Phone -->
-				<a
-					href="'tel:'.urlencode(Language::get_Text('phone'))"
-					cms:eval="href"
-					class="phone"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-phoneline"/>
-					<cms:text constant="phone"/>
-				</a>
-
-				<!-- Email -->
-				<a href="mailto:?">
-					<cms:svg file="site-sprite.svg" symbol="icon-email"/>
-					<cms:text constant="mail"/>
-				</a>
-
-				<!-- Facebook -->
-				<a href="https://www.facebook.com/sharer/sharer.php?u=">
-					<cms:svg file="site-sprite.svg" symbol="icon-facebook"/>
-					<cms:text constant="facebook"/>
-				</a>
-
-				<!-- YouTube -->
-				<a href="https://www.facebook.com/sharer/sharer.php?u=">
-					<cms:svg file="site-sprite.svg" symbol="icon-youtube"/>
-					<cms:text constant="youtube"/>
-				</a>
-		</div>
-
-			<!-- Div Contact form left -->
-		<div class="left">
-			<h3><cms:text constant="contact_form"/></h3>
-			<h4><cms:text constant="call_us_back"/></h4>
-			<cms:module
-				name="contact_form"
-				action="show"
-				text_id="contact_form"
-			/>
-		</div>
-	</section>
+	<!-- Button-phone -->
+	<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+		cms:eval="href"
+		class="phone"
+		>
+		<!-- Phone text -->
+		<cms:text constant="phone"/>
+		<!-- icon-phone -->
+		<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
+	</a>
 </document>
