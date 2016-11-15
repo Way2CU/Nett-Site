@@ -67,10 +67,21 @@ Site.on_load = function() {
 	Site.body = document.querySelector('body');
 
 	Site.animationTrigger = document.querySelector('header').clientHeight;
+
 	//event listener and function call
 	window.addEventListener('scroll', Site.scroll);
 
+	//Page controll for animation of Show_case gallery tablet and div.content with description and img
+	Site.show_case_gallery_tablet = new PageControl('div.tablet', 'div.content');
+	Site.show_case_gallery_tablet
+		.setInterval(3000)
+		.setWrapAround(true);
 
+	//Page controll for animation of Show_case gallery mobile
+	Site.show_case_gallery_mobile = new PageControl('div.mobile', 'img');
+	Site.show_case_gallery_mobile
+		.setInterval(3000)
+		.setWrapAround(true);
 
 };
 
