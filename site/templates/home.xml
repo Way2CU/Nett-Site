@@ -5,6 +5,7 @@
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<cms:collection  include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -77,6 +78,23 @@
 				</ul>
 			</section>
 
+			<!-- Section videos -->
+			<section class="videos">
+
+			<!-- Section Header videos with constant -->
+			<h3><cms:text constant="header_youtube"/></h3>
+
+				<!-- You tube module call list -->
+				<ul>
+					 <!-- <cms:module
+						name="youtube"
+						action="show_list"
+						group_text_id="videos"
+						template="parts/youtube.xml"
+						/> -->
+				</ul>
+			</section>
+
 			<!-- Section Gallery Logos -->
 			<section class="gallery">
 
@@ -94,22 +112,33 @@
 				</ul>
 			</section>
 
-			<!-- Section videos -->
-			<section class="videos">
+			<!-- Section Projects Showcase -->
+			<section class="showcase">
+				<h2><cms:text constant="latest_projects"/></h2>
 
-			<!-- Section Header videos with constant -->
-			<h3><cms:text constant="header_youtube"/></h3>
+				<!-- Tablet showcase container & img inside-->
+				<div class="tablet">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="tablet_showcase"
+						order_by="text_id"
+						template="parts/tablet_gallery.xml"
+					/>
+				</div>
+				<!-- Mobile showcase container & img inside-->
+				<div class="mobile">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="mobile_showcase"
+						order_by="text_id"
+						template="parts/mobile_gallery.xml"
+					/>
+				</div>
 
-				<!-- You tube module call list -->
-				<ul>
-					 <!-- <cms:module
-						name="youtube"
-						action="show_list"
-						group_text_id="videos"
-						template="parts/youtube.xml"
-						/> -->
-				</ul>
 			</section>
+
 			<footer>
 				<cms:template file="parts/footer.xml"/>
 			</footer>
