@@ -1,22 +1,24 @@
 <document>
-	<!-- Color Logo img  -->
-	<img
-		src="_BASEURL.'/site/images/logo_color.svg'"
-		alt="next_site_logo"
-		cms:eval="src"
-	/>
+	<div class="footer_content">
+		<!-- Color Logo img  -->
+		<img
+			src="_BASEURL.'/site/images/logo_color.svg'"
+			alt="next_site_logo"
+			cms:eval="src"
+		/>
 
-	<!-- Constant with text from H1 -->
-	<h2><cms:text constant="logo_text"/></h2>
+		<!-- Constant with text from H1 -->
+		<h2><cms:text constant="logo_text"/></h2>
 
-	<!-- Button-phone -->
-	<a href="'tel:'.urlencode(Language::get_Text('phone'))"
-		cms:eval="href"
-		class="phone"
-		>
-		<!-- Phone text -->
-		<cms:text constant="phone"/>
-		<!-- icon-phone -->
-		<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
-	</a>
+		<!-- Button-phone -->
+		<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+			cms:eval="href"
+			class="phone"
+			>
+			<!-- Phone text -->
+			<cms:text constant="phone"/>
+			<!-- icon-phone -->
+			<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
+		</a>
+	</div>
 </document>
