@@ -1,0 +1,18 @@
+<document>
+	<!-- Excluding group with text_id home_features -->
+	<cms:if condition="$params['text_id'] != 'home_features'">
+		<!-- article showing with text id show -->
+		<cms:module
+			name="articles"
+			action="show"
+			group="$params['id']"
+			text_id="show"
+			template="stock/article_generic.xml"
+			cms:eval="group"
+			>
+			<param name="title" value=""/>
+			<!-- image group connected to article connected inside article generic -->
+			<param name="image" value=""/>
+		</cms:module>
+	</cms:if>
+</document>
