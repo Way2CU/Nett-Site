@@ -156,6 +156,11 @@ section.gallery ul li img {
 */
 section.showcase {
 	position: relative;
+	background-image: url(../images/showcase_background.jpg);
+	background-position: center bottom;
+	background-size: 1920px 800px;
+	background-repeat: no-repeat;
+	min-height: 800px;
 }
 section.showcase h2 {
 	color: white;
@@ -163,7 +168,7 @@ section.showcase h2 {
 	background-color: @color_title;
 	text-align: center;
 	padding: 1em;
-	margin-bottom: 3.5em;
+	margin-bottom: 3em;
 }
 
 section.showcase div.tablet {
@@ -180,8 +185,8 @@ section.showcase div.tablet {
 
 section.showcase div.mobile {
 	position: absolute;
-	top: 55%;
-	left: calc(~'50% + 350px');
+	top: 52%;
+	left: calc(~'50% + 300px');
 	display: block;
 	margin: 0 auto;
 	background-image: url(../images/mobile.svg);
@@ -214,7 +219,7 @@ section.showcase div.mobile img.visible {
 section.showcase div.tablet div.content p a,
 section.showcase div.tablet div.content p {
 	position: absolute;
-	bottom: 105%;
+	bottom: 104%;
 	left: 50%;
 	transform: translateX(-50%);
 	text-align: center;
@@ -233,9 +238,35 @@ section.showcase div.tablet div.content.visible p {
 }
 
 /*
-* Contact Section
+* Section Latest articles
 */
 
+section.latest_articles {
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
+}
+
+section.latest_articles > h2 {
+	text-align: center;
+	font-weight: 400;
+	padding-bottom: 0.5em;
+}
+
+section.latest_articles > h2:after {
+	content: "";
+	display: block;
+	width: 30%;
+	height: 1px;
+	background-color: fade(@color_border, 50%);
+	margin: 10px auto;
+
+}
+
+section.latest_articles article {
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	width: calc(~'100% / 3');
+}
 
 /*
 *Contact section
