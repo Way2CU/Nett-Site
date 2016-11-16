@@ -6,34 +6,46 @@
  * Authors: Iliya Melishev
  */
 
-footer {
-	background-image: url(../images/showcase_background.png);
-	background-position: bottom center;
-	background-size: 1920px 800px;
+footer div.footer_content {
+	background-image: url(../images/footer_background.png);
+	background-position: center bottom;
+	background-size: 1921px 450px;
 	background-repeat: no-repeat;
 	text-align: center;
+	min-height: 450px;
+	padding-top: 2em;
 }
 
-footer img {
+footer div.footer_content img {
 	display: block;
 	margin: 0 auto;
 	width: 400px;
-	height: 200px;
 }
 
-footer a {
+footer div.footer_content a {
 	text-decoration: none;
 	color: white;
 	font-weight: 700;
 	display: inline-block;
 	vertical-align: middle;
 	background-color: @color_button;
+	padding: 0.5em 1.5em;
+	border-radius: 15px;
 }
 
-footer a svg {
+footer div.footer_content a svg {
+	fill: white;
+}
+
+footer div.footer_content a:hover {
+	background-color: lighten(@color_button, 10%);
+}
+
+footer div.footer_content a svg {
 	width: 35px;
 	height: 35px;
 	display: inline-block;
 	vertical-align: middle;
 	fill: white;
+	padding-right: 1em;
 }
