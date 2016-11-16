@@ -9,14 +9,16 @@
 footer div.copyright {
 	padding: 20px 0px;
 	padding-left: 55px;
-
+	text-align: center;
 	background-image: url(../../images/stock/way2cu-black.svg);
 	background-repeat: no-repeat;
-	background-position: left center;
+	background-position: calc(50% - 80px) center;
 	background-size: 50px 50px;
 
 	font-size: 0.9rem;
 	direction: ltr;
+
+	background-color: black;
 }
 
 footer div.copyright.light {
@@ -25,6 +27,7 @@ footer div.copyright.light {
 
 footer div.copyright a {
 	text-decoration: underline;
+	color: white;
 }
 
 footer div.copyright a:hover {
