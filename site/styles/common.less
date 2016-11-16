@@ -28,3 +28,18 @@
   src: url(../images/fonts/assistant_bold_hebrew.woff2) format('woff2');
 }
 
+.button {
+	background-color: @color_button;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	padding: 1em;
+	border-radius: 15px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: lighten(@color_button, 10%)
+}
