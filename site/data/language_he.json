@@ -1,7 +1,8 @@
 {
     "site_title": "Next site",
-    "contact_link" : "צור קשר",
     "info_link" : "אודותינו",
+    "contact_link" : "צור קשר",
+    "press_link" : "מין העיתונות",
     "promotion_link" : "קידום אורגני בגוגל",
     "site_bulding" : "בניית אתרים מותאמים",
     "funding_link" : "פרסום ממומן בגוגל",
@@ -9,6 +10,7 @@
     "reputation_link" : "ניקוי מוניטין",
     "branding_link" : "מיתוג ברשת",
     "server_link" : "אחסון אתרים וניהול שרתים",
+    "gallery_link" : "גלרית אתרים",
     "logo_text": "נקסטסייט זו הדרך הטובה ביותר לפרסם את העסק שלך.",
     "solution":"נשמח להציע לך פתרון מותאם אישית, קבל הצעת מחיר:",
     "contact_now": "צרו קשר עכשיו",
@@ -22,5 +24,8 @@
     "mail": "nextsite@gmail.com",
     "facebook": "פייסבוק",
     "youtube":"Youtube",
-    "latest_projects":"פרוייקטים אחרונים"
+    "latest_projects":"פרוייקטים אחרונים",
+    "copyright_holder": "Developed by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>",
+    "copyright_text": "All rights reserved.",
+    "latest_articles": "הכתבות האחרונים שלנו"
 }

@@ -1,12 +1,13 @@
 {
 	"/": "home.xml",
-	"/contact" : "contact.xml",
 	"/about" : "about.xml",
+	"/press" : "press.xml",
+	"/gallery" : "gallery.xml",
 	"/promotion" : "promotion.xml",
-	"/bulding" : "bulding.xml",
 	"/funding" : "funding.xml",
 	"/facebook" : "facebook.xml",
 	"/reputation" : "reputation.xml",
 	"/branding" : "branding.xml",
-	"/servers" : "servers.xml"
+	"/servers" : "servers.xml",
+	"/contact" : "contact.xml"
 }
