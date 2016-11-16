@@ -56,11 +56,11 @@
 					<li>
 						<!-- Promotion link, image and constant -->
 						<a
-							href="URL::make(array(), 'promotion.xml')"
+							href="URL::make(array(), 'organic.xml')"
 							cms:eval="href"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-organicleaf"/>
-							<cms:text constant="promotion_link"/>
+							<cms:text constant="organic_link"/>
 						</a>
 					</li>
 					<li>
