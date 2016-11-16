@@ -42,8 +42,7 @@
 					<div class="laptop_screen_text">
 						<h2><cms:text constant="solution"/></h2>
 						<a
-							href="#contact_form"
-							cms:eval="href" >
+							href="#contact_form">
 							<cms:text constant="contact_now"/>
 						</a>
 					</div>
@@ -107,7 +106,7 @@
 						name="gallery"
 						action="show_image_list"
 						group="clients_logos"
-						template="parts/gallery_list.xml"
+						template="parts/gallery_list_logos.xml"
 						/>
 				</ul>
 			</section>
@@ -136,12 +135,34 @@
 						template="parts/mobile_gallery.xml"
 					/>
 				</div>
+			</section>
+
+			<!-- Section latest articles -->
+			<section class="latest_articles">
+
+				<h2><cms:text constant="latest_articles"/></h2>
+
+				<!-- Show articles group list -->
+				<cms:module
+					name="articles"
+					action="show_group_list"
+					template="parts/group_list.xml"
+					/>
 
 			</section>
 
 			<footer>
+				<!-- Footer Template -->
 				<cms:template file="parts/footer.xml"/>
+
+				<!-- Copyright -->
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
 			</footer>
+
 		</body>
 	</html>
 </document>
