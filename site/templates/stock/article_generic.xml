@@ -1,4 +1,4 @@
-<!-- 
+<!--
   Generic article template has option to set article title, timestamp and author of the article.
   Template supports both desktop and mobile versions.
 
@@ -10,10 +10,7 @@
  -->
 <document>
   <article class="isset($template['class']) ? $params['text_id'] : false" cms:optional="class">
-    <!-- Title -->
-    <cms:if condition="isset($template['title'])">
-      <h2><cms:var param="title" multilanguage="yes"/></h2>
-    </cms:if>
+
 
     <!-- Timestamp -->
     <cms:if condition="isset($template['timestamp'])">
@@ -23,6 +20,22 @@
     <!-- Author -->
     <cms:if condition="isset($template['author'])">
       <span class="author"><cms:var param="author" multilanguage="yes"/></span>
+    </cms:if>
+
+    <!-- Image gallery group connected to article -->
+    <cms:if condition="isset($template['image'])">
+      <cms:module
+        name="gallery"
+        action="show_image_list"
+        group_id="$params['gallery']"
+        template="parts/gallery_list.xml"
+        cms:eval="group_id"
+        />
+    </cms:if>
+
+    <!-- Title -->
+    <cms:if condition="isset($template['title'])">
+      <h2><cms:var param="title" multilanguage="yes"/></h2>
     </cms:if>
 
     <!-- Content -->
