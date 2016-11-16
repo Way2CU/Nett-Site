@@ -25,44 +25,50 @@ body.floating header {
 }
 
 header nav {
-	display: inline-table;
+	display: inline-block;
 	vertical-align: middle;
 	width: calc(~'100% - 300px');
 	padding: 1em 0;
+	position: relative;
 }
 
-header nav a {
-	display: table-cell;
-	vertical-align: top;
+header nav > ul {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+header nav ul li {
+	display: inline-block;
+	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
-	color: @color_text;
 	width: calc(~'100% / 9 ');
 	padding: 0 0.5em;
 	box-sizing: border-box;
 	border-left: 1px solid @color_border_image;
 	transition: all 0.3s;
+	min-height: 100px;
 }
 
-header nav a:last-of-type {
-	border: none;
+header nav ul li a {
+	text-decoration: none;
+	color: @color_text;
+	display: block;
+	margin: 0 auto;
 }
 
-header nav a:active,
-header nav a:hover {
-	color: red;
-}
-
-header nav a svg {
+header nav ul li a svg {
 	width: 1.5em;
 	height: 1.5em;
 	display: block;
-	margin: 0 auto;
+	margin: 1em auto;
 	text-align: center;
-	padding-bottom: 0.5em;
 }
 
-header nav a svg.phone_blue {
+header nav ul li a svg.phone_blue {
 	fill: #3498db;
 }
 
@@ -76,6 +82,63 @@ header a.logo {
 header a.logo img {
 	display: block;
 	width: 200px;
+}
+
+//First list item with svg arrow
+header nav ul li.action {
+	position: relative;
+}
+
+header nav ul li.action > svg {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 1em auto;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%) rotate(-90deg);
+	fill: black;
+}
+
+header nav ul li.action:hover ul.sub_dropdown {
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+}
+
+//SubMenu
+header nav ul li ul.sub_dropdown {
+	position: absolute;
+	display: block;
+	top: 115%;
+	left: 50%;
+	transform: translate(-50%);
+	width: 100px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+	border: 1px solid @color_border;
+	visibility: hidden;
+	transition: all 0.3s;
+	transition-delay: 0.5s;
+}
+
+header nav ul li ul.sub_dropdown li {
+	display: block;
+	width: 100%;
+	background-color: white;
+	min-height: 0;
+}
+
+header nav ul li ul.sub_dropdown li a {
+	padding-bottom: 1em;
+}
+
+header nav ul li ul.sub_dropdown li svg {
+	margin: 0 auto;
+	padding: 1em 0;
 }
 
 /*
@@ -224,12 +287,18 @@ div.floating_header nav input:checked ~ div.drop_down {
 div.floating_header nav div.drop_down > a {
 	display: block;
 	width: 100%;
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 	text-align: right;
 	border-left: none;
 	border-bottom: 1px solid fade(@color_border, 30%);
 	text-decoration: none;
 	color: @color_text;
+	padding-bottom: 1em;
+}
+
+div.floating_header nav div.drop_down > a:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 div.floating_header nav div.drop_down > a svg.phone_blue {
@@ -250,7 +319,7 @@ div.floating_header nav div.drop_down > a svg {
 	vertical-align: middle;
 	padding-left: 1em;
 	margin: 0;
-	width: 35px;
-	height: 35px;
+	width: 1.5em;
+	height: 1.5em;
 }
 
