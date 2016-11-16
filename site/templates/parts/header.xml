@@ -14,86 +14,116 @@
 					/>
 			</a>
 			<nav>
-				<!-- Contact link, image and constant -->
-				<a
-					href="URL::make(array(), 'contact.xml')"
-					cms:eval="href"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-phone" class="phone_blue"/>
-					<cms:text constant="contact_link"/>
-				</a>
+				<ul>
+					<li class="action">
+					<!-- About link, image and constant -->
+						<a
+							href="URL::make(array(), 'about.xml')"
+							cms:eval="href"
+							class="about"
+							>
+							<cms:svg file="site-sprite.svg" symbol="icon-info"/>
+							<cms:text constant="info_link"/>
+						</a>
+							<cms:svg file="site-sprite.svg" symbol="icon-left"/>
+						<!-- DropDown menu link press -->
+						<ul class="sub_dropdown">
 
-				<!-- About link, image and constant -->
-				<a
-					href="URL::make(array(), 'about.xml')"
-					cms:eval="href"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-info"/>
-					<cms:text constant="info_link"/>
-				</a>
+							<li>
+								<!-- Press link, image and constant -->
+								<a
+									href="URL::make(array(), 'press.xml')"
+									cms:eval="href"
+									class="press"
+									>
+									<cms:svg file="site-sprite.svg" symbol="icon-press"/>
+									<cms:text constant="press_link"/>
+								</a>
+							</li>
 
-				<!-- Promotion link, image and constant -->
-				<a
-					href="URL::make(array(), 'promotion.xml')"
-					cms:eval="href"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-organicleaf"/>
-					<cms:text constant="promotion_link"/>
-				</a>
-
-				<!-- Site building, image and constant -->
-				<a
-					href="URL::make(array(), 'bulding.xml')"
-					cms:eval="href"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-globe"/>
-					<cms:text constant="site_bulding"/>
-				</a>
-
-				<!-- Funding Promotion link, image and constant -->
-				<a
-					href="URL::make(array(), 'funding.xml')"
-					cms:eval="href"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-brand"/>
-					<cms:text constant="funding_link"/>
-				</a>
-
-				<!-- Facebook  link, image and constant -->
-				<a
-					href="URL::make(array(), 'facebook.xml')"
-					cms:eval="href"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-facebook"/>
-					<cms:text constant="facebook_link"/>
-				</a>
-
-				<!-- Reputation  link, image and constant -->
-				<a
-					href="URL::make(array(), 'reputation.xml')"
-					cms:eval="href"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-clean"/>
-					<cms:text constant="reputation_link"/>
-				</a>
-
-				<!-- Branding  link, image and constant -->
-				<a
-					href="URL::make(array(), 'branding.xml')"
-					cms:eval="href"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-advert"/>
-					<cms:text constant="branding_link"/>
-				</a>
-
-				<!-- Servers  link, image and constant -->
-				<a
-					href="URL::make(array(), 'servers.xml')"
-					cms:eval="href"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-servers"/>
-					<cms:text constant="server_link"/>
-				</a>
+						</ul>
+					</li>
+					<li>
+						<!-- Gallery link, image and constant -->
+						<a
+							href="URL::make(array(), 'gallery.xml')"
+							cms:eval="href"
+							>
+							<cms:svg file="site-sprite.svg" symbol="icon-gallery"/>
+							<cms:text constant="gallery_link"/>
+						</a>
+					</li>
+					<li>
+						<!-- Promotion link, image and constant -->
+						<a
+							href="URL::make(array(), 'promotion.xml')"
+							cms:eval="href"
+							>
+							<cms:svg file="site-sprite.svg" symbol="icon-organicleaf"/>
+							<cms:text constant="promotion_link"/>
+						</a>
+					</li>
+					<li>
+						<!-- Funding Promotion link, image and constant -->
+						<a
+							href="URL::make(array(), 'funding.xml')"
+							cms:eval="href"
+							>
+							<cms:svg file="site-sprite.svg" symbol="icon-money"/>
+							<cms:text constant="funding_link"/>
+						</a>
+					</li>
+					<li>
+						<!-- Facebook  link, image and constant -->
+						<a
+							href="URL::make(array(), 'facebook.xml')"
+							cms:eval="href"
+							>
+							<cms:svg file="site-sprite.svg" symbol="icon-facebook"/>
+							<cms:text constant="facebook_link"/>
+						</a>
+					</li>
+					<li>
+						<!-- Reputation  link, image and constant -->
+						<a
+							href="URL::make(array(), 'reputation.xml')"
+							cms:eval="href"
+							>
+							<cms:svg file="site-sprite.svg" symbol="icon-clean"/>
+							<cms:text constant="reputation_link"/>
+						</a>
+					</li>
+					<li>
+						<!-- Branding  link, image and constant -->
+						<a
+							href="URL::make(array(), 'branding.xml')"
+							cms:eval="href"
+							>
+							<cms:svg file="site-sprite.svg" symbol="icon-brand"/>
+							<cms:text constant="branding_link"/>
+						</a>
+					</li>
+					<li>
+						<!-- Servers  link, image and constant -->
+						<a
+							href="URL::make(array(), 'servers.xml')"
+							cms:eval="href"
+							>
+							<cms:svg file="site-sprite.svg" symbol="icon-servers"/>
+							<cms:text constant="server_link"/>
+						</a>
+					</li>
+					<li>
+						<!-- Contact link, image and constant -->
+						<a
+							href="URL::make(array(), 'contact.xml')"
+							cms:eval="href"
+							>
+							<cms:svg file="site-sprite.svg" symbol="icon-phone" class="phone_blue"/>
+							<cms:text constant="contact_link"/>
+						</a>
+					</li>
+				</ul>
 			</nav>
 		</cms:desktop>
 		<cms:mobile>
