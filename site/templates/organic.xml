@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="organic_link"/></title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="organic">
+			<cms:desktop>
+				<!-- 2 Header templates Desktop-->
+				<cms:template file="parts/header.xml"/>
+				<cms:template file="parts/header_floating.xml"/>
+			</cms:desktop>
+
+			<!-- Header template for mobile -->
+			<cms:mobile>
+				<cms:template file="parts/header.xml"/>
+			</cms:mobile>
+
+			<section class="header">
+
+				<!-- div with logo h1 and p -->
+				<div class="title">
+					<cms:svg file="site-sprite.svg" symbol="icon-organic"/>
+					<h1><cms:text constant="organic_link"/></h1>
+					<p><cms:text constant="organic_title"/></p>
+				</div>
+			</section>
+
+			<!-- Section Articles -->
+			<section class="organic_content">
+				<!-- Specific artile1 linked to generic article with title -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="organic_solo1"
+					template="stock/article_generic.xml"
+				>
+				</cms:module>
+
+				<!-- Specific artile2 linked to generic article with title -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="organic_solo2"
+					template="stock/article_generic.xml"
+				>
+				<param name="title" value=""/>
+				</cms:module>
+
+
+				<!-- Specific artile3 linked to generic article with title -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="organic_solo3"
+					template="stock/article_generic.xml"
+				>
+				<param name="title" value=""/>
+				</cms:module>
+			</section>
+
+			<section class="latest_organic">
+				<h2><cms:text constant="latest_organic"/></h2>
+				<!-- Show articles group list -->
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="organic"
+					template="stock/article_generic.xml"
+					>
+					<param name="title" value=""/>
+					<param name="image" value=""/>
+					<param name="link" value=""/>
+				</cms:module>
+			</section>
+			<footer>
+				<!-- Footer Template -->
+				<cms:template file="parts/footer.xml"/>
+
+				<!-- Copyright -->
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
+		</body>
+	</html>
+</document>
