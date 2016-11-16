@@ -40,5 +40,17 @@
 
     <!-- Content -->
     <cms:markdown param="content" multilanguage="yes"/>
+
+    <!-- Link with content form the title of the article -->
+    <cms:if condition="isset($template['link'])">
+      <a
+        href="URL::make(array('article' => $params['id']));"
+        cms:eval="href"
+        class="button"
+        >
+        <cms:var param="title" multilanguage="yes"/>
+      </a>
+    </cms:if>
+
   </article>
 </document>
