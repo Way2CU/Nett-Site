@@ -11,6 +11,7 @@
 @color_text: #0f466b;
 @color_border: #95a5a6;
 @color_border_image: #e7ecf2;
+@color_svg: #3498db;
 
 
 @font-face {
@@ -28,18 +29,26 @@
   src: url(../images/fonts/assistant_bold_hebrew.woff2) format('woff2');
 }
 
+button,
 .button {
 	background-color: @color_button;
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0 auto;
 	padding: 1em;
-	border-radius: 15px;
+	border-radius: 30px;
 	text-align: center;
 	color: white;
 	text-decoration: none;
+	border: 1px solid transparent;
+	font-weight: 700;
 }
 
+button:hover,
 .button:hover {
 	background-color: lighten(@color_button, 10%)
+}
+
+.phone_blue {
+	fill: #3498db;
 }
