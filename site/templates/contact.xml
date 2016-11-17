@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="contact_link"/></title>
+			<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYphh6sYZbQV4LKtINhITj918xYQJeCvo"></script>
+			<cms:script src="_BASEURL.'/site/scripts/location.js'" cms:eval="src"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="contact">
+			<cms:desktop>
+				<!-- 2 Header templates Desktop-->
+				<cms:template file="parts/header.xml"/>
+				<cms:template file="parts/header_floating.xml"/>
+			</cms:desktop>
+
+			<!-- Header template for mobile -->
+			<cms:mobile>
+				<cms:template file="parts/header.xml"/>
+			</cms:mobile>
+
+			<!-- div with logo h1 and p -->
+			<section class="header_contact">
+				<div class="title">
+					<cms:svg file="site-sprite.svg" symbol="icon-phone" class="phone_blue" />
+					<h1><cms:text constant="contact_link"/></h1>
+					<p><cms:text constant="contact_title"/></p>
+				</div>
+			</section>
+
+			<!-- Section with icons on the right and map on the left -->
+			<section class="information">
+				<!-- text and link_icons container -->
+				<div class="right">
+
+					<!-- Article module with text id -->
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="contact"
+						template="parts/articles/article_generic.xml"
+						/>
+
+					<!-- link to google maps location, text constant, svg icon location -->
+					<a href="google_location" cms:constant="href" class="location">
+						<cms:svg file="site-sprite" symbol="icon-location"/>
+						<cms:text constant="location_text"/>
+					</a>
+
+					<!-- link phone, text constant, svg icon phone with prepared class for fill color -->
+					<a
+						href="'tel:'.urlencode(Language::get_Text('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:svg file="site-sprite.svg" symbol="icon-phone" class="phone_blue"/>
+						<cms:text constant="phone"/>
+					</a>
+
+					<!-- link to mail, text constant and svg file icon  -->
+					<a href="mailto:info@next-site.co.il">
+						<cms:svg file="site-sprite.svg" symbol="icon-email" class="mail"/>
+						<cms:text constant="mail"/>
+					</a>
+
+					<!-- link to facebook, text constant and svg file icon  -->
+					<a href="facebook.com">
+						<cms:svg file="site-sprite.svg" symbol="icon-facebook"/>
+						<cms:text constant="facebook"/>
+					</a>
+
+					<!-- link to youtube, text constant and svg file icon  -->
+					<a href="youtube.com">
+						<cms:svg file="site-sprite.svg" symbol="icon-youtube"/>
+						<cms:text constant="youtube"/>
+					</a>
+
+				</div>
+				<div class="left">
+					<div id="map"></div>
+				</div>
+			</section>
+
+			<!-- Contact form section -->
+			<section class="contact_us">
+				<!-- h2 and article -->
+				<div class="right">
+				<h2><cms:text constant="call_us_back"/></h2>
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="contact_article"
+					template="parts/articles/article_generic.xml"
+					/>
+				</div>
+				<div class="left">
+				<!-- contact form -->
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+			</section>
+
+			<footer>
+				<!-- Footer Template -->
+				<cms:template file="parts/footer.xml"/>
+
+				<!-- Copyright -->
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
+		</body>
+	</html>
+</document>
