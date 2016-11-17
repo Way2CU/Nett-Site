@@ -32,7 +32,7 @@
 
 			<!-- Section Articles -->
 			<section class="organic_content">
-				<!-- Specific artile1 linked to generic article with title -->
+				<!-- Specific article1 linked to generic article with title -->
 				<cms:module
 					name="articles"
 					action="show"
@@ -41,7 +41,7 @@
 				>
 				</cms:module>
 
-				<!-- Specific artile2 linked to generic article with title -->
+				<!-- Specific article2 linked to generic article with title -->
 				<cms:module
 					name="articles"
 					action="show"
@@ -52,7 +52,7 @@
 				</cms:module>
 
 
-				<!-- Specific artile3 linked to generic article with title -->
+				<!-- Specific article3 linked to generic article with title -->
 				<cms:module
 					name="articles"
 					action="show"
@@ -63,27 +63,38 @@
 				</cms:module>
 			</section>
 
+			<!-- Section with latest articles  -->
 			<section class="latest_organic">
 				<h2><cms:text constant="latest_organic"/></h2>
 
-				<!-- Input hidden and button on top to control the visiblity of articles -->
-				<input type="checkbox"/>
+				<!-- checkbox to act as toggle to reveal content -->
+				<input type="checkbox" id="toggle"/>
 
+				<!-- Container with article list  -->
+				<div>
 				<!--
 					Show articles group list
 					Show image gallery connected to artice
 					Show link to article_view.xml with a name of article_title
 				-->
-				<cms:module
-					name="articles"
-					action="show_list"
-					group="organic"
-					template="parts/articles/article_generic.xml"
-					>
-					<param name="title" value=""/>
-					<param name="image" value=""/>
-					<param name="link_view" value=""/>
-				</cms:module>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="organic"
+						order_by="id"
+						template="parts/articles/article_generic.xml"
+						>
+						<param name="title" value=""/>
+						<param name="image" value=""/>
+						<param name="link_view" value=""/>
+					</cms:module>
+
+					<!-- label for input checkbox with text constant -->
+					<label for="toggle" class="button">
+						<cms:text constant="read_more"/>
+					</label>
+
+				</div>
 			</section>
 			<footer>
 				<!-- Footer Template -->
