@@ -1,6 +1,7 @@
 <document>
 	<!-- Excluding group with text_id home_features -->
 	<cms:if condition="$params['text_id'] != 'home_features'">
+
 		<!-- article showing with text id show -->
 		<cms:module
 			name="articles"
@@ -10,12 +11,17 @@
 			template="stock/article_generic.xml"
 			cms:eval="group"
 			>
+			<cms:transfer target="subject" name="text_id"/>
+
 			<!-- Title for article -->
 			<param name="title" value=""/>
+
 			<!-- image group connected to article connected inside article generic -->
 			<param name="image" value=""/>
-			<!-- Link with the name of the title leading to article page -->
+
+			<!-- Link with the name of the article_title leading article_view.xml -->
 			<param name="link" value=""/>
+
 		</cms:module>
 	</cms:if>
 </document>
