@@ -1,0 +1,70 @@
+<!--
+  Generic article template has option to set article title, timestamp and author of the article.
+  Template supports both desktop and mobile versions.
+
+  The folloiwng parameters are optional:
+    title     - Show title of article;
+    timestamp - Show timestamp of article;
+    author    - Show user name of article.
+    class     - Apply class name as text_id param of article module
+    img       - Shows gallery image connected to the article;
+    link      - Shows link generated from the title of the article (expects group_id and article id params)
+    link_view - Shows link generated form the title of the article  (expects article id)
+ -->
+<document>
+  <article class="isset($template['class']) ? $params['text_id'] : false" cms:optional="class">
+
+
+    <!-- Timestamp -->
+    <cms:if condition="isset($template['timestamp'])">
+      <span class="timestamp"><cms:var param="timestamp" multilanguage="yes"/></span>
+    </cms:if>
+
+    <!-- Author -->
+    <cms:if condition="isset($template['author'])">
+      <span class="author"><cms:var param="author" multilanguage="yes"/></span>
+    </cms:if>
+
+    <!-- Image gallery group connected to article -->
+    <cms:if condition="isset($template['image'])">
+      <cms:module
+        name="gallery"
+        action="show_image_list"
+        group_id="$params['gallery']"
+        template="parts/gallery_list.xml"
+        cms:eval="group_id"
+        />
+    </cms:if>
+
+    <!-- Title -->
+    <cms:if condition="isset($template['title'])">
+      <h2><cms:var param="title" multilanguage="yes"/></h2>
+    </cms:if>
+
+    <!-- Content -->
+    <cms:markdown param="content" multilanguage="yes"/>
+
+    <!-- Link with content form the title of the article-->
+    <cms:if condition="isset($template['link'])">
+      <a
+        href="URL::make(array('subject' => $template['subject'],'name' => $params['id']));"
+        cms:eval="href"
+        class="button"
+        >
+        <cms:var param="title" multilanguage="yes"/>
+      </a>
+    </cms:if>
+
+    <!-- Link with name of the article title expects article id  -->
+    <cms:if condition="isset($template['link_view'])">
+      <a
+        href="URL::make(array('name' => $params['id']));"
+        cms:eval="href"
+        class="button"
+        >
+        <cms:var param="title" multilanguage="yes"/>
+      </a>
+    </cms:if>
+
+  </article>
+</document>
