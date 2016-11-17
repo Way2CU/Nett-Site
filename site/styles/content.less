@@ -330,8 +330,7 @@ section.latest_articles article a:hover {
 	margin: 0 auto;
 }
 
-//Organic articles
-
+//Section Organic articles
 .organic section.organic_content article {
 	background-image: url(../images/organic.jpg);
 	background-position: calc(~'50% - 350px') center;
@@ -415,4 +414,18 @@ section.latest_organic article {
 section.latest_organic article p,
 section.latest_organic article h2 {
 	margin: 0.5em;
+}
+
+//Reveal more button
+
+section.latest_organic input:checked ~ article {
+	opacity: 0;
+}
+
+section.latest_organic input:checked ~ article:nth-of-type(1) {
+	opacity: 1;
+}
+
+section.latest_organic input:checked ~ article:nth-of-type(2) {
+	opacity: 1;
 }
