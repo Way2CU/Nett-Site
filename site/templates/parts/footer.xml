@@ -13,7 +13,7 @@
 		<!-- Button-phone -->
 		<a href="'tel:'.urlencode(Language::get_Text('phone'))"
 			cms:eval="href"
-			class="phone"
+			class="button"
 			>
 			<!-- Phone text -->
 			<cms:text constant="phone"/>
