@@ -331,6 +331,10 @@ section.latest_articles article a:hover {
 }
 
 //Section Organic articles
+.organic section.organic_content {
+	padding: 1em 0;
+}
+
 .organic section.organic_content article {
 	background-image: url(../images/organic.jpg);
 	background-position: calc(~'50% - 350px') center;
@@ -377,13 +381,13 @@ section.latest_organic {
 }
 
 section.latest_organic > h2 {
-	font-weight: 700;
-	border-top: 1px solid fade(@color_border, 50%);
+	font-weight: 400;
+	border-top: 1px solid fade(@color_border, 30%);
 	padding: 1em 0;
 	display: block;
 	width: 50%;
 	margin: 0 auto;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	position: relative;
 }
 
@@ -393,7 +397,7 @@ section.latest_organic > h2:after {
 	width: 50%;
 	margin: 0 auto;
 	height: 1px;
-	background-color: fade(@color_border, 50%);
+	background-color: fade(@color_border, 30%);
 	position: absolute;
 	top: 80%;
 	left: 50%;
@@ -404,8 +408,8 @@ section.latest_organic article {
 	text-align: center;
 	display: inline-block;
 	vertical-align: top;
-	width: 384px;
-	margin: 4px;
+	width: 382px;
+	margin: 6px;
 	min-height: 530px;
 	box-sizing: border-box;
 	border: 1px solid @color_border;
@@ -416,16 +420,32 @@ section.latest_organic article h2 {
 	margin: 0.5em;
 }
 
-//Reveal more button
-
-section.latest_organic input:checked ~ article {
-	opacity: 0;
+//Button toggle style and behavior
+section.latest_organic input {
+	display: none;
 }
 
-section.latest_organic input:checked ~ article:nth-of-type(1) {
-	opacity: 1;
+section.latest_organic label {
+	background-color: white;
+	border: 5px solid @color_button;
+	color: @color_button;
+	display: block;
+	width: 10%;
+	margin: 1em auto;
 }
 
-section.latest_organic input:checked ~ article:nth-of-type(2) {
-	opacity: 1;
+section.latest_organic label:hover {
+	color: white;
+}
+
+section.latest_organic input + div > article:nth-of-type(1n+4) {
+	display: none;
+	transform: scale(0);
+	transition: all 1s;
+}
+
+section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
+	display: inline-block;
+	transform: scale(1);
+	transition: all 1s;
 }
