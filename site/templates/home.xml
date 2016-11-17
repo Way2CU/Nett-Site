@@ -72,7 +72,7 @@
 						name="articles"
 						action="show_list"
 						group="home_features"
-						template="parts/article_list_svg.xml"
+						template="parts/articles/article_list_svg.xml"
 						/>
 				</ul>
 			</section>
@@ -106,7 +106,7 @@
 						name="gallery"
 						action="show_image_list"
 						group="clients_logos"
-						template="parts/gallery_list_logos.xml"
+						template="parts/galleries/gallery_list_logos.xml"
 						/>
 				</ul>
 			</section>
@@ -122,7 +122,7 @@
 						action="show_image_list"
 						group="tablet_showcase"
 						order_by="text_id"
-						template="parts/tablet_gallery.xml"
+						template="parts/galleries/tablet_gallery.xml"
 					/>
 				</div>
 				<!-- Mobile showcase container & img inside-->
@@ -132,7 +132,7 @@
 						action="show_image_list"
 						group="mobile_showcase"
 						order_by="text_id"
-						template="parts/mobile_gallery.xml"
+						template="parts/galleries/mobile_gallery.xml"
 					/>
 				</div>
 			</section>
@@ -146,7 +146,7 @@
 				<cms:module
 					name="articles"
 					action="show_group_list"
-					template="parts/group_list.xml"
+					template="parts/articles/group_list.xml"
 					/>
 			</section>
 

@@ -37,7 +37,7 @@
 					name="articles"
 					action="show"
 					text_id="organic_solo1"
-					template="stock/article_generic.xml"
+					template="parts/articles/article_generic.xml"
 				>
 				</cms:module>
 
@@ -46,7 +46,7 @@
 					name="articles"
 					action="show"
 					text_id="organic_solo2"
-					template="stock/article_generic.xml"
+					template="parts/articles/article_generic.xml"
 				>
 				<param name="title" value=""/>
 				</cms:module>
@@ -57,7 +57,7 @@
 					name="articles"
 					action="show"
 					text_id="organic_solo3"
-					template="stock/article_generic.xml"
+					template="parts/articles/article_generic.xml"
 				>
 				<param name="title" value=""/>
 				</cms:module>
@@ -72,13 +72,13 @@
 				<!--
 					Show articles group list
 					Show image gallery connected to artice
-					Show link to article_view.xml
+					Show link to article_view.xml with a name of article_title
 				-->
 				<cms:module
 					name="articles"
 					action="show_list"
 					group="organic"
-					template="stock/article_generic.xml"
+					template="parts/articles/article_generic.xml"
 					>
 					<param name="title" value=""/>
 					<param name="image" value=""/>

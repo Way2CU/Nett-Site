@@ -31,7 +31,7 @@
         name="gallery"
         action="show_image_list"
         group_id="$params['gallery']"
-        template="parts/gallery_list.xml"
+        template="parts/galleries/gallery_list.xml"
         cms:eval="group_id"
         />
     </cms:if>
