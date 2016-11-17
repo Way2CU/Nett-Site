@@ -4,11 +4,12 @@
 	"/press" : "press.xml",
 	"/gallery" : "gallery.xml",
 	"/organic" : "organic.xml",
-	"/organic/{article}" : "article_view.xml",
 	"/funding" : "funding.xml",
 	"/facebook" : "facebook.xml",
 	"/reputation" : "reputation.xml",
-	"/branding" : "branding.xml",
 	"/servers" : "servers.xml",
-	"/contact" : "contact.xml"
+	"/contact" : "contact.xml",
+	"/branding" : "branding.xml",
+	"/{name}" : "article_view.xml",
+	"/{subject}/{name}": "article_view.xml"
 }
