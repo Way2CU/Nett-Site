@@ -65,7 +65,15 @@
 
 			<section class="latest_organic">
 				<h2><cms:text constant="latest_organic"/></h2>
-				<!-- Show articles group list -->
+
+				<!-- Input hidden and button on top to control the visiblity of articles -->
+				<input type="checkbox"/>
+
+				<!--
+					Show articles group list
+					Show image gallery connected to artice
+					Show link to article_view.xml
+				-->
 				<cms:module
 					name="articles"
 					action="show_list"
@@ -74,7 +82,7 @@
 					>
 					<param name="title" value=""/>
 					<param name="image" value=""/>
-					<param name="link" value=""/>
+					<param name="link_view" value=""/>
 				</cms:module>
 			</section>
 			<footer>
