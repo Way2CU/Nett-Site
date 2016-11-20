@@ -36,7 +36,7 @@ header nav > ul {
 	display: block;
 	width: 100%;
 	padding: 0;
-	margin: 0;
+ 	margin: 0;
 	list-style: none;
 }
 
@@ -45,12 +45,17 @@ header nav ul li {
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
-	width: calc(~'100% / 9 ');
-	padding: 0 0.5em;
+	width: calc(~'100% / 10 ');
+	padding: 0 0.3em;
 	box-sizing: border-box;
 	border-left: 1px solid @color_border_image;
 	transition: all 0.3s;
 	min-height: 100px;
+}
+
+div.floating_header nav div.drop_down > a:hover,
+header nav ul li:hover > a {
+	color: @color_svg;
 }
 
 header nav ul li a {
@@ -107,7 +112,7 @@ header nav ul li.action:hover ul.sub_dropdown {
 header nav ul li ul.sub_dropdown {
 	position: absolute;
 	display: block;
-	top: 115%;
+	top: 125%;
 	left: 50%;
 	transform: translate(-50%);
 	width: 100px;
@@ -146,7 +151,6 @@ div.floating_header {
 	visibility: hidden;
 	opacity: 0;
 	position: fixed;
-	top: -100%;
 	left: 0;
 	right: 0;
 	z-index: 10000;
@@ -242,8 +246,6 @@ div.floating_header nav svg {
 	height: 50px;
 }
 
-
-
 div.floating_header nav div.drop_down {
 	display: block;
 	width: 300px;
@@ -283,11 +285,6 @@ div.floating_header nav div.drop_down > a:last-child {
 
 div.floating_header nav div.drop_down > a svg.phone_blue {
 	fill: #3498db;
-}
-
-div.floating_header nav div.drop_down > a:hover,
-div.floating_header nav div.drop_down > a:active {
-	color: red;
 }
 
 div.floating_header nav div.drop_down > a:last-of-type {
