@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="gallery_link"/></title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="gallery">
+
+			<cms:desktop>
+				<!-- 2 Header templates Desktop-->
+				<cms:template file="parts/header.xml"/>
+				<cms:template file="parts/header_floating.xml"/>
+			</cms:desktop>
+
+			<!-- Header template for mobile -->
+			<cms:mobile>
+				<cms:template file="parts/header.xml"/>
+			</cms:mobile>
+
+			<!-- div with logo h1 and p -->
+			<section class="header_gallery">
+				<div class="title">
+					<cms:svg file="site-sprite.svg" symbol="icon-gallery" />
+					<h1><cms:text constant="gallery_link"/></h1>
+					<p><cms:text constant="gallery_title"/></p>
+				</div>
+			</section>
+
+			<!-- section gallery list group -->
+			<section class="gallery_list">
+				<cms:module
+							name="gallery"
+							action="show_group_list"
+							template="parts/galleries/gallery_groups_articles.xml"
+						/>
+			</section>
+
+			<!-- Footer Template -->
+			<footer>
+				<cms:template file="parts/footer.xml"/>
+				<!-- Copyright -->
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
+		</body>
+	</html>
+</document>
