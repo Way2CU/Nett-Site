@@ -1,0 +1,21 @@
+<document>
+	<!-- Tablet showcase container & img inside-->
+			<cms:module
+				name="gallery"
+				action="show_image"
+				text_id="desktop"
+				group_id="$params['id']"
+				template="parts/galleries/desktop_gallery.xml"
+				cms:eval="group_id"
+			/>
+
+		<!-- Tablet showcase container & img inside-->
+			<cms:module
+				name="gallery"
+				action="show_image"
+				text_id="mobile"
+				group_id="$params['id']"
+				template="parts/galleries/mobile_gallery.xml"
+				cms:eval="group_id"
+			/>
+</document>

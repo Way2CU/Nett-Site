@@ -1,0 +1,11 @@
+<document>
+		<!-- Mobile showcase container & img inside-->
+		<cms:module
+			name="gallery"
+			action="show_image"
+			group_id="$params['id']"
+			text_id="mobile"
+			template="parts/galleries/mobile_gallery.xml"
+			cms:eval="group_id"
+		/>
+</document>
