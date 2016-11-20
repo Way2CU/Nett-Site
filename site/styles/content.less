@@ -662,6 +662,47 @@ section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 	background-image: url(../images/gallery_background.jpg);
 }
 
-.gallery section.gallery {
+.gallery section.gallery_list {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	text-align: center;
+}
+
+.gallery section.gallery_list div.gallery_content {
+	display: block;
+	width: 100%;
+	margin: 1em auto;
+}
+
+.gallery section.gallery_list div.gallery_content p,
+.gallery section.gallery_list div.gallery_content a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: @color_title;
+}
+
+.gallery section.gallery_list div.gallery_content a {
+	font-weight: 700;
+}
+
+.gallery section.gallery_list div.gallery_content a:hover {
+	color: @color_svg;
+}
+
+.gallery section.gallery_list div.gallery_content p {
+	padding-left: 2em;
+}
+
+.gallery section.gallery_list div.gallery_content a:first-of-type {
+	padding-left: 1em;
+}
+
+.gallery section.gallery_list div.gallery_content a img {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	border: 1px solid transparent;
+}
+.gallery section.gallery_list div.gallery_content a img:hover {
+	border: 1px solid @color_svg;
 }
