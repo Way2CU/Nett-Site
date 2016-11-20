@@ -1,6 +1,15 @@
 <document>
 	<!-- 2 modules with gallery by text id "desktop" "mobile" with markdown on desktop -->
-	<div class="gallery_container">
+	<div class="gallery_content">
+	<!-- Desktop gallery -->
+		<cms:module
+			name="gallery"
+			action="show_image"
+			text_id="desktop"
+			group_id="$params['id']"
+			template="parts/galleries/desktop_gallery_page.xml"
+			cms:eval="group_id"
+		/>
 	<!-- Mobile galler -->
 		<cms:module
 			name="gallery"
@@ -10,14 +19,5 @@
 			template="parts/galleries/mobile_gallery_page.xml"
 			cms:eval="group_id"
 		/>
-	<!-- Desktop gallery -->
-			<cms:module
-				name="gallery"
-				action="show_image"
-				text_id="desktop"
-				group_id="$params['id']"
-				template="parts/galleries/desktop_gallery_page.xml"
-				cms:eval="group_id"
-			/>
-		</div>
+	</div>
 </document>
