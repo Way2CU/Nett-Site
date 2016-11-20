@@ -114,27 +114,12 @@
 			<!-- Section Projects Showcase -->
 			<section class="showcase">
 				<h2><cms:text constant="latest_projects"/></h2>
-
-				<!-- Tablet showcase container & img inside-->
-				<div class="tablet">
+			<!-- Gallery list group -->
 					<cms:module
 						name="gallery"
-						action="show_image_list"
-						group="tablet_showcase"
-						order_by="text_id"
-						template="parts/galleries/tablet_gallery.xml"
+						action="show_group_list"
+						template="parts/galleries/gallery_groups.xml"
 					/>
-				</div>
-				<!-- Mobile showcase container & img inside-->
-				<div class="mobile">
-					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="mobile_showcase"
-						order_by="text_id"
-						template="parts/galleries/mobile_gallery.xml"
-					/>
-				</div>
 			</section>
 
 			<!-- Section latest articles -->
