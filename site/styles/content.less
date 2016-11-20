@@ -6,6 +6,8 @@
  * Authors: Iliya Melishev
  */
 
+ //Combined header styles of all page are in secton ORGANIC
+
 section.laptop {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
 	background-image: url(../images/laptop_background.jpg);
@@ -307,8 +309,10 @@ section.latest_articles article a:hover {
 
 //Combined header page style with contact page
 //Combined header page style with gallery page
+//Combined header page style with press page
 
 //Fixed backgound image
+.press section.header_press,
 .gallery section.header_gallery,
 .contact section.header_contact,
 .organic section.header {
@@ -322,6 +326,7 @@ section.latest_articles article a:hover {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 }
 
+.press section.header_press div.title,
 .gallery section.header_gallery div.title,
 .contact section.header_contact div.title,
 .organic section div.title {
@@ -335,6 +340,7 @@ section.latest_articles article a:hover {
 	padding: 1em;
 }
 
+.press section.header_press div.title h1,
 .gallery section.header_gallery div.title h1,
 .contact section.header_contact div.title h1,
 .organic section div.title h1 {
@@ -344,12 +350,14 @@ section.latest_articles article a:hover {
 	margin: 0;
 }
 
+.press section.header_press div.title p,
 .gallery section.header_gallery div.title p,
 .contact section.header_contact div.title p,
 .organic section div.title p {
 	margin-bottom: 0;
 }
 
+.press section.header_press div.title svg,
 .gallery section.header_gallery div.title svg,
 .contact section.header_contact div.title svg,
 .organic section div.title svg {
@@ -705,4 +713,47 @@ section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 }
 .gallery section.gallery_list div.gallery_content a img:hover {
 	border: 1px solid @color_svg;
+}
+
+/*
+* Page Press
+*/
+
+//section press header rule for diffrent background image
+.press section.header_press {
+	background-image: url(../images/press_background.jpg);
+}
+//section press with articles
+.press section.press {
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
+}
+
+.press section.press article {
+	display: block;
+	width: 100%;
+	position: relative;
+	margin-bottom: 1em;
+}
+
+.press section.press article:after {
+	content: "";
+	display: block;
+	width: 50%;
+	height: 1px;
+	background-color: @color_border;
+	position: absolute;
+	top: calc(~'100% + 1em');
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.press section.press article img {
+	position: absolute;
+	top: 50%;
+	left: calc(~'50% - 600px');
+	transform: translateY(-50%);
+}
+
+.press section.press article a {
+	padding: 1em 2em;
 }
