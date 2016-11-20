@@ -54,6 +54,16 @@
 						</a>
 					</li>
 					<li>
+						<!-- SiteBuilding link, image and constant -->
+						<a
+							href="URL::make(array(), 'building.xml')"
+							cms:eval="href"
+							>
+							<cms:svg file="site-sprite.svg" symbol="icon-globe"/>
+							<cms:text constant="site_bulding"/>
+						</a>
+					</li>
+					<li>
 						<!-- Promotion link, image and constant -->
 						<a
 							href="URL::make(array(), 'organic.xml')"
