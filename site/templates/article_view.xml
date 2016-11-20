@@ -26,13 +26,12 @@
 					name="articles"
 					action="show"
 					id="$_REQUEST['name']"
-					template="stock/article_generic.xml"
+					template="parts/articles/article_generic.xml"
 					cms:eval="id"
 					>
 					<param name="title" value=""/>
 					<param name="image" value=""/>
 				</cms:module>
-
 			</section>
 
 			<footer>
