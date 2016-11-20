@@ -161,6 +161,7 @@ section.showcase {
 	background-size: 1920px 800px;
 	background-repeat: no-repeat;
 	min-height: 800px;
+	position: relative;
 }
 section.showcase h2 {
 	color: white;
@@ -171,16 +172,20 @@ section.showcase h2 {
 	margin-bottom: 3em;
 }
 
-section.showcase div.tablet {
-	position: relative;
+section.showcase div.desktop {
 	display: block;
-	margin: 0 auto;
 	background-image: url(../images/tablet.svg);
 	background-size: 760px 600px;
 	width: 760px;
 	height: 600px;
 	background-position: center;
 	background-repeat: no-repeat;
+	position: absolute;
+	top: 59%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	visibility: hidden;
 }
 
 section.showcase div.mobile {
@@ -188,53 +193,60 @@ section.showcase div.mobile {
 	top: 52%;
 	left: calc(~'50% + 300px');
 	display: block;
-	margin: 0 auto;
 	background-image: url(../images/mobile.svg);
 	background-size: 190px 360px;
 	width: 190px;
 	height: 360px;
 	background-position: center;
 	background-repeat: no-repeat;
+	opacity: 0;
+	visibility: hidden;
 }
 
-section.showcase div.tablet div.content,
-section.showcase div.mobile img {
+section.showcase div.desktop.visible,
+section.showcase div.mobile.visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+section.showcase div.mobile img,
+section.showcase div.desktop img {
 	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border: 1px solid white;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.3s;
+	z-index: 1;
 }
 
-section.showcase div.tablet div.content.visible,
-section.showcase div.mobile img.visible {
-	opacity: 1;
-	visibility: visible;
-}
-
-section.showcase div.tablet div.content p a,
-section.showcase div.tablet div.content p {
+section.showcase div.mobile p {
 	position: absolute;
-	bottom: 104%;
-	left: 50%;
+	top: -84%;
+	left: -150%;
 	transform: translateX(-50%);
 	text-align: center;
 	display: block;
 	color: @color_title;
-	text-decoration: none;
 	margin-top: 0;
 	visibility: hidden;
 	opacity: 0;
 }
 
-section.showcase div.tablet div.content.visible p a,
-section.showcase div.tablet div.content.visible p {
-	visibility: visible;
+section.showcase div.mobile a {
+	text-decoration: none;
+	color: @color_svg;
+	font-weight: 700;
+}
+
+section.showcase div.mobile a:hover {
+	color: lighten(@color_svg, 10%);
+}
+
+section.showcase div.mobile.visible p a,
+section.showcase div.mobile.visible p {
 	opacity: 1;
+	visibility: visible;
 }
 
 /*
@@ -269,6 +281,10 @@ section.latest_articles article {
 	padding-top: 1.5em;
 }
 
+section.latest_articles article p {
+	min-height: 150px;
+}
+
 section.latest_articles article a {
 	display: block;
 	width: 50%;
@@ -290,8 +306,10 @@ section.latest_articles article a:hover {
 */
 
 //Combined header page style with contact page
+//Combined header page style with gallery page
 
 //Fixed backgound image
+.gallery section.header_gallery,
 .contact section.header_contact,
 .organic section.header {
 	background-image: url(../images/organic_header_background.jpg);
@@ -304,6 +322,7 @@ section.latest_articles article a:hover {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 }
 
+.gallery section.header_gallery div.title,
 .contact section.header_contact div.title,
 .organic section div.title {
 	display: block;
@@ -316,6 +335,7 @@ section.latest_articles article a:hover {
 	padding: 1em;
 }
 
+.gallery section.header_gallery div.title h1,
 .contact section.header_contact div.title h1,
 .organic section div.title h1 {
 	font-weight: 700;
@@ -324,11 +344,13 @@ section.latest_articles article a:hover {
 	margin: 0;
 }
 
+.gallery section.header_gallery div.title p,
 .contact section.header_contact div.title p,
 .organic section div.title p {
 	margin-bottom: 0;
 }
 
+.gallery section.header_gallery div.title svg,
 .contact section.header_contact div.title svg,
 .organic section div.title svg {
 	width: 3em;
@@ -630,4 +652,16 @@ section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 
 .contact section.contact_us div.left form div.controls button {
 	padding: 1em 3em;
+}
+
+/*
+* Gallery Page
+*/
+
+.gallery section.header_gallery {
+	background-image: url(../images/gallery_background.jpg);
+}
+
+.gallery section.gallery {
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
 }
