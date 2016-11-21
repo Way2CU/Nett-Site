@@ -86,7 +86,7 @@
 
 					<!-- label for input checkbox with text constant -->
 					<label for="toggle" class="button">
-						<cms:text constant="read_more"/>
+						<cms:text constant="show_more"/>
 					</label>
 
 				</div>
