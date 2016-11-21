@@ -8,7 +8,7 @@
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body class="building">
+		<body>
 
 			<cms:desktop>
 				<!-- 2 Header templates Desktop-->
@@ -16,13 +16,8 @@
 				<cms:template file="parts/header_floating.xml"/>
 			</cms:desktop>
 
-			<!-- Header template for mobile -->
-			<cms:mobile>
-				<cms:template file="parts/header.xml"/>
-			</cms:mobile>
-
 			<!-- div with logo h1 and p -->
-			<section class="header_building">
+			<section class="header building">
 				<div class="title">
 					<cms:svg file="site-sprite.svg" symbol="icon-globe"/>
 					<h1><cms:text constant="building_link"/></h1>
@@ -31,7 +26,7 @@
 			</section>
 
 			<!-- Section Solo Articles -->
-			<section class="building_content">
+			<section class="content building">
 				<!-- Specific article1 linked to generic article with title -->
 				<cms:module
 					name="articles"
@@ -65,7 +60,7 @@
 			</section>
 
 			<!-- Section with latest articles  -->
-			<section class="latest_building">
+			<section class="latest building">
 				<h2><cms:text constant="latest_building"/></h2>
 
 				<!-- checkbox to act as toggle to reveal content -->
@@ -92,7 +87,7 @@
 
 					<!-- label for input checkbox with text constant -->
 					<label for="toggle" class="button">
-						<cms:text constant="read_more"/>
+						<cms:text constant="show_more"/>
 					</label>
 
 				</div>

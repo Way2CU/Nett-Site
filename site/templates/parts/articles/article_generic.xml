@@ -62,7 +62,7 @@
         cms:eval="href"
         class="button"
         >
-        <cms:var param="title" multilanguage="yes"/>
+        <cms:text constant="read_more" />
       </a>
     </cms:if>
 

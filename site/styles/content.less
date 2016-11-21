@@ -302,25 +302,10 @@ section.latest_articles article a:hover {
 	background-color: lighten(@color_button, 10%);
 }
 
-
-/*
-* Organic Page
-*/
-
-//Combined header page style with contact page
-//Combined header page style with gallery page
-//Combined header page style with press page
-//Combined header page style with facebook page
-//Combined header page style with building page
-
+//Inner pages style
 //Fixed backgound image
-.building section.header_building,
-.facebook section.header_facebook,
-.press section.header_press,
-.gallery section.header_gallery,
-.contact section.header_contact,
-.organic section.header {
-	background-image: url(../images/organic_header_background.jpg);
+
+section.header {
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: 100% auto;
@@ -330,12 +315,20 @@ section.latest_articles article a:hover {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 }
 
-.building section.header_building div.title,
-.facebook section.header_facebook div.title,
-.press section.header_press div.title,
-.gallery section.header_gallery div.title,
-.contact section.header_contact div.title,
-.organic section div.title {
+section.header.facebook {
+	background-image: url(../images/facebook_header_background.jpg);
+}
+section.header.organic {
+	background-image: url(../images/organic_header_background.jpg);
+}
+section.header.building {
+	background-image: url(../images/building_header_background.jpg);
+}
+section.header.press {
+	background-image: url(../images/press_background.jpg);
+}
+
+section.header div.title {
 	display: block;
 	background-color: fade(white, 50%);
 	text-align: center;
@@ -346,52 +339,30 @@ section.latest_articles article a:hover {
 	padding: 1em;
 }
 
-.building section.header_building div.title h1,
-.facebook section.header_facebook div.title h1,
-.press section.header_press div.title h1,
-.gallery section.header_gallery div.title h1,
-.contact section.header_contact div.title h1,
-.organic section div.title h1 {
+section.header div.title h1 {
 	font-weight: 700;
 	border-bottom: 1px solid @color_border;
 	padding-bottom: 0.5em;
 	margin: 0;
 }
 
-.building section.header_building div.title p,
-.facebook section.header_facebook div.title p,
-.press section.header_press div.title p,
-.gallery section.header_gallery div.title p,
-.contact section.header_contact div.title p,
-.organic section div.title p {
+section.header div.title p {
 	margin-bottom: 0;
 }
 
-.building section.header_building div.title svg,
-.facebook section.header_facebook div.title svg,
-.press section.header_press div.title svg,
-.gallery section.header_gallery div.title svg,
-.contact section.header_contact div.title svg,
-.organic section div.title svg {
+section.header div.title svg {
 	width: 3em;
 	height: 3em;
 	display: block;
 	margin: 0 auto;
 }
 
-/*Connected style with Building page*/
-/*Connected style with Facebook page*/
-//Section Organic articles
-.building section.building_content,
-.facebook section.facebook_content,
-.organic section.organic_content {
+//Content of pages
+section.content {
 	padding: 1em 0;
 }
 
-.building section.building_content article,
-.facebook section.facebook_content article,
-.organic section.organic_content article {
-	background-image: url(../images/organic.jpg);
+section.content article {
 	background-position: calc(~'50% - 350px') center;
 	background-size: 501px 501px;
 	background-repeat: no-repeat;
@@ -402,54 +373,62 @@ section.latest_articles article a:hover {
 	margin-bottom: 1em;
 }
 
-.building section.building_content article:nth-child(1) p,
-.facebook section.facebook_content article:nth-child(1) p,
-.organic section.organic_content article:nth-child(1) p {
-	padding-top: 1em;
-}
-
-.building section.building_content article:nth-child(2),
-.facebook section.facebook_content article:nth-child(2),
-.organic section.organic_content article:nth-child(2) {
-	background-image: url(../images/organic2.jpg);
+section.content article:nth-child(2) {
 	background-position: center center;
 	background-size: 1920px 501px;
 	background-repeat: no-repeat;
 	min-height: 501px;
 }
 
-.building section.building_content article:nth-child(1),
-.facebook section.facebook_content article:nth-child(3),
-.organic section.organic_content article:nth-child(3) {
+section.content article h2 {
+	margin: 0;
+	padding: 1em 0;
+}
+
+//Facebook Backgrounds
+section.content.facebook article:nth-child(1) {
+	background-image: url(../images/facebook_local.jpg);
+}
+
+section.content.facebook article:nth-child(2){
+	background-image: url(../images/facebook_full_bg.jpg);
+}
+
+section.content.facebook article:nth-child(3){
+	background-image: url(../images/facebook_like.jpg);
+}
+//Oraganic Backgrounds
+section.content.organic article:nth-child(1) {
+	background-image: url(../images/organic.jpg);
+}
+
+section.content.organic article:nth-child(2){
+	background-image: url(../images/organic2.jpg);
+}
+
+section.content.organic article:nth-child(3){
 	background-image: url(../images/organic3.jpg);
 }
-
-.building section.building_content article p,
-.facebook section.facebook_content article p,
-.organic section.organic_content article p {
-	margin: 0;
+//Building Backgrounds
+section.content.building article:nth-child(1) {
+	background-image: url(../images/building_background.jpg);
 }
 
-.building section.building_content article h2,
-.facebook section.facebook_content article h2,
-.organic section.organic_content article h2 {
-	padding: 1em 0;
-	margin: 0;
+section.content.building article:nth-child(2){
+	background-image: url(../images/building_bg_full.jpg);
 }
 
-/*
-* Latest articles organic **Conected style with Facebook Page
-*/
+section.content.building article:nth-child(3){
+	background-image: url(../images/building_background2.jpg);
+}
+
+
 //latest articles connected
-section.latest_building,
-section.latest_facebook,
-section.latest_organic {
+section.latest {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 }
 
-section.latest_building > h2,
-section.latest_facebook > h2,
-section.latest_organic > h2 {
+section.latest > h2 {
 	font-weight: 400;
 	border-top: 1px solid fade(@color_border, 30%);
 	padding: 1em 0;
@@ -461,9 +440,7 @@ section.latest_organic > h2 {
 	text-align: center;
 }
 
-section.latest_building > h2:after,
-section.latest_facebook > h2:after,
-section.latest_organic > h2:after {
+section.latest > h2:after {
 	content: "";
 	display: block;
 	width: 50%;
@@ -476,9 +453,7 @@ section.latest_organic > h2:after {
 	transform: translateX(-50%);
 }
 
-section.latest_building article,
-section.latest_facebook article,
-section.latest_organic article {
+section.latest article {
 	text-align: center;
 	display: inline-block;
 	vertical-align: top;
@@ -489,25 +464,17 @@ section.latest_organic article {
 	border: 1px solid @color_border;
 }
 
-section.latest_building article p,
-section.latest_building article h2,
-section.latest_facebook article p,
-section.latest_facebook article h2,
-section.latest_organic article p,
-section.latest_organic article h2 {
+section.latest article p,
+section.latest article h2 {
 	margin: 0.5em;
 }
 
 //Button toggle style and behavior
-section.latest_building input,
-section.latest_facebook input,
-section.latest_organic input {
+section.latest input {
 	display: none;
 }
 
-section.latest_building label,
-section.latest_facebook label,
-section.latest_organic label {
+section.latest label {
 	background-color: white;
 	border: 5px solid @color_button;
 	color: @color_button;
@@ -516,24 +483,17 @@ section.latest_organic label {
 	margin: 1em auto;
 }
 
-section.latest_building label:hover,
-section.latest_facebook label:hover,
-section.latest_organic label:hover {
+section.latest label:hover {
 	color: white;
 }
 
-section.latest_building input + div > article:nth-of-type(1n+4),
-section.latest_facebook input + div > article:nth-of-type(1n+4),
-section.latest_organic input + div > article:nth-of-type(1n+4) {
+section.latest input + div > article:nth-of-type(1n+4) {
 	display: none;
 }
 
-section.latest_building input:checked + div > article:nth-of-type(1n+4),
-section.latest_facebook input:checked + div > article:nth-of-type(1n+4),
-section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
+section.latest input:checked + div > article:nth-of-type(1n+4) {
 	display: inline-block;
 }
-
 
 /*
 * Contact Page
@@ -766,26 +726,22 @@ section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 }
 
 /*
-* Page Press
+* Page From the Press
 */
 
-//section press header rule for diffrent background image
-.press section.header_press {
-	background-image: url(../images/press_background.jpg);
-}
 //section press with articles
-.press section.press {
+section.press {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 }
 
-.press section.press article {
+section.press article {
 	display: block;
 	width: 100%;
 	position: relative;
 	margin-bottom: 1em;
 }
 
-.press section.press article:after {
+section.press article:after {
 	content: "";
 	display: block;
 	width: 50%;
@@ -797,57 +753,13 @@ section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 	transform: translateX(-50%);
 }
 
-.press section.press article img {
+section.press article img {
 	position: absolute;
 	top: 50%;
 	left: calc(~'50% - 600px');
 	transform: translateY(-50%);
 }
 
-.press section.press article a {
+section.press article a {
 	padding: 1em 2em;
-}
-
-/*
-* Facebook Page
-*/
-
-//Styles connected with Page Organic
-.facebook section.header_facebook {
-	background-image: url(../images/facebook_header_background.jpg);
-}
-
-//Targeting specific bg images
-.facebook section.facebook_content article:nth-child(1) {
-	background-image: url(../images/facebook_local.jpg);
-}
-
-.facebook section.facebook_content article:nth-child(2){
-	background-image: url(../images/facebook_full_bg.jpg);
-}
-
-.facebook section.facebook_content article:nth-child(3){
-	background-image: url(../images/facebook_like.jpg);
-}
-
-/*
-* Building Page
-*/
-
-//Styles connected with Page Organic
-.building section.header_building {
-	background-image: url(../images/building_header_background.jpg);
-}
-
-//Targeting specific bg images
-.building section.building_content article:nth-child(1) {
-	background-image: url(../images/building_background.jpg);
-}
-
-.building section.building_content article:nth-child(2){
-	background-image: url(../images/building_bg_full.jpg);
-}
-
-.building section.building_content article:nth-child(3){
-	background-image: url(../images/building_background2.jpg);
 }

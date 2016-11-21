@@ -8,7 +8,7 @@
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body class="press">
+		<body>
 
 			<cms:desktop>
 				<!-- 2 Header templates Desktop-->
@@ -22,7 +22,7 @@
 			</cms:mobile>
 
 			<!-- div with logo h1 and p -->
-			<section class="header_press">
+			<section class="header press">
 				<div class="title">
 					<cms:svg file="site-sprite.svg" symbol="icon-press"/>
 					<h1><cms:text constant="press_link"/></h1>

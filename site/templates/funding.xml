@@ -4,34 +4,39 @@
 	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
-			<title><cms:text constant="facebook_link"/></title>
+			<title><cms:text constant="funding_link"/></title>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body>
-
 			<cms:desktop>
 				<!-- 2 Header templates Desktop-->
 				<cms:template file="parts/header.xml"/>
 				<cms:template file="parts/header_floating.xml"/>
 			</cms:desktop>
 
-			<!-- div with logo h1 and p -->
-			<section class="header facebook">
+			<!-- Header template for mobile -->
+			<cms:mobile>
+				<cms:template file="parts/header.xml"/>
+			</cms:mobile>
+
+			<section class="header funding">
+
+				<!-- div with logo h1 and p -->
 				<div class="title">
-					<cms:svg file="site-sprite.svg" symbol="icon-facebook"/>
-					<h1><cms:text constant="facebook_link"/></h1>
-					<p><cms:text constant="facebook_title"/></p>
+					<cms:svg file="site-sprite.svg" symbol="icon-money"/>
+					<h1><cms:text constant="funding_link"/></h1>
+					<p><cms:text constant="funding_title"/></p>
 				</div>
 			</section>
 
-			<!-- Section Solo Articles -->
-			<section class="content facebook">
+			<!-- Section Articles -->
+			<section class="content funding">
 				<!-- Specific article1 linked to generic article with title -->
 				<cms:module
 					name="articles"
 					action="show"
-					text_id="facebook_solo1"
+					text_id="funding_solo1"
 					template="parts/articles/article_generic.xml"
 				>
 				</cms:module>
@@ -40,7 +45,7 @@
 				<cms:module
 					name="articles"
 					action="show"
-					text_id="facebook_solo2"
+					text_id="funding_solo2"
 					template="parts/articles/article_generic.xml"
 				>
 				<param name="title" value=""/>
@@ -51,7 +56,7 @@
 				<cms:module
 					name="articles"
 					action="show"
-					text_id="facebook_solo3"
+					text_id="funding_solo3"
 					template="parts/articles/article_generic.xml"
 				>
 				<param name="title" value=""/>
@@ -59,8 +64,8 @@
 			</section>
 
 			<!-- Section with latest articles  -->
-			<section class="latest facebook">
-				<h2><cms:text constant="latest_facebook"/></h2>
+			<section class="latest funding">
+				<h2><cms:text constant="latest_funding"/></h2>
 
 				<!-- checkbox to act as toggle to reveal content -->
 				<input type="checkbox" id="toggle"/>
@@ -75,7 +80,7 @@
 					<cms:module
 						name="articles"
 						action="show_list"
-						group="facebook"
+						group="funding"
 						order_by="id"
 						template="parts/articles/article_generic.xml"
 						>
@@ -91,8 +96,8 @@
 
 				</div>
 			</section>
-			<!-- Footer Template -->
 			<footer>
+				<!-- Footer Template -->
 				<cms:template file="parts/footer.xml"/>
 
 				<!-- Copyright -->

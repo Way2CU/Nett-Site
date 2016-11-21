@@ -8,7 +8,7 @@
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body class="organic">
+		<body>
 			<cms:desktop>
 				<!-- 2 Header templates Desktop-->
 				<cms:template file="parts/header.xml"/>
@@ -20,7 +20,7 @@
 				<cms:template file="parts/header.xml"/>
 			</cms:mobile>
 
-			<section class="header">
+			<section class="header organic">
 
 				<!-- div with logo h1 and p -->
 				<div class="title">
@@ -31,7 +31,7 @@
 			</section>
 
 			<!-- Section Articles -->
-			<section class="organic_content">
+			<section class="content organic">
 				<!-- Specific article1 linked to generic article with title -->
 				<cms:module
 					name="articles"
@@ -64,7 +64,7 @@
 			</section>
 
 			<!-- Section with latest articles  -->
-			<section class="latest_organic">
+			<section class="latest organic">
 				<h2><cms:text constant="latest_organic"/></h2>
 
 				<!-- checkbox to act as toggle to reveal content -->
