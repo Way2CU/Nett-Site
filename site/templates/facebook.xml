@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="facebook_link"/></title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="facebook">
+
+			<cms:desktop>
+				<!-- 2 Header templates Desktop-->
+				<cms:template file="parts/header.xml"/>
+				<cms:template file="parts/header_floating.xml"/>
+			</cms:desktop>
+
+			<!-- Header template for mobile -->
+			<cms:mobile>
+				<cms:template file="parts/header.xml"/>
+			</cms:mobile>
+
+			<!-- div with logo h1 and p -->
+			<section class="header_facebook">
+				<div class="title">
+					<cms:svg file="site-sprite.svg" symbol="icon-facebook"/>
+					<h1><cms:text constant="facebook_link"/></h1>
+					<p><cms:text constant="facebook_title"/></p>
+				</div>
+			</section>
+
+			<!-- Section Solo Articles -->
+			<section class="facebook_content">
+				<!-- Specific article1 linked to generic article with title -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="facebook_solo1"
+					template="parts/articles/article_generic.xml"
+				>
+				</cms:module>
+
+				<!-- Specific article2 linked to generic article with title -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="facebook_solo2"
+					template="parts/articles/article_generic.xml"
+				>
+				<param name="title" value=""/>
+				</cms:module>
+
+
+				<!-- Specific article3 linked to generic article with title -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="facebook_solo3"
+					template="parts/articles/article_generic.xml"
+				>
+				<param name="title" value=""/>
+				</cms:module>
+			</section>
+
+			<!-- Section with latest articles  -->
+			<section class="latest_facebook">
+				<h2><cms:text constant="latest_facebook"/></h2>
+
+				<!-- checkbox to act as toggle to reveal content -->
+				<input type="checkbox" id="toggle"/>
+
+				<!-- Container with article list  -->
+				<div>
+				<!--
+					Show articles group list
+					Show image gallery connected to artice
+					Show link to article_view.xml with a name of article_title
+				-->
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="facebook"
+						order_by="id"
+						template="parts/articles/article_generic.xml"
+						>
+						<param name="title" value=""/>
+						<param name="image" value=""/>
+						<param name="link_view" value=""/>
+					</cms:module>
+
+					<!-- label for input checkbox with text constant -->
+					<label for="toggle" class="button">
+						<cms:text constant="read_more"/>
+					</label>
+
+				</div>
+			</section>
+			<!-- Footer Template -->
+			<footer>
+				<cms:template file="parts/footer.xml"/>
+
+				<!-- Copyright -->
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
+		</body>
+	</html>
+</document>
