@@ -306,7 +306,7 @@ section.latest_articles article a:hover {
 //Fixed backgound image
 
 section.header {
-	background-position: center center;
+	background-position: center 151px;
 	background-attachment: fixed;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
@@ -325,12 +325,21 @@ section.header.building {
 	background-image: url(../images/building_header_background.jpg);
 }
 section.header.press {
-	background-image: url(../images/press_background.jpg);
+	background-image: url(../images/press_header_background.jpg);
+}
+section.header.funding {
+	background-image: url(../images/funding_header_background.jpg);
+}
+section.header.contact {
+	background-image: url(../images/contact_header_background.jpg);
+}
+section.header.gallery {
+	background-image: url(../images/press_header_background.jpg);
 }
 
 section.header div.title {
 	display: block;
-	background-color: fade(white, 50%);
+	background-color: fade(white, 80%);
 	text-align: center;
 	position: absolute;
 	top: 50%;
@@ -421,9 +430,20 @@ section.content.building article:nth-child(2){
 section.content.building article:nth-child(3){
 	background-image: url(../images/building_background2.jpg);
 }
+//funding Backgrounds
+section.content.funding article:nth-child(1) {
+	background-image: url(../images/funding_background.jpg);
+}
 
+section.content.funding article:nth-child(2){
+	background-image: url(../images/funding_background2.jpg);
+}
 
-//latest articles connected
+section.content.funding article:nth-child(3){
+	background-image: url(../images/funding_background3.jpg);
+}
+
+//Section latest articles
 section.latest {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 }
@@ -499,22 +519,14 @@ section.latest input:checked + div > article:nth-of-type(1n+4) {
 * Contact Page
 */
 
-.contact section.header_contact {
-	background-image: url(../images/contact_us_background.jpg);
-}
-
-.contact section.header_contact div.title {
-	padding: 1em 5em;
-}
-
 //Contact page Section information
-.contact section.contact_us,
-.contact section.information {
+section.contact_us,
+section.information {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
 	position: relative;
 }
 
-.contact section.information:after {
+section.information:after {
 	content: "";
 	display: block;
 	height: 2px;
@@ -523,22 +535,23 @@ section.latest input:checked + div > article:nth-of-type(1n+4) {
 	margin: 1.5em 0;
 	background-color: fade(@color_border, 50%);
 }
-.contact section.contact_us div.right,
-.contact section.contact_us div.left,
-.contact section.information div.left,
-.contact section.information div.right {
+section.contact_us div.right,
+section.contact_us div.left,
+section.information div.left,
+section.information div.right {
 	display: inline-block;
 	vertical-align: top;
 	width: 50%;
 	min-height: 500px;
 }
-.contact section.information div.right article {
+
+section.information div.right article {
 	padding-bottom: 1em;
 	position: relative;
 	display: block;
 }
 
-.contact section.information div.right article:after {
+section.information div.right article:after {
 	display: block;
 	position: absolute;
 	content: "";
@@ -550,7 +563,7 @@ section.latest input:checked + div > article:nth-of-type(1n+4) {
 }
 
 //Links with Svg files
-.contact section.information div.right a {
+section.information div.right a {
 	display: block;
 	color: @color_title;
 	text-decoration: none;
@@ -558,11 +571,11 @@ section.latest input:checked + div > article:nth-of-type(1n+4) {
 	width: 50%;
 }
 
-.contact section.information div.right a:nth-of-type(1) {
+section.information div.right a:nth-of-type(1) {
 	padding-top: 1em;
 }
 
-.contact section.information div.right a svg {
+section.information div.right a svg {
 	display: inline-block;
 	vertical-align: middle;
 	width: 2em;
@@ -571,38 +584,39 @@ section.latest input:checked + div > article:nth-of-type(1n+4) {
 	border:1px solid transparent;
 }
 
-.contact section.information div.right a:hover {
+section.information div.right a:hover {
 	color: darken(@color_svg, 10%);
 }
 
 //Left div with map
-.contact section.information div.left {
+section.information div.left {
 	padding-top: 1.5em;
 }
 
-.contact section.information div.left div#map {
+section.information div.left div#map {
 	width: 100%;
 	height: 500px;
 }
 
 //Section contact Form
-.contact section.contact_us div.right h2 {
+section.contact_us div.right h2 {
 	margin: 0;
 }
 
-.contact section.contact_us div.left form {
+section.contact_us div.left form {
 	display: block;
 	width: 100%;
 }
 
-.contact section.contact_us div.left form label {
+section.contact_us div.left form label {
 	display: inline-block;
 	vertical-align: middle;
 	width: 50%;
 }
-.contact section.contact_us div.left form label select,
-.contact section.contact_us div.left form label input,
-.contact section.contact_us div.left form label span {
+
+section.contact_us div.left form label select,
+section.contact_us div.left form label input,
+section.contact_us div.left form label span {
 	display: block;
 	width: 95%;
 	box-sizing: border-box;
@@ -611,35 +625,34 @@ section.latest input:checked + div > article:nth-of-type(1n+4) {
 	background-color: white;
 }
 
-.contact section.contact_us div.left form label:nth-child(odd) select,
-.contact section.contact_us div.left form label:nth-child(odd) input {
+section.contact_us div.left form label:nth-child(odd) select,
+section.contact_us div.left form label:nth-child(odd) input {
 	width: 100%;
 }
 
-.contact section.contact_us div.left form label span {
+section.contact_us div.left form label span {
 	padding-bottom: 0.5em;
 }
 
-.contact section.contact_us div.left form label input {
+section.contact_us div.left form label input {
 	border: 1px solid @color_border;
 }
 
-.contact section.contact_us div.left form label select:focus,
-.contact section.contact_us div.left form label:nth-child(8) textarea:focus,
-.contact section.contact_us div.left form label input:focus,
-.contact section.contact_us div.left form label select:hover,
-.contact section.contact_us div.left form label:nth-child(8) textarea:hover,
-.contact section.contact_us div.left form label input:hover {
+section.contact_us div.left form label select:focus,
+section.contact_us div.left form label:nth-child(8) textarea:focus,
+section.contact_us div.left form label input:focus,
+section.contact_us div.left form label select:hover,
+section.contact_us div.left form label:nth-child(8) textarea:hover,
+section.contact_us div.left form label input:hover {
 	border: 1px solid @color_svg;
 }
 
-
-.contact section.contact_us div.left form label:nth-child(8) {
+section.contact_us div.left form label:nth-child(8) {
 	display: block;
 	width: 100%;
 }
 
-.contact section.contact_us div.left form label:nth-child(8) textarea {
+section.contact_us div.left form label:nth-child(8) textarea {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
@@ -648,27 +661,27 @@ section.latest input:checked + div > article:nth-of-type(1n+4) {
 	resize: vertical;
 }
 
-.contact section.contact_us div.left form label.checkbox {
+section.contact_us div.left form label.checkbox {
 	display: block;
 	width: 100%;
 	padding: 1em 0;
 }
 
-.contact section.contact_us div.left form label.checkbox input {
+section.contact_us div.left form label.checkbox input {
 	display: inline-block;
 	vertical-align: middle;
 	width: 20px;
 	height: 20px;
 }
 
-.contact section.contact_us div.left form label.checkbox span {
+section.contact_us div.left form label.checkbox span {
 	display: inline-block;
 	vertical-align: middle;
 	padding: 0;
 	padding-right: 1em;
 }
 
-.contact section.contact_us div.left form div.controls button {
+section.contact_us div.left form div.controls button {
 	padding: 1em 3em;
 }
 
@@ -676,52 +689,48 @@ section.latest input:checked + div > article:nth-of-type(1n+4) {
 * Gallery Page
 */
 
-.gallery section.header_gallery {
-	background-image: url(../images/gallery_background.jpg);
-}
-
-.gallery section.gallery_list {
+section.gallery_list {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 	text-align: center;
 }
 
-.gallery section.gallery_list div.gallery_content {
+section.gallery_list div.gallery_content {
 	display: block;
 	width: 100%;
 	margin: 2em auto;
 }
 
-.gallery section.gallery_list div.gallery_content p,
-.gallery section.gallery_list div.gallery_content a {
+section.gallery_list div.gallery_content p,
+section.gallery_list div.gallery_content a {
 	display: inline-block;
 	vertical-align: top;
 	text-decoration: none;
 	color: @color_title;
 }
 
-.gallery section.gallery_list div.gallery_content a {
+section.gallery_list div.gallery_content a {
 	font-weight: 700;
 }
 
-.gallery section.gallery_list div.gallery_content a:hover {
+section.gallery_list div.gallery_content a:hover {
 	color: @color_svg;
 }
 
-.gallery section.gallery_list div.gallery_content p {
+section.gallery_list div.gallery_content p {
 	padding-left: 2em;
 }
 
-.gallery section.gallery_list div.gallery_content a:first-of-type {
+section.gallery_list div.gallery_content a:first-of-type {
 	padding-left: 3em;
 }
 
-.gallery section.gallery_list div.gallery_content a img {
+section.gallery_list div.gallery_content a img {
 	display: block;
 	width: 100%;
 	margin: 0 auto;
 	border: 1px solid transparent;
 }
-.gallery section.gallery_list div.gallery_content a img:hover {
+section.gallery_list div.gallery_content a img:hover {
 	border: 1px solid @color_svg;
 }
 
