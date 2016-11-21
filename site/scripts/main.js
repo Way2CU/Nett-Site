@@ -66,7 +66,7 @@ Site.on_load = function() {
 	//Definition of global var Header
 	Site.body = document.querySelector('body');
 
-	Site.animationTrigger = document.querySelector('header').clientHeight;
+	Site.animationTrigger = document.querySelector('body').children[2].clientHeight;
 
 	//event listener and function call
 	window.addEventListener('scroll', Site.scroll);
