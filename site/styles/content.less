@@ -418,7 +418,7 @@ section.latest_articles article a:hover {
 	min-height: 501px;
 }
 
-.building section.building_content article:nth-child(1) p,
+.building section.building_content article:nth-child(1),
 .facebook section.facebook_content article:nth-child(3),
 .organic section.organic_content article:nth-child(3) {
 	background-image: url(../images/organic3.jpg);
@@ -728,7 +728,7 @@ section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 .gallery section.gallery_list div.gallery_content {
 	display: block;
 	width: 100%;
-	margin: 1em auto;
+	margin: 2em auto;
 }
 
 .gallery section.gallery_list div.gallery_content p,
@@ -752,7 +752,7 @@ section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 }
 
 .gallery section.gallery_list div.gallery_content a:first-of-type {
-	padding-left: 1em;
+	padding-left: 3em;
 }
 
 .gallery section.gallery_list div.gallery_content a img {
@@ -814,7 +814,7 @@ section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 
 //Styles connected with Page Organic
 .facebook section.header_facebook {
-	background-image: url(../images/facebook_background.jpg);
+	background-image: url(../images/facebook_header_background.jpg);
 }
 
 //Targeting specific bg images
@@ -828,4 +828,26 @@ section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 
 .facebook section.facebook_content article:nth-child(3){
 	background-image: url(../images/facebook_like.jpg);
+}
+
+/*
+* Building Page
+*/
+
+//Styles connected with Page Organic
+.building section.header_building {
+	background-image: url(../images/building_header_background.jpg);
+}
+
+//Targeting specific bg images
+.building section.building_content article:nth-child(1) {
+	background-image: url(../images/building_background.jpg);
+}
+
+.building section.building_content article:nth-child(2){
+	background-image: url(../images/building_bg_full.jpg);
+}
+
+.building section.building_content article:nth-child(3){
+	background-image: url(../images/building_background2.jpg);
 }
