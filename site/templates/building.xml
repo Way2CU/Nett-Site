@@ -39,6 +39,7 @@
 					text_id="building_solo1"
 					template="parts/articles/article_generic.xml"
 				>
+				<param name="title" value=""/>
 				</cms:module>
 
 				<!-- Specific article2 linked to generic article with title -->
