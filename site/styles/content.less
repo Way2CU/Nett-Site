@@ -310,8 +310,10 @@ section.latest_articles article a:hover {
 //Combined header page style with contact page
 //Combined header page style with gallery page
 //Combined header page style with press page
+//Combined header page style with facebook page
 
 //Fixed backgound image
+.facebook section.header_facebook,
 .press section.header_press,
 .gallery section.header_gallery,
 .contact section.header_contact,
@@ -326,6 +328,7 @@ section.latest_articles article a:hover {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 }
 
+.facebook section.header_facebook div.title,
 .press section.header_press div.title,
 .gallery section.header_gallery div.title,
 .contact section.header_contact div.title,
@@ -340,6 +343,7 @@ section.latest_articles article a:hover {
 	padding: 1em;
 }
 
+.facebook section.header_facebook div.title h1,
 .press section.header_press div.title h1,
 .gallery section.header_gallery div.title h1,
 .contact section.header_contact div.title h1,
@@ -350,6 +354,7 @@ section.latest_articles article a:hover {
 	margin: 0;
 }
 
+.facebook section.header_facebook div.title p,
 .press section.header_press div.title p,
 .gallery section.header_gallery div.title p,
 .contact section.header_contact div.title p,
@@ -357,6 +362,7 @@ section.latest_articles article a:hover {
 	margin-bottom: 0;
 }
 
+.facebook section.header_facebook div.title svg,
 .press section.header_press div.title svg,
 .gallery section.header_gallery div.title svg,
 .contact section.header_contact div.title svg,
@@ -367,11 +373,14 @@ section.latest_articles article a:hover {
 	margin: 0 auto;
 }
 
+/*Connected style with Facebook page*/
 //Section Organic articles
+.facebook section.facebook_content,
 .organic section.organic_content {
 	padding: 1em 0;
 }
 
+.facebook section.facebook_content article,
 .organic section.organic_content article {
 	background-image: url(../images/organic.jpg);
 	background-position: calc(~'50% - 350px') center;
@@ -384,10 +393,12 @@ section.latest_articles article a:hover {
 	margin-bottom: 1em;
 }
 
+.facebook section.facebook_content article:nth-child(1) p,
 .organic section.organic_content article:nth-child(1) p {
 	padding-top: 1em;
 }
 
+.facebook section.facebook_content article:nth-child(2),
 .organic section.organic_content article:nth-child(2) {
 	background-image: url(../images/organic2.jpg);
 	background-position: center center;
@@ -396,27 +407,32 @@ section.latest_articles article a:hover {
 	min-height: 501px;
 }
 
+.facebook section.facebook_content article:nth-child(3),
 .organic section.organic_content article:nth-child(3) {
 	background-image: url(../images/organic3.jpg);
 }
 
+.facebook section.facebook_content article p,
 .organic section.organic_content article p {
 	margin: 0;
 }
 
+.facebook section.facebook_content article h2,
 .organic section.organic_content article h2 {
 	padding: 1em 0;
 	margin: 0;
 }
 
 /*
-* Latest articles organic
+* Latest articles organic **Conected style with Facebook Page
 */
 
+section.latest_facebook,
 section.latest_organic {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 }
 
+section.latest_facebook > h2,
 section.latest_organic > h2 {
 	font-weight: 400;
 	border-top: 1px solid fade(@color_border, 30%);
@@ -429,6 +445,7 @@ section.latest_organic > h2 {
 	text-align: center;
 }
 
+section.latest_facebook >h2:after,
 section.latest_organic > h2:after {
 	content: "";
 	display: block;
@@ -442,6 +459,7 @@ section.latest_organic > h2:after {
 	transform: translateX(-50%);
 }
 
+section.latest_facebook article,
 section.latest_organic article {
 	text-align: center;
 	display: inline-block;
@@ -453,16 +471,20 @@ section.latest_organic article {
 	border: 1px solid @color_border;
 }
 
+section.latest_facebook article p,
+section.latest_facebook article h2,
 section.latest_organic article p,
 section.latest_organic article h2 {
 	margin: 0.5em;
 }
 
 //Button toggle style and behavior
+section.latest_facebook input,
 section.latest_organic input {
 	display: none;
 }
 
+section.latest_facebook label,
 section.latest_organic label {
 	background-color: white;
 	border: 5px solid @color_button;
@@ -472,14 +494,17 @@ section.latest_organic label {
 	margin: 1em auto;
 }
 
+section.latest_facebook label:hover,
 section.latest_organic label:hover {
 	color: white;
 }
 
+section.latest_facebook input + div > article:nth-of-type(1n+4),
 section.latest_organic input + div > article:nth-of-type(1n+4) {
 	display: none;
 }
 
+section.latest_facebook input:checked + div > article:nth-of-type(1n+4),
 section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 	display: inline-block;
 }
@@ -756,4 +781,26 @@ section.latest_organic input:checked + div > article:nth-of-type(1n+4) {
 
 .press section.press article a {
 	padding: 1em 2em;
+}
+
+/*
+* Facebook Page
+*/
+
+//Styles connected with Page Organic
+.facebook section.header_facebook {
+	background-image: url(../images/facebook_background.jpg);
+}
+
+//Targeting specific bg images
+.facebook section.facebook_content article:nth-child(1) {
+	background-image: url(../images/facebook_local.jpg);
+}
+
+.facebook section.facebook_content article:nth-child(2){
+	background-image: url(../images/facebook_full_bg.jpg);
+}
+
+.facebook section.facebook_content article:nth-child(3){
+	background-image: url(../images/facebook_like.jpg);
 }
