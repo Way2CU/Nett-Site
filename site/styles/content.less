@@ -310,7 +310,7 @@ section.header {
 	background-attachment: fixed;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
-	height: 500px;
+	height: calc(~'100vw * 0.26041');
 	position: relative;
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 }
@@ -328,13 +328,13 @@ section.header.press {
 	background-image: url(../images/press_header_background.jpg);
 }
 section.header.funding {
-	background-image: url(../images/funding_header_background.jpg);
+	background-image: url(../images/funded_header_background.jpg);
 }
 section.header.contact {
 	background-image: url(../images/contact_header_background.jpg);
 }
 section.header.gallery {
-	background-image: url(../images/press_header_background.jpg);
+	background-image: url(../images/gallery_header_background.jpg);
 }
 
 section.header div.title {
@@ -432,7 +432,11 @@ section.content.building article:nth-child(3){
 }
 //funding Backgrounds
 section.content.funding article:nth-child(1) {
-	background-image: url(../images/funding_background.jpg);
+	background-image: url(../images/funding_background1.jpg);
+}
+
+section.content.funding article:nth-child(1) p:first-of-type {
+	padding-top: 2em;
 }
 
 section.content.funding article:nth-child(2){
