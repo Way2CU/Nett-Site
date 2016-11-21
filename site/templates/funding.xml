@@ -80,7 +80,7 @@
 					<cms:module
 						name="articles"
 						action="show_list"
-						group="funding"
+						group="funded"
 						order_by="id"
 						template="parts/articles/article_generic.xml"
 						>
