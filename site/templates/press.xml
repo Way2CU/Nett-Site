@@ -9,17 +9,11 @@
 		</head>
 
 		<body>
-
 			<cms:desktop>
 				<!-- 2 Header templates Desktop-->
 				<cms:template file="parts/header.xml"/>
 				<cms:template file="parts/header_floating.xml"/>
 			</cms:desktop>
-
-			<!-- Header template for mobile -->
-			<cms:mobile>
-				<cms:template file="parts/header.xml"/>
-			</cms:mobile>
 
 			<!-- div with logo h1 and p -->
 			<section class="header press">

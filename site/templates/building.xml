@@ -20,7 +20,7 @@
 			<section class="header building">
 				<div class="title">
 					<cms:svg file="site-sprite.svg" symbol="icon-globe"/>
-					<h1><cms:text constant="building_link"/></h1>
+					<h1><cms:text constant="site_bulding"/></h1>
 					<p><cms:text constant="building_title"/></p>
 				</div>
 			</section>
