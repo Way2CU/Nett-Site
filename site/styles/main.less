@@ -16,10 +16,15 @@ body {
 	background-color: white;
 	color: @color_text;
 	font-family: "assistant", Arial, serif;
-	padding-top: 152px;
+	padding-top: 132px;
 }
 
 h1,h2,h3,h4,h5 {
 	color: @color_title;
 	font-family: "assistant", Arial, serif;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	body {
+		padding-top: 175px;
+	}
 }
