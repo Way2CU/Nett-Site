@@ -75,13 +75,17 @@ Site.on_load = function() {
 	Site.show_case_gallery_tablet = new PageControl('section.showcase', 'div.desktop');
 	Site.show_case_gallery_tablet
 		.setInterval(3000)
-		.setWrapAround(true);
+		.setWrapAround(true)
+		.attachNextControl($('a.next'))
+		.attachPreviousControl($('a.previous'));
 
 	//Page controll for animation of Show_case gallery mobile
 	Site.show_case_gallery_mobile = new PageControl('section.showcase', 'div.mobile');
 	Site.show_case_gallery_mobile
 		.setInterval(3000)
-		.setWrapAround(true);
+		.setWrapAround(true)
+		.attachNextControl($('a.next'))
+		.attachPreviousControl($('a.previous'));
 
 };
 
