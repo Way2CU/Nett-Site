@@ -34,9 +34,7 @@
 					action="show"
 					text_id="about_solo1"
 					template="parts/articles/article_generic.xml"
-				>
-				<param name="title" value=""/>
-				</cms:module>
+				/>
 
 				<!-- Specific article2 linked to generic article with title -->
 				<cms:module
@@ -71,7 +69,7 @@
 				/>
 			</section>
 
-			<!-- section video coustomers_tell -->
+			<!-- section עכשיו coustomers_tell -->
 			<section class="videos customers">
 				<h3><cms:text constant="customers_tell"/></h3>
 					<!-- You tube module call list -->
