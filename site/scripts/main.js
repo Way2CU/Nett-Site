@@ -87,6 +87,9 @@ Site.on_load = function() {
 		.attachNextControl($('a.next'))
 		.attachPreviousControl($('a.previous'));
 
+	//Light box gallery Testimonials customers
+	Site.galleryTestimonials = new LightBox('a.testimonial', false, false, true);
+
 };
 
 
