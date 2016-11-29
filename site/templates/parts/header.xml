@@ -7,11 +7,6 @@
 				cms:eval="href"
 				class="logo"
 				>
-				<img
-					src="_BASEURL.'/site/images/logo_color.svg'"
-					alt="next_site_logo"
-					cms:eval="src"
-					/>
 			</a>
 			<nav>
 				<ul>
