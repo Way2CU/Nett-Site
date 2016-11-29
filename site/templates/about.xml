@@ -5,6 +5,7 @@
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="about_link"/></title>
+			<cms:collection  include="page_control,animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -59,6 +60,30 @@
 				</cms:module>
 			</section>
 
+			<!-- Section customers_write Gallery -->
+			<section class="customers_write">
+				<h2><cms:text constant="customers_write"/></h2>
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="customers_write"
+					template="parts/galleries/coustomer_gallery.xml"
+				/>
+			</section>
+
+			<!-- section video coustomers_tell -->
+			<section class="videos customers">
+				<h3><cms:text constant="customers_tell"/></h3>
+					<!-- You tube module call list -->
+					<ul>
+					 	<cms:module
+							name="youtube"
+							action="show_list"
+							group_text_id="videos_customers"
+							template="parts/youtube.xml"
+							/>
+					</ul>
+			</section>
 			<!-- Footer Template -->
 			<footer>
 				<cms:template file="parts/footer.xml"/>
