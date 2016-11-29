@@ -1,6 +1,8 @@
 {
     "site_title": "Next site",
     "info_link" : "אודותינו",
+    "about_link" : "אודות החברה",
+    "about_title" : "תת כותרת לאודות החברה",
     "contact_link" : "צור קשר",
     "contact_title" : "תת כותרת ליצירת קשר",
     "location_text" : "דויד סחרוב 17 ,ראשון לציון",
