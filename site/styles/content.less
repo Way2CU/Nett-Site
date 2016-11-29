@@ -438,7 +438,7 @@ section.content article:nth-child(2) {
 	background-position: center center;
 	background-size: 1920px 501px;
 	background-repeat: no-repeat;
-	min-height: 501px;
+	min-height: 550px;
 }
 
 section.content article h2 {
@@ -961,19 +961,30 @@ section.customers_write a:hover {
 		width: calc(~'100% / 2 ');
 	}
 	//section showcase
-	section.showcase div.desktop {
-		left: 40%;
-	}
 	section.showcase div.mobile {
-		left: calc(~'50% + 255px');
+		left: calc(~'50% + 295px');
 	}
 	//Gallery Section
 	section.gallery_list div.gallery_content a:first-of-type {
 		padding-left: 2em;
 	}
+
 	//All Inner Pages
 	section.header {
-		background-position: center 172px;
+		background-position: center 135px;
+	}
+	//about page
+	section.content.about article:nth-of-type(1) {
+		background-position: 0 bottom;
+		min-height: 300px;
+	}
+	section.content.about article:nth-of-type(2) {
+		background-position: center bottom;
+		padding-bottom: 500px;
+	}
+	section.content.about article:nth-of-type(3) {
+		background-position: 0 bottom;
+		padding-bottom: 535px;
 	}
 	section.content article {
 		background-position: center bottom;
