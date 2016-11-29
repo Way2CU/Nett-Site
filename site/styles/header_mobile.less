@@ -1,78 +1,104 @@
 /**
- * Main_Mobile Style Sheet
- * Next site
- *
- * Copyright (c) 2016. by Way2CU, http://way2cu.com
- * Authors: Iliya Melishev
- */
+	* Header_Mobile Style Sheet
+	* Next site
+	*
+	* Copyright (c) 2016. by Way2CU, http://way2cu.com
+	* Authors: Iliya Melishev
+*/
 
-
-header div.mobile_title {
+header {
 	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	display: block;
 	width: 100%;
+	box-shadow: 0px 4px 11px -1px fade(@color_border, 80%);
 	background-color: white;
+	z-index: 100000;
 	text-align: center;
 }
 
-header div.mobile_title a.phone {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 10px;
-	padding: 1em;
+header div.mobile_title {
+	display: block;
+	width: 100%;
+	position: relative;
+	background-color: white;
 }
 
 header div.mobile_title a.menu {
 	position: absolute;
+	right: 0.5em;
 	top: 50%;
 	transform: translateY(-50%);
-	right: 10px;
-	padding: 1em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header div.mobile_title a.menu svg {
+	width: 2em;
+	height: 2em;
+	display: block;
+}
+
+header div.mobile_title a.phone {
+	position: absolute;
+	left: 0.5em;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header div.mobile_title a.phone svg {
+	fill: @color_svg;
+	display: block;
+	width: 2em;
+	height: 2em;
 }
 
 header div.mobile_title a.logo {
-	display: inline-block;
-	width: 45%;
-	padding: 0.5em 0;
-}
-
-header div.mobile_title a.logo img {
+	background-image: url(../images/logo_color.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	width: 150px;
+	height: 83px;
 	display: block;
+	margin: 0 auto;
+}
+
+html[dir=rtl] .mobile_menu {
+	right: -100%;
+}
+
+//Nav bar
+header nav.mobile_menu {
 	width: 100%;
-}
-
-header div.mobile_title a svg {
-	width: 2em;
-	height: 2em;
-}
-
-/*
-*	Nav mobile_menu
-*/
-
-header nav {
-	padding-top: 1em;
-}
-
-header nav.mobile_menu.visible {
-	width: 100%;
+	text-align: right;
+	box-sizing: border-box;
 }
 
 header nav.mobile_menu a {
-	display: block;
+	display: inline-block;
+	vertical-align: middle;
 	width: 100%;
-	padding-bottom: 1em;
+	padding-right: 1em;
+	margin-bottom: 1em;
 }
 
-header nav.mobile_menu a:active {
-	color: red;
+header nav.mobile_menu a:first-of-type {
+	padding-top: 2em;
+}
+
+header nav.mobile_menu a:last-of-type {
+	margin-bottom: 0;
 }
 
 header nav.mobile_menu a svg {
+	width: 1.5em;
+	height: 1.5em;
 	display: inline-block;
 	vertical-align: middle;
-	width: 2em;
-	height: 2em;
-	padding-left: 1em;
+	padding-left: 1.5em;
 }
