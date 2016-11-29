@@ -7,12 +7,11 @@
  */
 
 section.laptop {
-	margin-top: 60px;
-	background-image: url(../images/mobile_header.jpg);
+	background-image: url(../images/mobile_header_bg.jpg);
 	background-position: center center;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
-	height: 100vw;
+	min-height: 400px;
 }
 
 section.laptop h1 {
@@ -23,65 +22,37 @@ section.laptop h1 {
 	text-align: center;
 	margin: 0 auto;
 	width: 90%;
+	padding-bottom: 1em;
 }
 
-/*
-*Contact form
-*/
-
-div.contact_form h4 {
-	font-weight: 400;
-	text-align: center;
-	margin-bottom: 0.5em;
-}
-
-div.contact_form {
+section.laptop div.laptop_screen_text {
 	display: block;
-	width: 100%;
 	margin: 0 auto;
+	width: 100%;
+	text-align: center;
 }
 
-div.contact_form form {
-	display: block;
+section.laptop div.laptop_screen_text h2 {
+	margin: 0 auto;
+	color: white;
+	font-size: 1em;
 	width: 90%;
-	margin: 0 auto;
-}
-
-div.contact_form label {
 	display: block;
-	width: 100%;
-	box-sizing: border-box;
-	padding: 1em;
-}
-
-div.contact_form label span {
-	display: block;
-	width: 100%;
-}
-
-div.contact_form label input {
-	display: block;
-	width: 100%;
-	border: none;
-	border-bottom: 1px solid black;
-}
-
-div.contact_form div.controls {
-	display: block;
-	width: 100%;
-	margin: 0 auto;
 	text-align: center;
-	padding-bottom: padding: 1em;
 }
 
-div.contact_form div.controls button {
-	padding: 1em 3em;
+section.laptop div.laptop_screen_text a {
+	margin: 1.5em auto;
+	display: block;
+	width: 55%;
+	text-decoration: none;
 	color: white;
 	background-color: @color_button;
 	border-radius: 25px;
 	font-weight: 700;
-	border: transparent;
+	padding: 1em 0;
 }
+
 
 /*
 *Section Features
@@ -110,6 +81,7 @@ section.features ul {
 section.features ul li {
 	display: block;
 	width: 100%;
+	margin-bottom: 2em;
 }
 
 section.features ul li svg {
@@ -143,7 +115,7 @@ section.gallery ul {
 section.gallery ul li {
 	display: inline-block;
 	vertical-align: top;
-	margin: 0.5em;
+	margin: 0.3em;
 	border: 1px solid @color_border_image;
 }
 
@@ -173,4 +145,157 @@ section.videos li {
 	width: 100%;
 	text-align: center;
 	padding-bottom: 1em;
+}
+
+/*
+*	Secton ShowCase
+*/
+
+section.showcase {
+	position: relative;
+	background-image: url(../images/showcase_mobile_bg.jpg);
+	background-position: center bottom;
+	background-size: 1000px 417px;
+	background-repeat: no-repeat;
+	min-height: 450px;
+}
+
+section.showcase h2 {
+	color: white;
+	font-weight: 400;
+	background-color: @color_title;
+	text-align: center;
+	padding: 1em;
+}
+
+section.showcase a.next {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 65%;
+	transform: translateY(-60%);
+	right: 1em;
+}
+
+section.showcase a.previous {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 65%;
+	transform: translateY(-60%);
+	left: 1em;
+}
+
+section.showcase a.next svg,
+section.showcase a.previous svg {
+	display: block;
+	width: 100%;
+	height: auto;
+	width: 35px;
+	height: 35px;
+}
+
+section.showcase div.mobile {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	background-image: url(../images/mobile.svg);
+	background-size: 235px 300px;
+	width: 235px;
+	height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	visibility: hidden;
+}
+
+section.showcase div.mobile.visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+section.showcase div.mobile img {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid white;
+	z-index: 1;
+}
+
+section.showcase div.mobile p {
+	position: absolute;
+	bottom: 94%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	display: block;
+	color: @color_title;
+	margin-top: 0;
+	opacity: 0;
+}
+
+section.showcase div.mobile a {
+	text-decoration: none;
+	color: @color_svg;
+	font-weight: 700;
+}
+
+section.showcase div.mobile.visible p a,
+section.showcase div.mobile.visible p {
+	opacity: 1;
+	visibility: visible;
+}
+
+/*
+* Section Latest articles
+*/
+section.latest_articles {
+	padding: 0 1em;
+}
+
+section.latest_articles > h2 {
+	text-align: center;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+section.latest_articles > h2:after {
+	content: "";
+	display: block;
+	width: 90%;
+	height: 1px;
+	background-color: fade(@color_border, 50%);
+	margin: 10px auto;
+}
+
+section.latest_articles article {
+	text-align: center;
+	display: block;
+	width: 100%;
+	padding-top: 1.5em;
+	margin: 0 auto;
+}
+
+section.latest_articles article img {
+	display: block;
+	margin: 0 auto;
+}
+
+section.latest_articles article p {
+	min-height: 100px;
+}
+
+section.latest_articles article a {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	text-decoration: none;
+	background-color: @color_button;
+	color: white;
+	padding: 1em;
+	border-radius: 15px;
 }
