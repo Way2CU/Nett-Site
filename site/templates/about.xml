@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="about_link"/></title>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+
+			<cms:desktop>
+				<!-- 2 Header templates Desktop-->
+				<cms:template file="parts/header.xml"/>
+				<cms:template file="parts/header_floating.xml"/>
+			</cms:desktop>
+
+			<!-- div with logo h1 and p -->
+			<section class="header about">
+				<div class="title">
+					<cms:svg file="site-sprite.svg" symbol="icon-info"/>
+					<h1><cms:text constant="about_link"/></h1>
+					<p><cms:text constant="about_title"/></p>
+				</div>
+			</section>
+
+			<!-- Section Solo Articles -->
+			<section class="content about">
+				<!-- Specific article1 linked to generic article with title -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about_solo1"
+					template="parts/articles/article_generic.xml"
+				>
+				<param name="title" value=""/>
+				</cms:module>
+
+				<!-- Specific article2 linked to generic article with title -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about_solo2"
+					template="parts/articles/article_generic.xml"
+				>
+				<param name="title" value=""/>
+				</cms:module>
+
+
+				<!-- Specific article3 linked to generic article with title -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about_solo3"
+					template="parts/articles/article_generic.xml"
+				>
+				<param name="title" value=""/>
+				</cms:module>
+			</section>
+
+			<!-- Footer Template -->
+			<footer>
+				<cms:template file="parts/footer.xml"/>
+
+				<!-- Copyright -->
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
+		</body>
+	</html>
+</document>
