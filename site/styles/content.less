@@ -107,6 +107,19 @@ section.videos h3 {
 	text-align: center;
 	font-weight: 400;
 	padding: 2em 0;
+	position: relative;
+}
+
+section.videos h3:after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 35%;
+	top: 70%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 1px;
+	background-color: lighten(@color_border, 10%);
 }
 
 section.videos ul {
@@ -873,6 +886,27 @@ section.press article img {
 
 section.press article a {
 	padding: 1em 2em;
+}
+
+/*section customers write*/
+section.customers_write {
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	text-align: center;
+}
+
+section.customers_write a {
+	margin: 1em;
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	top: 0;
+	transition: all 0.3s;
+}
+
+section.customers_write a:hover {
+	top: -10px;
+	box-shadow: 0px 6px 13px 1px rgba(0,0,0,0.5);
 }
 
 /*
