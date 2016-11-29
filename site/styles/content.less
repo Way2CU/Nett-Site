@@ -166,6 +166,7 @@ section.showcase {
 	min-height: 800px;
 	position: relative;
 }
+
 section.showcase h2 {
 	color: white;
 	font-weight: 400;
@@ -173,6 +174,31 @@ section.showcase h2 {
 	text-align: center;
 	padding: 1em;
 	margin-bottom: 3em;
+}
+
+section.showcase a.next {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 120px;
+	left: calc(~'50% + 300px');
+}
+
+section.showcase a.previous {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 120px;
+	right: calc(~'50% + 300px');
+}
+
+section.showcase a.next svg,
+section.showcase a.previous svg {
+	display: block;
+	width: 100%;
+	height: auto;
+	width: 35px;
+	height: 35px;
 }
 
 section.showcase div.desktop {
@@ -226,7 +252,7 @@ section.showcase div.desktop img {
 section.showcase div.mobile p {
 	position: absolute;
 	top: -84%;
-	left: -150%;
+	left: -160%;
 	transform: translateX(-50%);
 	text-align: center;
 	display: block;
