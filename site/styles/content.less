@@ -333,7 +333,7 @@ section.latest_articles article a:hover {
 //Fixed backgound image
 
 section.header {
-	background-position: center 151px;
+	background-position: center 133px;
 	background-attachment: fixed;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
@@ -371,6 +371,9 @@ section.header.branding {
 }
 section.header.servers {
 	background-image: url(../images/servers_header_background.jpg);
+}
+section.header.about {
+	background-image: url(../images/about_us_header_background.jpg);
 }
 
 section.header div.title {
@@ -442,6 +445,7 @@ section.content.facebook article:nth-child(2){
 section.content.facebook article:nth-child(3){
 	background-image: url(../images/facebook_like.jpg);
 }
+
 //Oraganic Backgrounds
 section.content.organic article:nth-child(1) {
 	background-image: url(../images/organic.jpg);
@@ -454,6 +458,7 @@ section.content.organic article:nth-child(2){
 section.content.organic article:nth-child(3){
 	background-image: url(../images/organic3.jpg);
 }
+
 //Building Backgrounds
 section.content.building article:nth-child(1) {
 	background-image: url(../images/building_background.jpg);
@@ -466,6 +471,7 @@ section.content.building article:nth-child(2){
 section.content.building article:nth-child(3){
 	background-image: url(../images/building_background2.jpg);
 }
+
 //funding Backgrounds
 section.content.funding article:nth-child(1) {
 	background-image: url(../images/funding_background1.jpg);
@@ -482,6 +488,7 @@ section.content.funding article:nth-child(2){
 section.content.funding article:nth-child(3){
 	background-image: url(../images/funding_background3.jpg);
 }
+
 //Reputation Backgrounds
 section.content.reputation article:nth-child(1) {
 	background-image: url(../images/reputation_background1.jpg);
@@ -494,6 +501,7 @@ section.content.reputation article:nth-child(2){
 section.content.reputation article:nth-child(3){
 	background-image: url(../images/reputation_background3.jpg);
 }
+
 //Branding Backgrounds
 section.content.branding article:nth-child(1) {
 	background-image: url(../images/branding_background1.jpg);
@@ -506,6 +514,7 @@ section.content.branding article:nth-child(2){
 section.content.branding article:nth-child(3){
 	background-image: url(../images/branding_background3.jpg);
 }
+
 //Servers Backgrounds
 section.content.servers article:nth-child(1) {
 	background-image: url(../images/servers_background1.jpg);
@@ -518,6 +527,26 @@ section.content.servers article:nth-child(2){
 section.content.servers article:nth-child(3){
 	background-image: url(../images/servers_background3.jpg);
 }
+
+//About us Backgrounds
+section.content.about article:nth-child(1) {
+	background-image: url(../images/about_us1.jpg);
+	background-size: 1920px 400px;
+	background-position: center center;
+}
+
+section.content.about article:nth-child(2){
+	background-image: url(../images/about_us2.jpg);
+	background-position: calc(~'50% - 350px') center;
+	background-size: 550px 550px;
+}
+
+section.content.about article:nth-child(3){
+	background-image: url(../images/about_us_full_bg.jpg);
+	background-size: 1920px 600px;
+	background-position: center center;
+}
+
 //Section latest articles
 section.latest {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
@@ -852,12 +881,17 @@ section.press article a {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 	//header
 	header a.logo {
-		padding-left: 1em;
-		padding-right: 1em;
+		background-image: url(../images/logo_vertical.svg);
+		width: 135px;
+		margin-left: 1em;
+		margin-right: 1em;
+		vertical-align: top;
 	}
+
 	header nav {
-		width: calc(~'100% - 216px - 1em');
+		width: calc(~'100% - 135px - 2em');
 	}
+
 	header nav ul li {
 		vertical-align: top;
 	}
@@ -867,6 +901,28 @@ section.press article a {
 		transition-delay: 0s;
 	}
 	//home page
+	section.laptop {
+		background-image: url(../images/tablet_background.jpg);
+		background-size: 100% auto;
+		background-position: center;
+		background-repeat: no-repeat;
+		min-height: 700px;
+	}
+
+	section.laptop div.laptop_screen_text {
+		padding: 0;
+		padding-top: 1em;
+	}
+
+	section.laptop div.laptop_screen_text h2 {
+		padding-bottom: 60px;
+		color: white;
+	}
+
+	section.laptop div.laptop_screen_text a {
+		width: 40%;
+	}
+
 	section.latest_articles article {
 		width: calc(~'100% / 2 ');
 	}
