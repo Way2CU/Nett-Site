@@ -1,4 +1,5 @@
 <document>
+	<cms:desktop>
 	<!-- Tablet showcase container & img inside-->
 			<cms:module
 				name="gallery"
@@ -9,7 +10,7 @@
 				cms:eval="group_id"
 			/>
 
-		<!-- Tablet showcase container & img inside-->
+		<!-- Mobile showcase container & img inside-->
 			<cms:module
 				name="gallery"
 				action="show_image"
@@ -18,4 +19,16 @@
 				template="parts/galleries/mobile_gallery.xml"
 				cms:eval="group_id"
 			/>
+	</cms:desktop>
+	<cms:mobile>
+	<!-- Mobile showcase container & img inside-->
+		<cms:module
+			name="gallery"
+			action="show_image"
+			text_id="mobile"
+			group_id="$params['id']"
+			template="parts/galleries/mobile_gallery.xml"
+			cms:eval="group_id"
+		/>
+	</cms:mobile>
 </document>

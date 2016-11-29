@@ -145,11 +145,6 @@
 				cms:eval="href"
 				class="logo"
 				>
-				<img
-					src="_BASEURL.'/site/images/logo_color.svg'"
-					alt="next_site_logo"
-					cms:eval="src"
-					/>
 				</a>
 
 				<!-- Phone link svg -->
@@ -163,14 +158,6 @@
 			</div>
 			<!-- Mobile menu  -->
 			<nav class="mobile_menu">
-				<!-- Contact link, image and constant -->
-				<a
-					href="URL::make(array(), 'contact.xml')"
-					cms:eval="href"
-					>
-					<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
-					<cms:text constant="contact_link"/>
-				</a>
 
 				<!-- About link, image and constant -->
 				<a
@@ -187,7 +174,7 @@
 					cms:eval="href"
 					>
 					<cms:svg file="site-sprite.svg" symbol="icon-organicleaf"/>
-					<cms:text constant="promotion_link"/>
+					<cms:text constant="organic_link"/>
 				</a>
 
 				<!-- Site building, image and constant -->
@@ -231,7 +218,7 @@
 					href="URL::make(array(), 'branding.xml')"
 					cms:eval="href"
 					>
-					<cms:svg file="site-sprite.svg" symbol="icon-advert"/>
+					<cms:svg file="site-sprite.svg" symbol="icon-brand"/>
 					<cms:text constant="branding_link"/>
 				</a>
 

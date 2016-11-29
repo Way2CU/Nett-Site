@@ -1,9 +1,20 @@
 <document>
-	<li>
-		<img
-			src="gallery::getThumbnailById($params['id'], null, 200, Thumbnail::CONSTRAIN_HEIGHT)"
-			alt="$params['title'][$language]"
-			cms:eval="src,alt"
-			/>
-	</li>
+	<cms:desktop>
+		<li>
+			<img
+				src="gallery::getThumbnailById($params['id'], null, 200, Thumbnail::CONSTRAIN_HEIGHT)"
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				/>
+		</li>
+	</cms:desktop>
+	<cms:mobile>
+		<li>
+			<img
+				src="gallery::getThumbnailById($params['id'], null, 140, Thumbnail::CONSTRAIN_BOTH)"
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				/>
+		</li>
+	</cms:mobile>
 </document>

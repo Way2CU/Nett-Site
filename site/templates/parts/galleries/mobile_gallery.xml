@@ -1,10 +1,22 @@
 <document>
-	<div class="mobile">
-		<cms:markdown param="description" multilanguage="yes"/>
-		<img
-		src="gallery::getThumbnailById($params['id'], null, 165, Thumbnail::CONSTRAIN_HEIGHT)"
-		alt="$params['title'][$language]"
-		cms:eval="src,alt"
-		/>
-	</div>
+	<cms:desktop>
+		<div class="mobile">
+			<cms:markdown param="description" multilanguage="yes"/>
+			<img
+			src="gallery::getThumbnailById($params['id'], null, 165, Thumbnail::CONSTRAIN_HEIGHT)"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
+		</div>
+	</cms:desktop>
+	<cms:mobile>
+		<div class="mobile">
+			<cms:markdown param="description" multilanguage="yes"/>
+			<img
+			src="gallery::getThumbnailById($params['id'], null, 235, Thumbnail::CONSTRAIN_WIDTH)"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
+		</div>
+	</cms:mobile>
 </document>

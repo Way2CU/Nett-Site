@@ -1,7 +1,16 @@
 <document>
-	<img
-		src="gallery::getThumbnailById($params['id'], null, 380, Thumbnail::CONSTRAIN_HEIGHT)"
-		alt="$params['title'][$language]"
-		cms:eval="src,alt"
-	/>
+	<cms:desktop>
+		<img
+			src="gallery::getThumbnailById($params['id'], null, 380, Thumbnail::CONSTRAIN_HEIGHT)"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+		/>
+	</cms:desktop>
+	<cms:mobile>
+		<img
+			src="gallery::getThumbnailById($params['id'], null, 250, Thumbnail::CONSTRAIN_HEIGHT)"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+		/>
+	</cms:mobile>
 </document>
