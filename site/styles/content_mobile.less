@@ -304,15 +304,51 @@ section.latest_articles article a {
 
 section.header {
 	background-position: center center;
-	background-position: fixed;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	height: calc(~'100vw * 0.7');
 	position: relative;
 }
 
+//about us page
 section.header.about {
 	background-image: url(../images/about_header_background_mobile.jpg);
+}
+//oragnic page
+section.header.organic {
+	background-image: url(../images/organic_header_background_mobile.jpg);
+}
+//building page
+section.header.building {
+	background-image: url(../images/building_header_background_mobile.jpg);
+}
+//funding page
+section.header.funding {
+	background-image: url(../images/funding_header_background_mobile.jpg);
+}
+//facebook page
+section.header.facebook {
+	background-image: url(../images/facebook_header_background_mobile.jpg);
+}
+//reputation page
+section.header.reputation {
+	background-image: url(../images/reputation_header_background_mobile.jpg);
+}
+//branding page
+section.header.branding {
+	background-image: url(../images/branding_header_background_background.jpg);
+}
+//servers page
+section.header.servers {
+	background-image: url(../images/hosting_header_background_mobile.jpg);
+}
+//gallery page
+section.header.gallery {
+	background-image: url(../images/gallery_header_background_mobile.jpg);
+}
+//contact page
+section.header.contact {
+	background-image: url(../images/contact_header_background_mobile.jpg);
 }
 
 section.header div.title {
@@ -352,7 +388,6 @@ section.header div.title svg {
 }
 
 //Content
-
 section.content article {
 	background-position: 0 bottom;
 	background-size: 100% auto;
@@ -374,6 +409,103 @@ section.content.about article:nth-child(2){
 
 section.content.about article:nth-child(3){
 	background-image: url(../images/about_background3_mobile.jpg);
+}
+
+//Oranigc Backgrounds
+section.content.organic article:nth-child(1) {
+	background-image: url(../images/organic.jpg);
+}
+
+section.content.organic article:nth-child(2){
+	background-image: url(../images/organic_background2_mobile.jpg);
+	padding-bottom: 215px;
+}
+
+section.content.organic article:nth-child(3){
+	background-image: url(../images/organic3.jpg);
+}
+
+//Building Backgrounds
+section.content.building article:nth-child(1) {
+	background-image: url(../images/building_background.jpg);
+}
+
+section.content.building article:nth-child(2){
+	background-image: url(../images/building_background2_mobile.jpg);
+}
+
+section.content.building article:nth-child(3){
+	background-image: url(../images/building_background2.jpg);
+	padding-bottom: 335px;
+}
+
+//Funding Backgrounds
+section.content.funding article:nth-child(1) {
+	background-image: url(../images/funding_backgroud1_mobile.jpg);
+	padding-bottom: 350px;
+}
+
+section.content.funding article:nth-child(2){
+	background-image: url(../images/funding_background2_mobile.jpg);
+}
+
+section.content.funding article:nth-child(3){
+	background-image: url(../images/funding_background3_mobile.jpg);
+}
+
+//Facebook Backgrounds
+section.content.facebook article:nth-child(1) {
+	background-image: url(../images/facebook_local.jpg);
+}
+
+section.content.facebook article:nth-child(2){
+	background-image: url(../images/facebook_background2_mobile.jpg);
+	padding-bottom: 215px;
+}
+
+section.content.facebook article:nth-child(3){
+	background-image: url(../images/facebook_like.jpg);
+}
+
+//Reputation Backgrounds
+section.content.reputation article:nth-child(1) {
+	background-image: url(../images/reputation_background1.jpg);
+}
+
+section.content.reputation article:nth-child(2){
+	background-image: url(../images/reputation_background2_mobile.jpg);
+	padding-bottom: 225px;
+}
+
+section.content.reputation article:nth-child(3){
+	background-image: url(../images/reputation_background3.jpg);
+}
+
+//Branding Backgrounds
+section.content.branding article:nth-child(1) {
+	background-image: url(../images/branding_background1.jpg);
+}
+
+section.content.branding article:nth-child(2){
+	background-image: url(../images/branding_background2_mobile.jpg);
+}
+
+section.content.branding article:nth-child(3){
+	background-image: url(../images/branding_background3.jpg);
+}
+
+//Servers Backgrounds
+section.content.servers article:nth-child(1) {
+	background-image: url(../images/servers_background1.jpg);
+}
+
+section.content.servers article:nth-child(2){
+	background-image: url(../images/servers_background2_mobile.jpg);
+	padding-bottom: 220px;
+}
+
+section.content.servers article:nth-child(3){
+	background-image: url(../images/servers_background3.jpg);
 }
 
 //about us page customers write gallery
@@ -407,6 +539,11 @@ section.customers_write a {
 }
 
 //About us page section customers videos
+section.videos {
+	text-align: center;
+	padding: 0 0.5em;
+}
+
 section.videos.customers h3 {
 	font-weight: 400;
 	position: relative;
@@ -422,4 +559,225 @@ section.videos.customers h3:after {
 	transform: translateX(-50%);
 	height: 1px;
 	background-color: @color_border;
+}
+
+//Section latest articles
+section.latest {
+	padding: 1em;
+	text-align: center;
+}
+
+section.latest > h2 {
+	font-weight: 400;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 0.5em;
+	position: relative;
+	text-align: center;
+}
+
+section.latest > h2:after {
+	content: "";
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	height: 1px;
+	background-color: fade(@color_border, 30%);
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+section.latest article {
+	text-align: center;
+	box-sizing: border-box;
+	border: 1px solid @color_border;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+section.latest article p,
+section.latest article h2 {
+	margin: 0.5em;
+}
+
+section.latest article a {
+	margin-bottom: 0.5em;
+}
+
+//Button toggle style and behavior
+section.latest input {
+	display: none;
+}
+
+section.latest label {
+	background-color: white;
+	border: 5px solid @color_button;
+	color: @color_button;
+	display: block;
+	width: 45%;
+	margin: 1em auto;
+}
+
+section.latest input + div > article:nth-of-type(1n+4) {
+	display: none;
+}
+
+section.latest input:checked + div > article:nth-of-type(1n+4) {
+	display: inline-block;
+}
+
+/*
+*Gallery Page
+*/
+section.gallery_list {
+	padding: 0 0.5em;
+}
+
+section.gallery_list div.gallery_content {
+	display: block;
+	width: 100%;
+	margin: 2em auto;
+	text-align: center;
+}
+
+section.gallery_list div.gallery_content p {
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid @color_border;
+}
+
+section.gallery_list div.gallery_content p > a {
+	text-decoration: none;
+	color: @color_svg;
+	text-align: center;
+	display: block;
+}
+
+section.gallery_list div.gallery_content > a {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0.2em;
+}
+
+/*
+* Contact Page
+*/
+
+//Contact page Section information
+section.contact_us,
+section.information {
+	padding: 0 0.5em;
+	position: relative;
+}
+
+section.information article {
+	display: block;
+	width: 100%;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid @color_border;
+	margin-bottom: 1em;
+}
+
+section.information a {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	padding-bottom: 1em;
+	text-decoration: none;
+	font-weight: 700;
+	color: @color_text;
+}
+
+section.information a svg {
+	width: 2em;
+	height: 2em;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 1em;
+}
+
+//Left div with map
+section.information div.left div#map {
+	width: 100%;
+	height: 500px;
+}
+
+section.contact_us div.right h2 {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: 400;
+}
+
+section.contact_us div.right article {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+//Contact form
+section.contact_us div.left form {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+section.contact_us div.left form label {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 1em;
+}
+
+section.contact_us div.left form label select,
+section.contact_us div.left form label input {
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(~'100% - 20%');
+	padding: 1em 0.5em;
+	box-sizing: border-box;
+	background-color: white;
+}
+
+section.contact_us div.left form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20%;
+	box-sizing: border-box;
+}
+
+section.contact_us div.left form label:nth-child(8) textarea {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	min-height: 150px;
+	padding: 0.5em;
+	resize: vertical;
+}
+
+section.contact_us div.left form label.checkbox {
+	display: block;
+	width: 100%;
+}
+
+section.contact_us div.left form label.checkbox input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+}
+
+section.contact_us div.left form label.checkbox span {
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(~'100% - 20px');
+	padding: 0;
+	padding-right: 1em;
+}
+
+section.contact_us div.left form div.controls button {
+	padding: 1em 3em;
 }
