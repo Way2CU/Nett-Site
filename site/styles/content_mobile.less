@@ -299,3 +299,127 @@ section.latest_articles article a {
 	padding: 1em;
 	border-radius: 15px;
 }
+
+//Style to all inner pages
+
+section.header {
+	background-position: center center;
+	background-position: fixed;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	height: calc(~'100vw * 0.7');
+	position: relative;
+}
+
+section.header.about {
+	background-image: url(../images/about_header_background_mobile.jpg);
+}
+
+section.header div.title {
+	display: block;
+	background-color: fade(white, 80%);
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 250px;
+}
+
+section.header div.title h1 {
+	font-weight: 400;
+	margin: 0;
+	position: relative;
+}
+
+section.header div.title h1:after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	width: 80%;
+	background-color: @color_border;
+	height: 1px;
+}
+
+section.header div.title svg {
+	width: 2em;
+	height: 2em;
+	display: block;
+	margin: 0.5em auto;
+}
+
+//Content
+
+section.content article {
+	background-position: 0 bottom;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	padding-bottom: 300px;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+//About Backgrounds
+section.content.about article:nth-child(1) {
+	background-image: url(../images/about_background1_mobile.jpg);
+	padding-bottom: 150px;
+}
+
+section.content.about article:nth-child(2){
+	background-image: url(../images/about_background2_mobile.jpg);
+}
+
+section.content.about article:nth-child(3){
+	background-image: url(../images/about_background3_mobile.jpg);
+}
+
+//about us page customers write gallery
+section.customers_write {
+	text-align: center;
+}
+
+section.customers_write h2 {
+	font-weight: 400;
+	position: relative;
+}
+
+section.customers_write h2:after {
+	content: "";
+	display: block;
+	width: 80%;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 1px;
+	background-color: @color_border;
+}
+
+section.customers_write a {
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin: 0.5em;
+}
+
+//About us page section customers videos
+section.videos.customers h3 {
+	font-weight: 400;
+	position: relative;
+}
+
+section.videos.customers h3:after {
+	content: "";
+	display: block;
+	width: 90%;
+	position: absolute;
+	top: 110%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 1px;
+	background-color: @color_border;
+}
