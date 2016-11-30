@@ -8,7 +8,7 @@
 	</cms:desktop>
 	<cms:mobile>
 		<img
-			src="gallery::getThumbnailById($params['id'], null, 250, Thumbnail::CONSTRAIN_HEIGHT)"
+			src="gallery::getThumbnailById($params['id'], null, 270, Thumbnail::CONSTRAIN_HEIGHT)"
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 		/>

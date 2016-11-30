@@ -9,9 +9,9 @@
 		</head>
 
 		<body>
+			<!-- 2 Header templates Desktop-->
+			<cms:template file="parts/header.xml"/>
 			<cms:desktop>
-				<!-- 2 Header templates Desktop-->
-				<cms:template file="parts/header.xml"/>
 				<cms:template file="parts/header_floating.xml"/>
 			</cms:desktop>
 
