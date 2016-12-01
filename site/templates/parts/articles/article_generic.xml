@@ -42,7 +42,14 @@
     </cms:if>
 
     <!-- Content -->
-    <cms:markdown param="content" multilanguage="yes"/>
+    <cms:if condition="isset($template['limit'])">
+      <cms:markdown param="content" multilanguage="yes" chars="$template['limit']" cms:eval="chars"/>
+    </cms:if>
+
+    <cms:if condition="!isset($template['limit'])">
+      <cms:markdown param="content" multilanguage="yes"/>
+    </cms:if>
+
 
     <!-- Link with content form the title of the article-->
     <cms:if condition="isset($template['link'])">

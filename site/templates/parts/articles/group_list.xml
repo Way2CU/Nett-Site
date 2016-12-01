@@ -22,6 +22,8 @@
 			<!-- Link with the name of the article_title leading article_view.xml -->
 			<param name="link" value=""/>
 
+			<param name="limit" value="150"/>
+
 		</cms:module>
 	</cms:if>
 </document>
