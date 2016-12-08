@@ -13,7 +13,7 @@ Site.map = function (langitude, latitude) {
   var marker = new google.maps.Marker({
     position:{lat: langitude, lng: latitude},
     map: map,
-    title: "DukiveNapo Shop",
+    title: "Next Site",
   });
 }
 
