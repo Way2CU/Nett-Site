@@ -53,7 +53,7 @@
 						name="articles"
 						action="show_list"
 						group="home_features"
-						template="parts/articles/article_list_svg.xml"
+						template="parts/articles/features.xml"
 						/>
 				</ul>
 			</section>
