@@ -57,7 +57,7 @@
 					</a>
 
 					<!-- link to mail, text constant and svg file icon  -->
-					<a href="mailto:info@next-site.co.il">
+					<a href="mailto:elilevy77@gmail.com">
 						<cms:svg file="site-sprite.svg" symbol="icon-email" class="mail"/>
 						<cms:text constant="mail"/>
 					</a>
