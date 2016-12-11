@@ -1,7 +1,7 @@
-# Site title
+# Next-Site
 
 
-Site description
+Google & Facebook promotion and advertisment site.
 
 
 ## License
