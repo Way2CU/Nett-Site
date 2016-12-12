@@ -9,10 +9,10 @@
 section.laptop {
 	padding: 0 calc(~'(100% - 1200px)' / 2);
 	background-image: url(../images/laptop_background.jpg);
-	background-size: 1920px 1100px;
+	background-size: 1920px 1000px;
 	background-repeat: no-repeat;
 	background-position: center top;
-	min-height: 1060px;
+	min-height: 1000px;
 	text-align: center;
 	position: relative;
 }
@@ -35,7 +35,7 @@ section.laptop div.laptop_screen_text {
 	top: 50%;
 	transform: translateY(-50%) translateX(-50%);
 	left: 50%;
-	padding-bottom: 120px;
+	padding-bottom: 140px;
 	width: 450px;
 }
 
@@ -53,8 +53,12 @@ section.laptop div.laptop_screen_text a {
 	border-radius: 25px;
 	font-weight: 700;
 	padding: 1em 0;
+	transition: all 0.3s;
 }
 
+section.laptop div.laptop_screen_text a:hover {
+	background-color: lighten(@color_button, 10%);
+}
 
 /*
 *Section Features
@@ -103,7 +107,7 @@ section.features ul li a {
 }
 
 section.features ul li a:hover {
-	font-weight: 700;
+	text-decoration: underline;
 }
 
 /*
@@ -358,6 +362,7 @@ section.latest_articles article a {
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
+	transition: all 0.3s;
 }
 
 section.latest_articles article a:hover {
