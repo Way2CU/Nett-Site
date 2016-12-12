@@ -263,11 +263,14 @@ div.floating_header nav div.drop_down {
 	visibility: hidden;
 	opacity: 0;
 	border: 1px solid fade(@color_border, 50%);
+	transition-delay: 1s;
 }
 
-div.floating_header nav input:checked ~ div.drop_down {
+div.floating_header nav div.drop_down:hover,
+div.floating_header nav > svg:hover ~ div.drop_down {
 	visibility: visible;
 	opacity: 1;
+	transition-delay: 0s;
 }
 
 div.floating_header nav div.drop_down > a {
