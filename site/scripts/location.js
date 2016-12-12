@@ -5,7 +5,8 @@ Site.map = function (langitude, latitude) {
   var mapCanvas = document.getElementById('map');
   var mapOptions = {
     center: {lat: langitude, lng: latitude},
-    zoom: 17
+    zoom: 17,
+    scrollwheel: false
   }
 
   var map = new google.maps.Map(mapCanvas, mapOptions);
@@ -13,7 +14,7 @@ Site.map = function (langitude, latitude) {
   var marker = new google.maps.Marker({
     position:{lat: langitude, lng: latitude},
     map: map,
-    title: "Next Site",
+    title: "Next Site"
   });
 }
 
