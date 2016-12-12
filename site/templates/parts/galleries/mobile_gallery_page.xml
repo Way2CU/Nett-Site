@@ -1,6 +1,6 @@
 <document>
 	<cms:desktop>
-		<a href="$params['image']" cms:eval="href">
+		<a href="$params['image']" cms:eval="href" class="small_tumb">
 			<img
 				src="gallery::getThumbnailById($params['id'], null, 157, Thumbnail::CONSTRAIN_HEIGHT)"
 				alt="$params['title'][$language]"
@@ -10,7 +10,7 @@
 		</a>
 	</cms:desktop>
 	<cms:mobile>
-		<a href="$params['image']" cms:eval="href">
+		<a href="$params['image']" cms:eval="href" class="small_tumb">
 			<img
 				src="gallery::getThumbnailById($params['id'], null, 85, Thumbnail::CONSTRAIN_HEIGHT)"
 				alt="$params['title'][$language]"
