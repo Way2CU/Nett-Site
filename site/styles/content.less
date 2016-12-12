@@ -333,10 +333,16 @@ section.latest_articles article {
 	vertical-align: top;
 	width: calc(~'100% / 3');
 	padding-top: 1.5em;
+	margin-bottom: 5em;
+	position: relative;
+	min-height: 500px;
 }
 
 section.latest_articles article p {
-	min-height: 150px;
+	min-height: 50px;
+	margin: 0;
+	padding: 1em;
+	padding-top: 0;
 }
 
 section.latest_articles article a {
@@ -348,6 +354,10 @@ section.latest_articles article a {
 	color: white;
 	padding: 1em;
 	border-radius: 15px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 section.latest_articles article a:hover {
