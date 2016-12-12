@@ -82,6 +82,7 @@
 						<param name="title" value=""/>
 						<param name="image" value=""/>
 						<param name="link_view" value=""/>
+						<param name="limit" value="150"/>
 					</cms:module>
 
 					<!-- label for input checkbox with text constant -->

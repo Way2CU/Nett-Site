@@ -595,7 +595,7 @@ section.latest {
 
 section.latest > h2 {
 	font-weight: 400;
-	border-top: 1px solid fade(@color_border, 30%);
+	// border-top: 1px solid fade(@color_border, 30%);
 	padding: 1em 0;
 	display: block;
 	width: 50%;
@@ -613,7 +613,7 @@ section.latest > h2:after {
 	height: 1px;
 	background-color: fade(@color_border, 30%);
 	position: absolute;
-	top: 80%;
+	top: 90%;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -624,14 +624,22 @@ section.latest article {
 	vertical-align: top;
 	width: 382px;
 	margin: 6px;
-	min-height: 530px;
+	min-height: 550px;
 	box-sizing: border-box;
 	border: 1px solid @color_border;
+	position: relative;
 }
 
 section.latest article p,
 section.latest article h2 {
 	margin: 0.5em;
+}
+
+section.latest article a {
+	position: absolute;
+	bottom: 1em;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 //Button toggle style and behavior
