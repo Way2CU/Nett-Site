@@ -34,6 +34,8 @@
 						<a
 							href="URL::make(array(), 'about.xml')"
 							cms:eval="href"
+							class="URL::is_active('about.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-info"/>
 							<cms:text constant="info_link"/>
@@ -43,6 +45,8 @@
 						<a
 							href="URL::make(array(), 'press.xml')"
 							cms:eval="href"
+							class="URL::is_active('press.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-press"/>
 							<cms:text constant="press_link"/>
@@ -52,6 +56,8 @@
 						<a
 							href="URL::make(array(), 'gallery.xml')"
 							cms:eval="href"
+							class="URL::is_active('gallery.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-gallery"/>
 							<cms:text constant="gallery_link"/>
@@ -61,6 +67,8 @@
 						<a
 							href="URL::make(array(), 'building.xml')"
 							cms:eval="href"
+							class="URL::is_active('building.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-globe"/>
 							<cms:text constant="site_bulding"/>
@@ -70,6 +78,8 @@
 						<a
 							href="URL::make(array(), 'organic.xml')"
 							cms:eval="href"
+							class="URL::is_active('organic.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-organicleaf"/>
 							<cms:text constant="organic_link"/>
@@ -79,6 +89,8 @@
 						<a
 							href="URL::make(array(), 'funding.xml')"
 							cms:eval="href"
+							class="URL::is_active('funding.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-money"/>
 							<cms:text constant="funding_link"/>
@@ -88,6 +100,8 @@
 						<a
 							href="URL::make(array(), 'facebook.xml')"
 							cms:eval="href"
+							class="URL::is_active('facebook.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-facebook"/>
 							<cms:text constant="facebook_link"/>
@@ -97,6 +111,8 @@
 						<a
 							href="URL::make(array(), 'reputation.xml')"
 							cms:eval="href"
+							class="URL::is_active('reputation.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-clean"/>
 							<cms:text constant="reputation_link"/>
@@ -106,6 +122,8 @@
 						<a
 							href="URL::make(array(), 'branding.xml')"
 							cms:eval="href"
+							class="URL::is_active('branding.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-brand"/>
 							<cms:text constant="branding_link"/>
@@ -115,6 +133,8 @@
 						<a
 							href="URL::make(array(), 'servers.xml')"
 							cms:eval="href"
+							class="URL::is_active('servers.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-servers"/>
 							<cms:text constant="server_link"/>
@@ -123,6 +143,8 @@
 						<a
 							href="URL::make(array(), 'contact.xml')"
 							cms:eval="href"
+							class="URL::is_active('contact.xml')"
+							cms:optional="class"
 							>
 							<cms:svg file="site-sprite.svg" symbol="icon-phone" class="phone_blue"/>
 							<cms:text constant="contact_link"/>
