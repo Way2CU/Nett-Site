@@ -24,8 +24,6 @@
 
 				<!-- Nav Burger drop down -->
 				<nav>
-					<input type="checkbox"/>
-
 					<!-- Svg menu icon -->
 					<cms:svg file="site-sprite.svg" symbol="icon-menu"/>
 
