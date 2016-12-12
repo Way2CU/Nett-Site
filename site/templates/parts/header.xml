@@ -60,7 +60,7 @@
 							class="URL::is_active('building.xml')"
 							cms:optional="class"
 							>
-							<cms:svg file="site-sprite.svg" symbol="icon-globe"/>
+							<cms:svg file="site-sprite.svg" symbol="icon-building"/>
 							<cms:text constant="site_bulding"/>
 						</a>
 					</li>
