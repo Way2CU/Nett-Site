@@ -71,24 +71,30 @@ Site.on_load = function() {
 	//event listener and function call
 	window.addEventListener('scroll', Site.scroll);
 
-	//Page controll for animation of Show_case gallery desktop and img with description and img
-	Site.show_case_gallery_tablet = new PageControl('section.showcase', 'div.desktop');
-	Site.show_case_gallery_tablet
-		.setInterval(3000)
-		.setWrapAround(true)
-		.attachNextControl($('a.next'))
-		.attachPreviousControl($('a.previous'));
+	if(document.querySelector('section.showcase')) {
+		//Page controll for animation of Show_case gallery desktop and img with description and img
+		Site.show_case_gallery_tablet = new PageControl('section.showcase', 'div.desktop');
+		Site.show_case_gallery_tablet
+			.setInterval(3000)
+			.setWrapAround(true)
+			.attachNextControl($('a.next'))
+			.attachPreviousControl($('a.previous'));
 
-	//Page controll for animation of Show_case gallery mobile
-	Site.show_case_gallery_mobile = new PageControl('section.showcase', 'div.mobile');
-	Site.show_case_gallery_mobile
-		.setInterval(3000)
-		.setWrapAround(true)
-		.attachNextControl($('a.next'))
-		.attachPreviousControl($('a.previous'));
+		//Page controll for animation of Show_case gallery mobile
+		Site.show_case_gallery_mobile = new PageControl('section.showcase', 'div.mobile');
+		Site.show_case_gallery_mobile
+			.setInterval(3000)
+			.setWrapAround(true)
+			.attachNextControl($('a.next'))
+			.attachPreviousControl($('a.previous'));
+	}
+
+
 
 	//Light box gallery Testimonials customers
 	Site.galleryTestimonials = new LightBox('a.testimonial', false, false, true);
+	Site.largeThumb = new LightBox('a.large_tumb', false, false, false);
+	Site.smallThumb = new LightBox('a.small_tumb', false, false, false);
 
 };
 
