@@ -20,5 +20,13 @@
 			<!-- icon-phone -->
 			<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
 		</a>
+		<div class="bottom_links">
+			<a href="#" class="analytics">
+			</a>
+
+			<a href="#" class="partners">
+			</a>
+		</div>
+
 	</div>
 </document>
