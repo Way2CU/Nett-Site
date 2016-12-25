@@ -16,13 +16,13 @@ footer div.footer_content {
 	padding-top: 2em;
 }
 
-footer div.footer_content img {
+footer div.footer_content > img {
 	display: block;
 	margin: 0 auto;
 	width: 400px;
 }
 
-footer div.footer_content a {
+footer div.footer_content > a {
 	padding: 1em 2em;
 	transition: all 0.3s;
 }
@@ -31,11 +31,11 @@ footer div.footer_content a svg {
 	fill: white;
 }
 
-footer div.footer_content a:hover {
+footer div.footer_content > a:hover {
 	background-color: lighten(@color_button, 10%);
 }
 
-footer div.footer_content a svg {
+footer div.footer_content > a svg {
 	width: 35px;
 	height: 35px;
 	display: inline-block;
@@ -43,3 +43,44 @@ footer div.footer_content a svg {
 	fill: white;
 	padding-right: 1em;
 }
+
+footer div.footer_content div.buttom_links {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+footer div.footer_content div.bottom_links > a {
+	display: inline-block;
+	vertical-align: middle;
+	width: 200px;
+	height: 80px;
+	margin-top: 2em;
+	padding: 0;
+	border: 2px solid @color_border_image;
+	transition: all 0.3s;
+}
+
+footer div.footer_content div.bottom_links > a:hover {
+	border: 2px solid @color_svg;
+}
+
+footer div.footer_content div.bottom_links a.analytics {
+	background-image: url(../images/analytics.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	margin-left: 1em;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+footer div.footer_content div.bottom_links a.partners {
+	background-image: url(../images/partners.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+
