@@ -25,9 +25,9 @@ header a.logo {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	width: 200px;
+	width: 150px;
 	height: 83px;
-	margin-left: 2em;
+	margin-left: 1em;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -40,7 +40,7 @@ body.floating header {
 header nav {
 	display: inline-block;
 	vertical-align: middle;
-	width: calc(~'100% - 300px');
+	width: calc(~'100% - 150px - 1em');
 	position: relative;
 }
 
@@ -62,6 +62,7 @@ header nav ul li {
 	border-left: 1px solid @color_border_image;
 	transition: all 0.3s;
 	min-height: 100px;
+	padding: 0 0.1em;
 }
 
 div.floating_header nav div.drop_down > a:hover,
