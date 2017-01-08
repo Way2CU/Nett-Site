@@ -25,7 +25,7 @@
 				<!-- Nav Burger drop down -->
 				<nav>
 					<!-- Svg menu icon -->
-					<cms:svg file="site-sprite.svg" symbol="icon-menu"/>
+					<cms:svg file="site-sprite.svg" symbol="hamburger"/>
 
 					<div class="drop_down">
 						<!-- About link, image and constant -->
