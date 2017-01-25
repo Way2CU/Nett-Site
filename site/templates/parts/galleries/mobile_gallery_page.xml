@@ -8,6 +8,7 @@
 				class="desktop"
 				/>
 		</a>
+		</div>
 	</cms:desktop>
 	<cms:mobile>
 		<a href="$params['image']" cms:eval="href" class="small_tumb">
