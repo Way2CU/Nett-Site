@@ -844,48 +844,49 @@ section.contact_us div.left form div.controls button {
 
 section.gallery_list {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
-	text-align: center;
 }
 
-section.gallery_list div.gallery_content {
-	display: block;
-	width: 100%;
-	margin: 2em auto;
-}
-
-section.gallery_list div.gallery_content p,
-section.gallery_list div.gallery_content a {
+section.gallery_list a {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
+	width: 280px;
+	position: relative;
 	text-decoration: none;
-	color: @color_title;
+	color: white;
+	margin-left: 1em;
+	overflow: hidden;
 }
 
-section.gallery_list div.gallery_content a {
-	font-weight: 700;
-}
-
-section.gallery_list div.gallery_content a:hover {
-	color: @color_svg;
-}
-
-section.gallery_list div.gallery_content p {
-	padding-left: 2em;
-}
-
-section.gallery_list div.gallery_content a:first-of-type {
-	padding-left: 3em;
-}
-
-section.gallery_list div.gallery_content a img {
+section.gallery_list a div.hidden {
 	display: block;
 	width: 100%;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: fade(@color_border, 80%);
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0.5em;
+}
+
+section.gallery_list a div.hidden h3 {
+	margin: 0;
+	font-size: 1em;
+	color: white;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid white;
+	display: block;
+	width: 95%;
 	margin: 0 auto;
-	border: 1px solid transparent;
 }
-section.gallery_list div.gallery_content a img:hover {
-	border: 1px solid @color_svg;
+
+section.gallery_list a:hover div.hidden {
+	top: 0;
+	background-color: fade(@color_svg, 50%);
 }
+
+
 
 /*
 * Page From the Press
