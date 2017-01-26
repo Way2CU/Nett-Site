@@ -843,18 +843,21 @@ section.contact_us div.left form div.controls button {
 */
 
 section.gallery_list {
-	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	padding: 1em calc(~'(100% - 1200px)' / 2 );
 }
 
-section.gallery_list a {
+section.gallery_list > a {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 	width: 280px;
-	position: relative;
+	height: 214px;
 	text-decoration: none;
 	color: white;
 	margin-left: 1em;
+	margin-bottom: 2em;
 	overflow: hidden;
+	position: relative;
+	border: 1px solid black;
 }
 
 section.gallery_list a div.hidden {
@@ -867,14 +870,13 @@ section.gallery_list a div.hidden {
 	background-color: fade(@color_border, 80%);
 	height: 100%;
 	box-sizing: border-box;
-	padding: 0.5em;
+	padding: 0 0.5em;
 }
 
 section.gallery_list a div.hidden h3 {
 	margin: 0;
 	font-size: 1em;
 	color: white;
-	padding-bottom: 0.5em;
 	border-bottom: 1px solid white;
 	display: block;
 	width: 95%;
@@ -886,7 +888,73 @@ section.gallery_list a:hover div.hidden {
 	background-color: fade(@color_svg, 50%);
 }
 
+section.gallery_list div.details {
+	float: right;
+	display: none;
+	width: 100%;
+	position: relative;
+	margin: 1em 0;
+}
 
+section.gallery_list div.details div.desktop {
+	display: block;
+	background-image: url(../images/tablet.svg);
+	background-size: 760px 600px;
+	width: 760px;
+	height: 600px;
+	background-position: center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	padding: 2em 0;
+	margin-left: 10%;
+	margin-right: auto;
+}
+
+section.gallery_list div.details div.mobile {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-image: url(../images/mobile.svg);
+	background-size: 190px 360px;
+	width: 190px;
+	height: 360px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+section.gallery_list div.details div.mobile img {
+	display: block;
+	z-index: 1;
+	margin: 0 auto;
+	padding: 2em 0;
+}
+
+section.gallery_list div.details div.desktop img {
+	display: block;
+	border: 1px solid white;
+	z-index: 1;
+	margin: 0 auto;
+}
+
+section.gallery_list div.details div.mobile p {
+	position: absolute;
+	bottom: 100%;
+	left: 550%;
+	text-align: center;
+	display: block;
+	color: @color_title;
+	margin-top: 0;
+}
+
+section.gallery_list div.details div.mobile a {
+	text-decoration: none;
+	color: @color_svg;
+	font-weight: 700;
+}
+
+section.gallery_list a.active + div.details {
+	display: block;
+}
 
 /*
 * Page From the Press
