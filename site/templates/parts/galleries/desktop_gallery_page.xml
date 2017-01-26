@@ -1,18 +1,17 @@
 <document>
 	<cms:desktop>
-		<a href="$params['image']" cms:eval="href" class="large_tumb">
+		<a href="javascript:void()" class="large_tumb">
 				<div class="hidden">
-				<h3><cms:var param="title" multilanguage="yes" /></h3>
-				<p><cms:var param="description" multilanguage="yes"/></p>
+					<h3><cms:var param="title" multilanguage="yes" /></h3>
+					<p><cms:var param="description" multilanguage="yes"/></p>
 				</div>
 			<img
-				src="gallery::getThumbnailById($params['id'], null, 280, Thumbnail::CONSTRAIN_HEIGHT)"
+				src="gallery::getThumbnailById($params['id'], null, 280, Thumbnail::CONSTRAIN_BOTH)"
 				alt="$params['title'][$language]"
 				cms:eval="src,alt"
 				class="desktop"
 				/>
 		</a>
-
 	</cms:desktop>
 
 	<cms:mobile>
