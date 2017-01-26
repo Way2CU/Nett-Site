@@ -5,11 +5,11 @@
 		<head>
 			<title><cms:text constant="gallery_link"/></title>
 			<cms:collection  include="animation_chain"/>
+			<cms:collection  include="dynamic_page_content"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body>
-
 			<!-- 2 Header templates Desktop-->
 			<cms:template file="parts/header.xml"/>
 			<cms:desktop>
@@ -30,7 +30,7 @@
 				<cms:module
 							name="gallery"
 							action="show_group_list"
-							template="parts/galleries/gallery_groups_articles.xml"
+							template="parts/galleries/gallery_groups_show.xml"
 						/>
 			</section>
 
