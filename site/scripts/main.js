@@ -93,9 +93,27 @@ Site.on_load = function() {
 
 	//Light box gallery Testimonials customers
 	Site.galleryTestimonials = new LightBox('a.testimonial', false, false, true);
-	Site.largeThumb = new LightBox('a.large_tumb', false, false, false);
-	Site.smallThumb = new LightBox('a.small_tumb', false, false, false);
 
+	//Active class in gallery page
+	Site.thumbnail = document.querySelectorAll('a.large_tumb');
+
+	if ('section.gallery_list') {
+	Site.thumbnail.forEach(function(element) {
+			element.addEventListener('click', handle_click);
+	});
+	}
+
+	function handle_click(event){
+		event.preventDefault();
+		for (var i=0; i < Site.thumbnail.length; i++) {
+			var link = Site.thumbnail[i];
+			if (link === this)
+				continue;
+			link.classList.remove('active');
+		}
+
+		this.classList.add('active');
+	}
 };
 
 
