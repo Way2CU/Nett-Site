@@ -27,16 +27,61 @@ footer div.footer_content h2 {
 	font-weight: 400;
 }
 
-footer div.footer_content a {
-	padding: 1em;
+footer div.footer_content div.buttom_links {
+	display: block;
+	padding: 0.5em 0em;
+	border-top: 1px solid @color_text;
 }
 
-footer div.footer_content a svg {
-	fill: white;
-	width: 2em;
-	height: 2em;
+footer div.footer_content div.bottom_links > a {
 	display: inline-block;
 	vertical-align: middle;
+	margin: 0em 0.2em;
+	width: 150px;
+	height: 50px;
+	padding: 0;
+	border: 2px solid @color_border_image;
+	transition: all 0.3s;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+
+footer div.footer_content div.bottom_links > a.button {
+	height: auto;
+	margin: 0.5em 0em;
+	padding: 1em;
+	background-color: @color_svg;
+}
+
+footer div.footer_content div.bottom_links > a.button svg {
+	display: inline-block;
+	vertical-align: middle;
+	width: 2em;
+	height: 2em;
+	padding: 0em 0.2em;
 	fill: white;
-	padding-right: 1em;
+}
+
+footer div.footer_content div.bottom_links > a:hover {
+	border: 2px solid @color_svg;
+}
+
+footer div.footer_content div.bottom_links a.analytics {
+	background-image: url(../images/analytics.png);
+}
+
+footer div.footer_content div.bottom_links a.partners {
+	background-image: url(../images/partners.png);
+}
+
+footer div.footer_content div.bottom_links a.youtube {
+	background-image: url(../images/youtube.svg);
+	background-color: black;
+}
+
+footer div.footer_content div.bottom_links a.facebook {
+	background-image: url(../images/facebook.svg);
+	background-size: auto 100%;
 }

@@ -13,18 +13,35 @@
 		<div class="bottom_links">
 			<a href="#" class="analytics"></a>
 			<a href="#" class="partners"></a>
+
+			<cms:desktop>
 			<!-- Button-phone -->
-			<a href="'tel:'.urlencode(Language::get_Text('phone'))"
-				cms:eval="href"
-				class="button"
-				>
-				<!-- Phone text -->
-				<cms:text constant="phone"/>
-				<!-- icon-phone -->
-				<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
-			</a>
+				<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+					cms:eval="href"
+					class="button"
+					>
+					<!-- Phone text -->
+					<cms:text constant="phone"/>
+					<!-- icon-phone -->
+					<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
+				</a>
+			</cms:desktop>
+
 			<a href="#" class="facebook"></a>
 			<a href="#" class="youtube"></a>
+
+			<cms:mobile>
+			<!-- Button-phone -->
+				<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+					cms:eval="href"
+					class="button"
+					>
+					<!-- Phone text -->
+					<cms:text constant="phone"/>
+					<!-- icon-phone -->
+					<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
+				</a>
+			</cms:mobile>
 		</div>
 
 	</div>
