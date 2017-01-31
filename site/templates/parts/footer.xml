@@ -10,22 +10,21 @@
 		<!-- Constant with text from H1 -->
 		<h2><cms:text constant="logo_text"/></h2>
 
-		<!-- Button-phone -->
-		<a href="'tel:'.urlencode(Language::get_Text('phone'))"
-			cms:eval="href"
-			class="button"
-			>
-			<!-- Phone text -->
-			<cms:text constant="phone"/>
-			<!-- icon-phone -->
-			<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
-		</a>
 		<div class="bottom_links">
-			<a href="#" class="analytics">
+			<a href="#" class="analytics"></a>
+			<a href="#" class="partners"></a>
+			<!-- Button-phone -->
+			<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+				cms:eval="href"
+				class="button"
+				>
+				<!-- Phone text -->
+				<cms:text constant="phone"/>
+				<!-- icon-phone -->
+				<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
 			</a>
-
-			<a href="#" class="partners">
-			</a>
+			<a href="#" class="facebook"></a>
+			<a href="#" class="youtube"></a>
 		</div>
 
 	</div>
