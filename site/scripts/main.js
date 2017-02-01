@@ -49,7 +49,7 @@ Site.is_mobile = function() {
 Site.scroll = function(event) {
 	if(window.scrollY > Site.animationTrigger) {
 		Site.body.classList.add('floating');
-	}else {
+	} else {
 		Site.body.classList.remove('floating');
 	}
 
@@ -109,11 +109,30 @@ Site.on_load = function() {
 			var link = Site.thumbnail[i];
 			if (link === this)
 				continue;
-			link.classList.remove('active');
+				link.classList.remove('active');
 		}
-
-		this.classList.add('active');
+		this.classList.toggle('active');
 	}
+
+	//Hnadle dialog click function
+	handle_dialog = function(event) {
+		event.preventDefault();
+		Site.video_dialog
+			.setTitle(this.getAttribute('title'))
+			.setContentFromURL(this.getAttribute('href'))
+			.showWhenReady();
+	}
+
+	//Grabbing all video link inside section and connecting click handler
+	Site.videos = document.querySelectorAll('section.videos a');
+	Site.videos.forEach(function(element) {
+		element.addEventListener('click', handle_dialog);
+	});
+
+	//Dialog box for site videos
+	Site.video_dialog = new Dialog();
+
+
 };
 
 
