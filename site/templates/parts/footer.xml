@@ -1,11 +1,7 @@
 <document>
 	<div class="footer_content">
 		<!-- Color Logo img  -->
-		<img
-			src="_BASEURL.'/site/images/logo_color.svg'"
-			alt="next_site_logo"
-			cms:eval="src"
-		/>
+		<cms:svg file="logo_color.svg" />
 
 		<!-- Constant with text from H1 -->
 		<h2><cms:text constant="logo_text"/></h2>
