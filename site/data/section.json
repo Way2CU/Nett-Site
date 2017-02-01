@@ -11,6 +11,7 @@
 	"/servers" : "servers.xml",
 	"/contact" : "contact.xml",
 	"/branding" : "branding.xml",
-	"/{name}" : "article_view.xml",
-	"/{subject}/{name}": "article_view.xml"
+	"/{s:name}" : "article_view.xml",
+	"/videos/{n:video_id}": "view_video.xml",
+	"/{s:subject}/{n:name}": "article_view.xml"
 }
