@@ -5,7 +5,7 @@
 			title="$params['title'][$language]"
 			cms:eval="href,title"
 			>
-			<cms:var param="title" multilanguage="yes"/>
+			<span><cms:var param="title" multilanguage="yes"/></span>
 			<img src="$params['image']" alt="$params['title'][$language]" cms:eval="src,alt"/>
 		</a>
 	</li>
