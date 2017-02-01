@@ -7,8 +7,10 @@
 		<h2><cms:text constant="logo_text"/></h2>
 
 		<div class="bottom_links">
-			<a href="#" class="analytics"></a>
-			<a href="#" class="partners"></a>
+			<a href="#" class="youtube"></a>
+			<a href="#" class="facebook"></a>
+
+
 
 			<cms:desktop>
 			<!-- Button-phone -->
@@ -23,8 +25,8 @@
 				</a>
 			</cms:desktop>
 
-			<a href="#" class="facebook"></a>
-			<a href="#" class="youtube"></a>
+			<a href="#" class="analytics"></a>
+			<a href="#" class="partners"></a>
 
 			<cms:mobile>
 			<!-- Button-phone -->
