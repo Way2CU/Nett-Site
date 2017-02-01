@@ -1,14 +1,12 @@
 <document>
 	<li>
-			<cms:module
-				name="youtube"
-				action="show"
-				id="$params['id']"
-				embed="1"
-				width="280"
-				height="200"
-				enable_api="1"
-				cms:eval="id"
-				/>
+		<a
+			href="URL::make(array('video_id' => $params['id']))"
+			title="$params['title'][$language]"
+			cms:eval="href,title"
+			>
+			<cms:var param="title" multilanguage="yes"/>
+			<img src="$params['image']" alt="$params['title'][$language]" cms:eval="src,alt"/>
+		</a>
 	</li>
 </document>
