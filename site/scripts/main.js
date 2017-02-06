@@ -55,6 +55,12 @@ Site.scroll = function(event) {
 
 };
 
+//Dialog form handle click event and show dialog form
+handle_laptop_link_click = function(event) {
+	event.preventDefault();
+	Site.dialog_form.show();
+};
+
 
 /**
  * Function called when document and images have been completely loaded.
@@ -88,8 +94,6 @@ Site.on_load = function() {
 			.attachNextControl($('a.next'))
 			.attachPreviousControl($('a.previous'));
 	}
-
-
 
 	//Light box gallery Testimonials customers
 	Site.galleryTestimonials = new LightBox('a.testimonial', false, false, true);
@@ -132,6 +136,15 @@ Site.on_load = function() {
 	//Dialog box for site videos
 	Site.video_dialog = new Dialog();
 
+	//Dialog form seclecting link and attaching event
+	Site.dialog_form = document.querySelector('div.laptop_screen_text a');
+	Site.dialog_form.addEventListener('click', handle_laptop_link_click);
+
+	//Dialog from
+	Site.dialog_form = new Dialog();
+	Site.dialog_form
+		.addClass('floating_form')
+		.setContentFromDOM('div#bottom_form');
 
 };
 

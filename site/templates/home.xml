@@ -35,7 +35,7 @@
 					<div class="laptop_screen_text">
 						<h2><cms:text constant="solution"/></h2>
 						<a
-							href="#contact_form">
+							href="#">
 							<cms:text constant="contact_now"/>
 						</a>
 					</div>
@@ -127,6 +127,13 @@
 			<footer>
 				<cms:template file="parts/footer.xml"/>
 			</footer>
+			<div id="bottom_form">
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="contact_form"
+					/>
+			</div>
 		</body>
 	</html>
 </document>
