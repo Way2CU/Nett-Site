@@ -123,6 +123,16 @@
 					/>
 			</section>
 
+			<!-- Facebook like & share buttons -->
+			<div class="fb-like"
+				data-href="https://next-site.co.il"
+				data-layout="standard"
+				data-action="like"
+				data-size="large"
+				data-show-faces="true"
+				data-share="true">
+			</div>
+
 			<!-- Footer Template -->
 			<footer>
 				<cms:template file="parts/footer.xml"/>
