@@ -9,26 +9,8 @@
 		<div class="bottom_links">
 			<a href="#" class="youtube"></a>
 			<a href="#" class="facebook"></a>
-
-
-
-			<cms:desktop>
-			<!-- Button-phone -->
-				<a href="'tel:'.urlencode(Language::get_Text('phone'))"
-					cms:eval="href"
-					class="button"
-					>
-					<!-- Phone text -->
-					<cms:text constant="phone"/>
-					<!-- icon-phone -->
-					<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
-				</a>
-			</cms:desktop>
-
 			<a href="partners_link" cms:constant="href" class="analytics"></a>
 			<a href="partners_link" cms:constant="href" class="partners"></a>
-
-
 
 			<cms:mobile>
 			<!-- Button-phone -->

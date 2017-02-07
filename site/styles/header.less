@@ -19,17 +19,40 @@ header {
 	z-index: 100000;
 	text-align: center;
 }
+header div.logo_container {
+	display: inline-block;
+	vertical-align: middle;
+	width: 150px;
+	padding-left: 1em;
+}
 
-header a.logo {
+header div.logo_container a.logo {
 	background-image: url(../images/logo_color.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
+	display: block;
 	width: 150px;
-	height: 83px;
-	margin-left: 1em;
+	height: 50px;
+	padding-bottom: 0.5em;
+}
+
+header div.logo_container a.button {
+	display: block;
+	padding: 0.5em;
+}
+
+header div.logo_container a svg {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+header div.logo_container a.button svg {
 	display: inline-block;
 	vertical-align: middle;
+	fill: white;
+	margin-left: 0.5em;
 }
 
 body.floating header {

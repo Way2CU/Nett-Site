@@ -1,13 +1,26 @@
 <document>
 	<header>
 		<cms:desktop>
-			<!-- Logo image -->
-			<a
-				href="URL::make()"
-				cms:eval="href"
-				class="logo"
-				>
-			</a>
+			<div class="logo_container">
+				<!-- Logo image -->
+				<a
+					href="URL::make()"
+					cms:eval="href"
+					class="logo"
+					>
+				</a>
+				<!-- Button-phone -->
+				<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+					cms:eval="href"
+					class="button"
+					>
+					<!-- icon-phone -->
+					<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
+					<!-- Phone text -->
+					<cms:text constant="phone"/>
+				</a>
+			</div>
+
 			<nav>
 				<ul>
 					<li class="action">
