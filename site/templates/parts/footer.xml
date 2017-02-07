@@ -25,7 +25,7 @@
 				</a>
 			</cms:desktop>
 
-			<a href="#" class="analytics"></a>
+			<a href="partners_link" cms:constant="href" class="analytics"></a>
 			<a href="partners_link" cms:constant="href" class="partners"></a>
 
 
