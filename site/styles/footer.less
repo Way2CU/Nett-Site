@@ -8,13 +8,13 @@
 
 footer div.footer_content {
 	background-image: url(../images/footer_skyline.svg);
-	background-position: center -1px;
+	background-position: center bottom;
 	background-size: 1920px 450px;
 	background-repeat: no-repeat;
 	text-align: center;
-	padding-top: 200px;
-	padding-bottom: 2em;
-	background-color: @color_backgound_dark;
+	background-color: white;
+	min-height: 450px;
+	padding-bottom: 150px;
 }
 
 footer div.footer_content > svg {
@@ -25,25 +25,38 @@ footer div.footer_content > svg {
 }
 
 footer div.footer_content > svg path.st0 {
-	fill: white;
+	fill: black;
 }
 
 footer div.footer_content h2 {
-	color: white;
+	color: black;
 	width: 60%;
 	padding-bottom: 1em;
-	margin-left: auto;
-	margin-right: auto;
-	border-bottom: 1px solid @color_border_image;
+	margin: 0 auto;
 }
 
-footer div.footer_content div.buttom_links {
+footer a.button {
+	display: inline-block;
+	padding: 0.5em;
+	text-align: center;
+}
+
+footer a.button svg {
+	display: inline-block;
+	vertical-align: middle;
+	fill: white;
+	width: 2em;
+	height: 2em;
+}
+
+footer div.bottom_links {
 	display: block;
 	padding: 0.5em 0em;
-	border-top: 1px solid @color_text;
+	text-align: center;
+	background-color: @color_backgound_dark;
 }
 
-footer div.footer_content div.bottom_links > a {
+footer div.bottom_links > a {
 	display: inline-block;
 	vertical-align: middle;
 	width: 100px;
@@ -57,23 +70,23 @@ footer div.footer_content div.bottom_links > a {
 	transition: all 0.3s;
 }
 
-footer div.footer_content div.bottom_links > a:hover {
+footer div.bottom_links > a:hover {
 	transform: scale(1.1);
 }
 
-footer div.footer_content div.bottom_links a.analytics {
+footer div.bottom_links a.analytics {
 	background-image: url(../images/analytics.png);
 }
 
-footer div.footer_content div.bottom_links a.partners {
+footer div.bottom_links a.partners {
 	background-image: url(../images/partners.png);
 }
 
-footer div.footer_content div.bottom_links a.youtube {
+footer div.bottom_links a.youtube {
 	background-image: url(../images/youtube.svg);
 }
 
-footer div.footer_content div.bottom_links a.facebook {
+footer div.bottom_links a.facebook {
 	background-image: url(../images/facebook.svg);
 	background-size: auto 100%;
 }
