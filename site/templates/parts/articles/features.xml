@@ -3,7 +3,7 @@
 		<cms:svg file="site-sprite.svg" symbol="'icon-' .$params['text_id']" cms:eval="symbol"/>
 		<h4><cms:var param="title" multilanguage="yes"/></h4>
 		<cms:markdown param="content" multilanguage="yes"/>
-		<a href="URL::make(array(), $params['text_id'].'.xml')" cms:eval="href" class="button">
+		<a href="URL::make(array(), $params['text_id'].'.xml')" cms:eval="href">
 			<cms:text constant="more_info"/>
 		</a>
 	</li>
