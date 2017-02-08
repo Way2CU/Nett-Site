@@ -10,17 +10,13 @@
 	<div class="bottom_links">
 		<a href="#" class="youtube"></a>
 
-		<cms:desktop>
-			<!-- Facebook like & share buttons -->
-			<div class="fb-like" id="fb_root"
-				data-href="$_SERVER['REQUEST_URI']"
-				data-layout="button"
-				data-action="like"
-				data-show-faces="false"
-				data-share="true"
-				cms:eval="data-href">
-			</div>
-		</cms:desktop>
+		<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width=450&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId"
+			width="450" height="35"
+			style="border:none;overflow:hidden"
+			scrolling="no"
+			frameborder="0"
+			allowTransparency="true">
+		</iframe>
 
 		<a href="partners_link" cms:constant="href" class="analytics"></a>
 		<a href="partners_link" cms:constant="href" class="partners"></a>
