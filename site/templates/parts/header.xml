@@ -14,10 +14,10 @@
 					cms:eval="href"
 					class="button"
 					>
-					<!-- icon-phone -->
-					<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
 					<!-- Phone text -->
 					<cms:text constant="phone"/>
+					<!-- icon-phone -->
+					<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
 				</a>
 			</div>
 
