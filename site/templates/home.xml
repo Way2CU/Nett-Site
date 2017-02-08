@@ -86,6 +86,7 @@
 						name="gallery"
 						action="show_image_list"
 						group="clients_logos"
+						order_by="text_id"
 						template="parts/galleries/gallery_list_logos.xml"
 						/>
 				</ul>
