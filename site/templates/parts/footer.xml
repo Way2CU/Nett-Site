@@ -5,22 +5,23 @@
 
 		<!-- Constant with text from H1 -->
 		<h2><cms:text constant="logo_text"/></h2>
-
-		<!-- Button-phone -->
-		<a href="'tel:'.urlencode(Language::get_Text('phone'))"
-			cms:eval="href"
-			class="button"
-			>
-			<!-- icon-phone -->
-			<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
-			<!-- Phone text -->
-			<cms:text constant="phone"/>
-		</a>
 	</div>
 
 	<div class="bottom_links">
 		<a href="#" class="youtube"></a>
-		<a href="#" class="facebook"></a>
+
+		<cms:desktop>
+			<!-- Facebook like & share buttons -->
+			<div class="fb-like" id="fb_root"
+				data-href="$_SERVER['REQUEST_URI']"
+				data-layout="button"
+				data-action="like"
+				data-show-faces="false"
+				data-share="true"
+				cms:eval="data-href">
+			</div>
+		</cms:desktop>
+
 		<a href="partners_link" cms:constant="href" class="analytics"></a>
 		<a href="partners_link" cms:constant="href" class="partners"></a>
 	</div>
