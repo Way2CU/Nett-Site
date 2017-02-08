@@ -819,3 +819,119 @@ section.read article img {
 	margin: 0 auto;
 }
 
+/*
+ * Dialog form
+*/
+div.dialog.floating_form.visible {
+	width: 100%;
+}
+
+div.dialog.floating_form div.content {
+	height: 100vh;
+}
+
+div.dialog.floating_form.visible div.title {
+	display: none
+}
+
+div.dialog.floating_form.visible div.command_bar a.close {
+	background-color: @color_svg;
+	padding: 0.5em 0.5em;
+	transition: all 0.3s;
+}
+
+div.dialog.floating_form.visible div.command_bar a.close:hover {
+	background-color: lighten(@color_svg, 10%);
+}
+
+#bottom_form {
+	display: block;
+	box-sizing: border-box;
+	padding: 0.5em;
+}
+
+#bottom_form form {
+	display: block;
+	width: 100%;
+}
+
+#bottom_form form label {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 50%;
+}
+
+#bottom_form form label select,
+#bottom_form form label input,
+#bottom_form form label span {
+	display: block;
+	width: 95%;
+	box-sizing: border-box;
+	padding: 0.5em;
+	color: black;
+	background-color: white;
+}
+
+#bottom_form form label:nth-child(odd) select,
+#bottom_form form label:nth-child(odd) input {
+	width: 100%;
+}
+
+#bottom_form form label span {
+	padding-bottom: 0.5em;
+}
+
+#bottom_form form label input {
+	border: 1px solid @color_border;
+}
+
+#bottom_form form label select:focus,
+#bottom_form form label:nth-child(8) textarea:focus,
+#bottom_form form label input:focus,
+#bottom_form form label select:hover,
+#bottom_form form label:nth-child(8) textarea:hover,
+#bottom_form form label input:hover {
+	border: 1px solid @color_svg;
+}
+
+#bottom_form form label:nth-child(8) {
+	display: block;
+	width: 100%;
+}
+
+#bottom_form form label:nth-child(8) textarea {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	min-height: 90px;
+	padding: 0.5em;
+	resize: vertical;
+}
+
+#bottom_form form label.checkbox {
+	display: block;
+	width: 100%;
+	padding: 1em 0;
+}
+
+#bottom_form form label.checkbox input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+}
+
+#bottom_form form label.checkbox span {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	padding-right: 1em;
+}
+
+#bottom_form form div.controls {
+	text-align: center;
+}
+
+#bottom_form form div.controls button {
+	padding: 1em 3em;
+}
