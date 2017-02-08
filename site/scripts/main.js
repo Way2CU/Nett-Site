@@ -58,7 +58,7 @@ Site.scroll = function(event) {
 //Dialog form handle click event and show dialog form
 handle_laptop_link_click = function(event) {
 	event.preventDefault();
-	Site.dialog_form.show();
+	Site.dialog_form.open();
 };
 
 
@@ -134,17 +134,18 @@ Site.on_load = function() {
 	});
 
 	//Dialog box for site videos
-	Site.video_dialog = new Dialog();
+	Site.video_dialog = new Caracal.Dialog();
 
 	//Dialog form seclecting link and attaching event
-	Site.dialog_form = document.querySelector('div.laptop_screen_text a');
-	Site.dialog_form.addEventListener('click', handle_laptop_link_click);
+	var contact_form_link = document.querySelector('div.laptop_screen_text a');
+	if (contact_form_link)
+		contact_form_link.addEventListener('click', handle_laptop_link_click);
 
 	//Dialog from
-	Site.dialog_form = new Dialog();
+	Site.dialog_form = new Caracal.Dialog();
 	Site.dialog_form
-		.addClass('floating_form')
-		.setContentFromDOM('div#bottom_form');
+		.add_class('floating_form')
+		.set_content_from_dom('div#bottom_form');
 
 	//Facebook SDK
   window.fbAsyncInit = function() {
@@ -156,13 +157,13 @@ Site.on_load = function() {
     FB.AppEvents.logPageView();
   };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+  // (function(d, s, id){
+  //    var js, fjs = d.getElementsByTagName(s)[0];
+  //    if (d.getElementById(id)) {return;}
+  //    js = d.createElement(s); js.id = id;
+  //    js.src = "//connect.facebook.net/en_US/sdk.js";
+  //    fjs.parentNode.insertBefore(js, fjs);
+  //  }(document, 'script', 'facebook-jssdk'));
 
 };
 
