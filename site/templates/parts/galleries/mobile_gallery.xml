@@ -12,7 +12,7 @@
 	<cms:mobile>
 		<div class="mobile">
 			<img
-			src="gallery::getThumbnailById($params['id'], null, 110, Thumbnail::CONSTRAIN_BOTH)"
+			src="gallery::getThumbnailById($params['id'], null, 230, Thumbnail::CONSTRAIN_BOTH)"
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 			/>

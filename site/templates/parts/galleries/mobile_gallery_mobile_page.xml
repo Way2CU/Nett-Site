@@ -1,0 +1,9 @@
+<document>
+	<div class="mobile">
+		<img
+		src="gallery::getThumbnailById($params['id'], null, 110, Thumbnail::CONSTRAIN_BOTH)"
+		alt="$params['title'][$language]"
+		cms:eval="src,alt"
+		/>
+	</div>
+</document>
