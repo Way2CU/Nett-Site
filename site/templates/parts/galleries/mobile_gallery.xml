@@ -11,9 +11,8 @@
 	</cms:desktop>
 	<cms:mobile>
 		<div class="mobile">
-			<cms:markdown param="description" multilanguage="yes"/>
 			<img
-			src="gallery::getThumbnailById($params['id'], null, 235, Thumbnail::CONSTRAIN_WIDTH)"
+			src="gallery::getThumbnailById($params['id'], null, 110, Thumbnail::CONSTRAIN_BOTH)"
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 			/>

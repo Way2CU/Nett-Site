@@ -10,13 +10,14 @@
 		</a>
 		</div>
 	</cms:desktop>
+
 	<cms:mobile>
 		<a href="$params['image']" cms:eval="href" class="small_tumb">
 			<img
-				src="gallery::getThumbnailById($params['id'], null, 85, Thumbnail::CONSTRAIN_HEIGHT)"
+				src="gallery::getThumbnailById($params['id'], null, 150, Thumbnail::CONSTRAIN_HEIGHT)"
 				alt="$params['title'][$language]"
 				cms:eval="src,alt"
-				class="desktop"
+				class="mobile"
 				/>
 		</a>
 	</cms:mobile>

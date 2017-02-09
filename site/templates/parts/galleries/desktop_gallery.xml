@@ -10,4 +10,15 @@
 				/>
 		</div>
 	</cms:desktop>
+	<cms:mobile>
+		<div class="desktop">
+			<!--Container and img form gallery  -->
+				<img
+				src="gallery::getThumbnailById($params['id'], null, 150, Thumbnail::CONSTRAIN_HEIGHT)"
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				class="desktop"
+				/>
+		</div>
+	</cms:mobile>
 </document>

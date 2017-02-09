@@ -15,14 +15,17 @@
 	</cms:desktop>
 
 	<cms:mobile>
-		<cms:markdown param="description" multilanguage="yes"/>
-		<a href="$params['image']" cms:eval="href" class="large_tumb">
-			<img
-				src="gallery::getThumbnailById($params['id'], null, 200, Thumbnail::CONSTRAIN_HEIGHT)"
-				alt="$params['title'][$language]"
-				cms:eval="src,alt"
-				class="desktop"
-				/>
-		</a>
+			<a href="$params['image']" cms:eval="href" class="large_tumb">
+				<img
+					src="gallery::getThumbnailById($params['id'], null, 135, Thumbnail::CONSTRAIN_HEIGHT)"
+					alt="$params['title'][$language]"
+					cms:eval="src,alt"
+					class="mobile"
+					/>
+				<div class="hidden">
+					<p><cms:var param="description" multilanguage="yes"/></p>
+					<button><cms:text constant="gallery_show_button" /></button>
+				</div>
+			</a>
 	</cms:mobile>
 </document>

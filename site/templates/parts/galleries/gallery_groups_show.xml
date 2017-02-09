@@ -7,7 +7,8 @@
 		group_id="$params['id']"
 		template="parts/galleries/desktop_gallery_page.xml"
 		cms:eval="group_id"
-	/>
+		/>
+
 	<div class="details">
 	<!-- Tablet showcase container & img inside-->
 			<cms:module
@@ -17,7 +18,7 @@
 				group_id="$params['id']"
 				template="parts/galleries/desktop_gallery.xml"
 				cms:eval="group_id"
-			/>
+				/>
 
 		<!-- Mobile showcase container & img inside-->
 			<cms:module
@@ -27,6 +28,6 @@
 				group_id="$params['id']"
 				template="parts/galleries/mobile_gallery.xml"
 				cms:eval="group_id"
-			/>
+				/>
 	</div>
 </document>
