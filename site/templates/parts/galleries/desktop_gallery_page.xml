@@ -17,7 +17,7 @@
 	<cms:mobile>
 			<a href="$params['image']" cms:eval="href" class="large_tumb">
 				<img
-					src="gallery::getThumbnailById($params['id'], null, 135, Thumbnail::CONSTRAIN_HEIGHT)"
+					src="gallery::getThumbnailById($params['id'], null, 250, Thumbnail::CONSTRAIN_HEIGHT)"
 					alt="$params['title'][$language]"
 					cms:eval="src,alt"
 					class="mobile"
