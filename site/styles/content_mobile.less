@@ -422,11 +422,12 @@ section.content article {
 //About Backgrounds
 section.content.about article:nth-child(1) {
 	background-image: url(../images/about_background1_mobile.jpg);
-	padding-bottom: 150px;
+	padding-bottom: 180px;
 }
 
 section.content.about article:nth-child(2){
 	background-image: url(../images/about_background2_mobile.jpg);
+	padding-bottom: 330px;
 }
 
 section.content.about article:nth-child(3){
@@ -653,33 +654,78 @@ section.latest input:checked + div > article:nth-of-type(1n+4) {
 /*
 *Gallery Page
 */
+
 section.gallery_list {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0.5em;
+	text-align: center;
+}
+
+section.gallery_list p {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: @color_title;
+	text-decoration: none;
+}
+
+section.gallery_list a {
+	display: block;
+	text-decoration: none;
+	color: @color_svg;
+}
+
+section.gallery_list a div.hidden {
+	color: @color_svg;
+}
+
+section.gallery_list div.details {
+	display: none;
+	position: relative;
+	margin-bottom: 5em;
 	padding: 0 0.5em;
 }
 
-section.gallery_list div.gallery_content {
-	display: block;
-	width: 100%;
-	margin: 2em auto;
-	text-align: center;
-}
-
-section.gallery_list div.gallery_content p {
-	padding-bottom: 0.5em;
-	border-bottom: 1px solid @color_border;
-}
-
-section.gallery_list div.gallery_content p > a {
-	text-decoration: none;
-	color: @color_svg;
-	text-align: center;
-	display: block;
-}
-
-section.gallery_list div.gallery_content > a {
+section.gallery_list div.details div.desktop {
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0 0.2em;
+	background-image: url(../images/tablet.svg);
+	background-size: 180px 600px;
+	width: 180px;
+	height: 150px;
+	background-position: center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	margin-left: 1.5em;
+}
+
+section.gallery_list div.details div.mobile {
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url(../images/mobile.svg);
+	background-size: 80px 140px;
+	width: 80px;
+	height: 140px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+section.gallery_list div.details div.mobile img {
+	display: block;
+	z-index: 1;
+	margin: 0 auto;
+	padding: 1.2em 0;
+}
+
+section.gallery_list div.details div.desktop img {
+	z-index: 1;
+	margin: 0 auto;
+	padding-top: 1em;
+}
+
+section.gallery_list a.active + div.details {
+	display: block;
 }
 
 /*
