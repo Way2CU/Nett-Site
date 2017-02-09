@@ -8,7 +8,7 @@
 	</div>
 
 	<div class="bottom_links">
-<!-- 		<div
+		<div
 			class="fb-like"
 			data-layout="button"
 			data-action="like"
@@ -17,7 +17,7 @@
 			data-width="200"
 			data-color-scheme="dark"
 			style="width:100vw"
-			/> -->
+			/>
 		<a href="#" class="youtube"></a>
 		<a href="partners_link" cms:constant="href" class="analytics"></a>
 		<a href="partners_link" cms:constant="href" class="partners"></a>
