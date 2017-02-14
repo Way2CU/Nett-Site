@@ -19,6 +19,9 @@
 			style="width:100vw"
 			/>
 		<a href="#" class="youtube"></a>
+		<a href="" class="facebook">
+			<cms:svg file="site-sprite.svg" symbol="facebook" />
+		</a>
 		<a href="partners_link" cms:constant="href" class="analytics"></a>
 		<a href="partners_link" cms:constant="href" class="partners"></a>
 	</div>
