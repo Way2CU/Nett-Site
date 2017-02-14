@@ -18,11 +18,43 @@
 			data-color-scheme="dark"
 			style="width:100vw"
 			/>
-		<a href="#" class="youtube"></a>
-		<a href="" class="facebook">
-			<cms:svg file="site-sprite.svg" symbol="facebook" />
+
+		<!-- Youtube -->
+		<a href="#">
+			<img
+				src="_BASEURL.'/site/images/youtube.svg'"
+				alt="youtube"
+				cms:eval="src"
+				class="youtube"
+				/>
 		</a>
-		<a href="partners_link" cms:constant="href" class="analytics"></a>
-		<a href="partners_link" cms:constant="href" class="partners"></a>
+
+		<!-- Facebook -->
+		<a href="https://www.facebook.com/%D7%A0%D7%A7%D7%A1%D7%98-%D7%A1%D7%99%D7%99%D7%98-Next-Site-565622693553320/?fref=ts">
+			<img
+				src="_BASEURL.'/site/images/facebook.svg'"
+				alt="facebook"
+				cms:eval="src"
+				class="facebook"
+				/>
+		</a>
+
+		<!-- Analytics -->
+		<a href="https://www.google.com/partners/#a_profile;idtf=9410281971;qury=%D7%A0%D7%A7%D7%A1%D7%98%D7%A1%D7%99%D7%99%D7%98">
+			<img
+				src="_BASEURL.'/site/images/analytics.png'"
+				alt="google_analytics"
+				cms:eval="src"
+				/>
+		</a>
+
+		<!-- Parters -->
+		<a href="https://www.google.com/partners/#a_profile;idtf=9410281971;qury=%D7%A0%D7%A7%D7%A1%D7%98%D7%A1%D7%99%D7%99%D7%98">
+			<img
+				src="_BASEURL.'/site/images/analytics.png'"
+				alt="google_partners"
+				cms:eval="src"
+				/>
+		</a>
 	</div>
 </document>
