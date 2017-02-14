@@ -51,7 +51,7 @@
 		<!-- Parters -->
 		<a href="https://www.google.com/partners/#a_profile;idtf=9410281971;qury=%D7%A0%D7%A7%D7%A1%D7%98%D7%A1%D7%99%D7%99%D7%98">
 			<img
-				src="_BASEURL.'/site/images/analytics.png'"
+				src="_BASEURL.'/site/images/partners.png'"
 				alt="google_partners"
 				cms:eval="src"
 				/>
