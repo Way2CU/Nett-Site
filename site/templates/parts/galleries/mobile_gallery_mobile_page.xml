@@ -1,7 +1,7 @@
 <document>
 	<div class="mobile">
 		<img
-		src="gallery::getThumbnailById($params['id'], null, 110, Thumbnail::CONSTRAIN_BOTH)"
+		src="gallery::getThumbnailById($params['id'], null, 160, Thumbnail::CONSTRAIN_HEIGHT)"
 		alt="$params['title'][$language]"
 		cms:eval="src,alt"
 		/>
