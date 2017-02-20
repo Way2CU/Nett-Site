@@ -84,7 +84,8 @@ Site.on_load = function() {
 			.setInterval(3000)
 			.setWrapAround(true)
 			.attachNextControl($('a.next'))
-			.attachPreviousControl($('a.previous'));
+			.attachPreviousControl($('a.previous'))
+			.setPauseOnHover(true);
 
 		//Page controll for animation of Show_case gallery mobile
 		Site.show_case_gallery_mobile = new PageControl('section.showcase', 'div.mobile');
@@ -92,7 +93,8 @@ Site.on_load = function() {
 			.setInterval(3000)
 			.setWrapAround(true)
 			.attachNextControl($('a.next'))
-			.attachPreviousControl($('a.previous'));
+			.attachPreviousControl($('a.previous'))
+			.setPauseOnHover(true);
 	}
 
 	//Light box gallery Testimonials customers
