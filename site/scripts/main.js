@@ -126,6 +126,7 @@ Site.on_load = function() {
 		Site.video_dialog
 			.setTitle(this.getAttribute('title'))
 			.setContentFromURL(this.getAttribute('href'))
+			.add_class('video_dialog')
 			.showWhenReady();
 	}
 
