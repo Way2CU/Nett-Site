@@ -16,7 +16,7 @@
 			data-size="large"
 			data-width="200"
 			data-color-scheme="dark"
-			style="width:100vw"
+			style="display:block; width: 100%;"
 			/>
 
 		<!-- Youtube -->
