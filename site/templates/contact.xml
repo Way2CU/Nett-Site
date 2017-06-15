@@ -41,7 +41,7 @@
 
 					<!-- link to google maps location, text constant, svg icon location -->
 					<a href="google_location" cms:constant="href" class="location">
-						<cms:svg file="site-sprite" symbol="icon-location"/>
+						<cms:svg file="site-sprite.svg" symbol="icon-location"/>
 						<cms:text constant="location_text"/>
 					</a>
 
