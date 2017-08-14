@@ -45,7 +45,6 @@
 				<param name="title" value=""/>
 				</cms:module>
 
-
 				<!-- Specific article3 linked to generic article with title -->
 				<cms:module
 					name="articles"
