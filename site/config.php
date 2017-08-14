@@ -21,7 +21,7 @@ $available_languages = array('en','he');
 $default_language = 'he';
 
 // default session options
-$session_type = SessionType::BROWSER;
+$session_type = Session::TYPE_BROWSER;
 
 // database
 $db_use = true;
