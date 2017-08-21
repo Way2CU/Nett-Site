@@ -1,11 +1,11 @@
 <document>
 	<div id="fb-root"/>
 	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.8";
-	  fjs.parentNode.insertBefore(js, fjs);
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.8";
+		fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 	<header>
@@ -33,7 +33,7 @@
 			<nav>
 				<ul>
 					<li class="action">
-					<!-- About link, image and constant -->
+						<!-- About link, image and constant -->
 						<a
 							href="URL::make(array(), 'about.xml')"
 							cms:eval="href"
@@ -43,10 +43,9 @@
 							<cms:svg file="site-sprite.svg" symbol="icon-info"/>
 							<cms:text constant="info_link"/>
 						</a>
-							<cms:svg file="site-sprite.svg" symbol="icon-left"/>
+						<cms:svg file="site-sprite.svg" symbol="icon-left"/>
 						<!-- DropDown menu link press -->
 						<ul class="sub_dropdown">
-
 							<li>
 								<!-- Press link, image and constant -->
 								<a
@@ -183,19 +182,19 @@
 
 				<!-- Logo -->
 				<a
-				href="URL::make()"
-				cms:eval="href"
-				class="logo"
-				>
+					href="URL::make()"
+					cms:eval="href"
+					class="logo"
+					>
 				</a>
 
 				<!-- Phone link svg -->
 				<a
-				href="'tel:'.urlencode(Language::get_Text('phone'))"
-				cms:eval="href"
-				class="phone"
-				>
-				<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
+					href="'tel:'.urlencode(Language::get_Text('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<cms:svg file="site-sprite.svg" symbol="icon-phone"/>
 				</a>
 			</div>
 			<!-- Mobile menu  -->

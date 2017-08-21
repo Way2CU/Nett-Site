@@ -13,5 +13,6 @@
 	"/branding" : "branding.xml",
 	"/articles/{s:name}" : "article_view.xml",
 	"/videos/{n:video_id}": "view_video.xml",
-	"/articles/{s:subject}/{n:name}": "article_view.xml"
+	"/articles/{s:subject}/{n:name}": "article_view.xml",
+	"/sitemap.xml": "sitemap.xml"
 }
