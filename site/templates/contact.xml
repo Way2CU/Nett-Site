@@ -3,14 +3,17 @@
 <document>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
-			<title><cms:text constant="contact_link"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="contact_link"/>
+			</title>
 			<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAWpa2fUPFG1VE27q1p7FYanJuMsQKzGyE"></script>
 			<cms:script src="_BASEURL.'/site/scripts/location.js'" cms:eval="src"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body>
-
 			<!-- 2 Header templates Desktop-->
 			<cms:template file="parts/header.xml"/>
 			<cms:desktop>
@@ -83,16 +86,16 @@
 			<section class="contact_us">
 				<!-- h2 and article -->
 				<div class="right">
-				<h2><cms:text constant="call_us_back"/></h2>
-				<cms:module
-					name="articles"
-					action="show"
-					text_id="contact_article"
-					template="parts/articles/article_generic.xml"
-					/>
+					<h2><cms:text constant="call_us_back"/></h2>
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="contact_article"
+						template="parts/articles/article_generic.xml"
+						/>
 				</div>
 				<div class="left">
-				<!-- contact form -->
+					<!-- contact form -->
 					<cms:module
 						name="contact_form"
 						action="show"
@@ -104,6 +107,6 @@
 			<footer>
 				<!-- Footer Template -->
 				<cms:template file="parts/footer.xml"/>
-		</body>
-	</html>
-</document>
+			</body>
+		</html>
+	</document>

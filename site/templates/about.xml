@@ -3,7 +3,11 @@
 <document>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
-			<title><cms:text constant="about_link"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="about_link"/>
+			</title>
 			<cms:collection  include="page_control,animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
@@ -32,7 +36,7 @@
 					action="show"
 					text_id="about_solo1"
 					template="parts/articles/article_generic.xml"
-				/>
+					/>
 
 				<!-- Specific article2 linked to generic article with title -->
 				<cms:module
@@ -40,10 +44,9 @@
 					action="show"
 					text_id="about_solo2"
 					template="parts/articles/article_generic.xml"
-				>
-				<param name="title" value=""/>
+					>
+					<param name="title" value=""/>
 				</cms:module>
-
 
 				<!-- Specific article3 linked to generic article with title -->
 				<cms:module
@@ -51,8 +54,8 @@
 					action="show"
 					text_id="about_solo3"
 					template="parts/articles/article_generic.xml"
-				>
-				<param name="title" value=""/>
+					>
+					<param name="title" value=""/>
 				</cms:module>
 			</section>
 
@@ -64,22 +67,23 @@
 					action="show_image_list"
 					group="customers_write"
 					template="parts/galleries/coustomer_gallery.xml"
-				/>
+					/>
 			</section>
 
 			<!-- section עכשיו coustomers_tell -->
 			<section class="videos customers">
 				<h3><cms:text constant="customers_tell"/></h3>
-					<!-- You tube module call list -->
-					<ul>
-					 	<cms:module
-							name="youtube"
-							action="show_list"
-							group_text_id="videos_customers"
-							template="parts/youtube.xml"
-							/>
-					</ul>
+				<!-- You tube module call list -->
+				<ul>
+					<cms:module
+						name="youtube"
+						action="show_list"
+						group_text_id="videos_customers"
+						template="parts/youtube.xml"
+						/>
+				</ul>
 			</section>
+
 			<!-- Footer Template -->
 			<footer>
 				<cms:template file="parts/footer.xml"/>

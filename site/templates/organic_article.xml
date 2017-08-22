@@ -6,7 +6,15 @@
 			<title>
 				<cms:text constant="site_title"/>
 				<cms:raw text=" - "/>
-				<cms:text constant="press_link"/>
+				<cms:text constant="organic_link"/>
+				<cms:raw text=" - "/>
+				<cms:module
+					name="articles"
+					action="show"
+					id="$_REQUEST['name']"
+					template="parts/articles/title.xml"
+					cms:eval="id"
+					/>
 			</title>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
@@ -18,32 +26,30 @@
 				<cms:template file="parts/header_floating.xml"/>
 			</cms:desktop>
 
-			<!-- div with logo h1 and p -->
-			<section class="header press">
-				<div class="title">
-					<cms:svg file="site-sprite.svg" symbol="icon-press"/>
-					<h1><cms:text constant="press_link"/></h1>
-					<p><cms:text constant="press_title"/></p>
-				</div>
-			</section>
+			<!-- Header template for mobile -->
+			<cms:mobile>
+				<cms:template file="parts/header.xml"/>
+			</cms:mobile>
 
-			<!-- Section From the press -->
-			<section class="press">
+			<!-- Article with ID IMG and TITLE -->
+			<section class="read">
 				<cms:module
 					name="articles"
-					action="show_list"
-					group="from_the_press"
+					action="show"
+					id="$_REQUEST['name']"
 					template="parts/articles/article_generic.xml"
+					cms:eval="id"
 					>
-					<param name="link_view" value=""/>
+					<param name="title" value=""/>
 					<param name="image" value=""/>
 				</cms:module>
 			</section>
 
-			<!-- Footer Template -->
 			<footer>
+				<!-- Footer Template -->
 				<cms:template file="parts/footer.xml"/>
 			</footer>
+
 		</body>
 	</html>
 </document>

@@ -3,7 +3,11 @@
 <document>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
-			<title><cms:text constant="site_bulding"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="site_bulding"/>
+			</title>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -14,7 +18,6 @@
 				<cms:template file="parts/header_floating.xml"/>
 			</cms:desktop>
 
-			<!-- div with logo h1 and p -->
 			<section class="header building">
 				<div class="title">
 					<cms:svg file="site-sprite.svg" symbol="icon-globe"/>
@@ -31,8 +34,8 @@
 					action="show"
 					text_id="building_solo1"
 					template="parts/articles/article_generic.xml"
-				>
-				<param name="title" value=""/>
+					>
+					<param name="title" value=""/>
 				</cms:module>
 
 				<!-- Specific article2 linked to generic article with title -->
@@ -41,10 +44,9 @@
 					action="show"
 					text_id="building_solo2"
 					template="parts/articles/article_generic.xml"
-				>
-				<param name="title" value=""/>
+					>
+					<param name="title" value=""/>
 				</cms:module>
-
 
 				<!-- Specific article3 linked to generic article with title -->
 				<cms:module
@@ -52,8 +54,8 @@
 					action="show"
 					text_id="building_solo3"
 					template="parts/articles/article_generic.xml"
-				>
-				<param name="title" value=""/>
+					>
+					<param name="title" value=""/>
 				</cms:module>
 			</section>
 
@@ -66,11 +68,11 @@
 
 				<!-- Container with article list  -->
 				<div>
-				<!--
+					<!--
 					Show articles group list
 					Show image gallery connected to artice
 					Show link to article_view.xml with a name of article_title
-				-->
+					-->
 					<cms:module
 						name="articles"
 						action="show_list"
@@ -82,15 +84,16 @@
 						<param name="image" value=""/>
 						<param name="link_view" value=""/>
 						<param name="limit" value="150"/>
+						<param name="file" value="building_article.xml"/>
 					</cms:module>
 
 					<!-- label for input checkbox with text constant -->
 					<label for="toggle" class="button">
 						<cms:text constant="show_more"/>
 					</label>
-
 				</div>
 			</section>
+
 			<!-- Footer Template -->
 			<footer>
 				<cms:template file="parts/footer.xml"/>

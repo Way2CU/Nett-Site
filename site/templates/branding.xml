@@ -3,7 +3,11 @@
 <document>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
-			<title><cms:text constant="branding_link"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="branding_link"/>
+			</title>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -32,7 +36,7 @@
 					action="show"
 					text_id="branding_solo1"
 					template="parts/articles/article_generic.xml"
-				>
+					>
 				</cms:module>
 
 				<!-- Specific article2 linked to generic article with title -->
@@ -41,8 +45,8 @@
 					action="show"
 					text_id="branding_solo2"
 					template="parts/articles/article_generic.xml"
-				>
-				<param name="title" value=""/>
+					>
+					<param name="title" value=""/>
 				</cms:module>
 
 
@@ -52,21 +56,21 @@
 					action="show"
 					text_id="branding_solo3"
 					template="parts/articles/article_generic.xml"
-				>
-				<param name="title" value=""/>
+					>
+					<param name="title" value=""/>
 				</cms:module>
 			</section>
 
 			<!-- Section with latest articles  -->
 			<section class="latest branding">
-			<h2><cms:text constant="latest_branding"/></h2>
+				<h2><cms:text constant="latest_branding"/></h2>
 
 				<!-- checkbox to act as toggle to reveal content -->
 				<input type="checkbox" id="toggle"/>
 
 				<!-- Container with article list  -->
 				<div>
-				<!--
+					<!--
 					Show articles group list
 					Show image gallery connected to artice
 					Show link to article_view.xml with a name of article_title
@@ -91,6 +95,7 @@
 
 				</div>
 			</section>
+
 			<footer>
 				<!-- Footer Template -->
 				<cms:template file="parts/footer.xml"/>
