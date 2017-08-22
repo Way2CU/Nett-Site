@@ -3,7 +3,6 @@
 <document>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
-			<title><cms:text constant="site_title"/></title>
 			<cms:collection  include="page_control"/>
 			<cms:module name="head_tag" action="show"/>
 		</head>
@@ -31,13 +30,13 @@
 				<h1><cms:text constant="logo_text"/></h1>
 
 				<!-- Absolutly positioned text and link inside laptop background screen -->
-					<div class="laptop_screen_text">
-						<h2><cms:text constant="solution"/></h2>
-						<a
-							href="#">
-							<cms:text constant="contact_now"/>
-						</a>
-					</div>
+				<div class="laptop_screen_text">
+					<h2><cms:text constant="solution"/></h2>
+					<a
+						href="#">
+						<cms:text constant="contact_now"/>
+					</a>
+				</div>
 			</section>
 
 			<!-- Features Section-->
@@ -59,12 +58,12 @@
 			<!-- Section videos -->
 			<section class="videos">
 
-			<!-- Section Header videos with constant -->
-			<h3><cms:text constant="header_youtube"/></h3>
+				<!-- Section Header videos with constant -->
+				<h3><cms:text constant="header_youtube"/></h3>
 
 				<!-- You tube module call list -->
 				<ul>
-				 	<cms:module
+					<cms:module
 						name="youtube"
 						action="show_list"
 						group_text_id="videos"
@@ -102,11 +101,11 @@
 				<a href="javascrip:void(0)" class="previous">
 					<cms:svg file="site-sprite.svg" symbol="icon-left"/>
 				</a>
-			<!-- Gallery list group -->
-					<cms:module
-						name="gallery"
-						action="show_group_list"
-						template="parts/galleries/gallery_groups.xml"
+				<!-- Gallery list group -->
+				<cms:module
+					name="gallery"
+					action="show_group_list"
+					template="parts/galleries/gallery_groups.xml"
 					/>
 			</section>
 
@@ -127,6 +126,7 @@
 			<footer>
 				<cms:template file="parts/footer.xml"/>
 			</footer>
+
 			<div id="bottom_form">
 				<cms:module
 					name="contact_form"

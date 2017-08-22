@@ -4,15 +4,16 @@
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title>
-				<cms:text constant="site_title"/>
-				<cms:raw text=" - "/>
-				<cms:text constant="funding_link"/>
-				<cms:raw text=" - "/>
+				<cms:module
+					name="head_tag"
+					action="add_to_title"
+					value="funding_link"
+					cms:constant="value"
+					/>
 				<cms:module
 					name="articles"
-					action="show"
+					action="add_to_title"
 					id="$_REQUEST['name']"
-					template="parts/articles/title.xml"
 					cms:eval="id"
 					/>
 			</title>

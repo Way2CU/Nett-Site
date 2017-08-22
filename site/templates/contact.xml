@@ -4,9 +4,12 @@
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title>
-				<cms:text constant="site_title"/>
-				<cms:raw text=" - "/>
-				<cms:text constant="contact_link"/>
+				<cms:module
+					name="head_tag"
+					action="add_to_title"
+					value="contact_link"
+					cms:constant="value"
+					/>
 			</title>
 			<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAWpa2fUPFG1VE27q1p7FYanJuMsQKzGyE"></script>
 			<cms:script src="_BASEURL.'/site/scripts/location.js'" cms:eval="src"/>
