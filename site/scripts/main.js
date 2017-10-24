@@ -98,7 +98,11 @@ Site.on_load = function() {
 	}
 
 	//Light box gallery Testimonials customers
-	Site.galleryTestimonials = new LightBox('a.testimonial', false, false, true);
+	Site.galleryTestimonials = new Caracal.Gallery.LightBox();
+	Site.galleryTestimonials
+			.set_show_controls(true)
+			.set_show_thumbnails(true)
+			.images.add('a.testimonial');
 
 	//Active class in gallery page
 	Site.thumbnail = document.querySelectorAll('a.large_tumb');
