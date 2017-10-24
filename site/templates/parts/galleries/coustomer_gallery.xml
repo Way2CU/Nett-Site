@@ -2,7 +2,7 @@
 	<cms:desktop>
 		<a href="$params['image']" cms:eval="href" class="testimonial">
 			<img
-				src="gallery::getThumbnailById($params['id'], null, 300, Thumbnail::CONSTRAIN_WIDTH)"
+				src="gallery::get_image($params['id'], 300, Thumbnail::CONSTRAIN_WIDTH)"
 				alt="$params['title'][$language]"
 				cms:eval="src,alt"
 				class="desktop"
@@ -12,7 +12,7 @@
 	<cms:mobile>
 		<a href="$params['image']" cms:eval="href" class="testimonial">
 			<img
-				src="gallery::getThumbnailById($params['id'], null, 140, Thumbnail::CONSTRAIN_WIDTH)"
+				src="gallery::get_image($params['id'], 140, Thumbnail::CONSTRAIN_WIDTH)"
 				alt="$params['title'][$language]"
 				cms:eval="src,alt"
 				class="desktop"

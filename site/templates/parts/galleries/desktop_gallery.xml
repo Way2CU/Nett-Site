@@ -3,7 +3,7 @@
 		<div class="desktop">
 			<!--Container and img form gallery  -->
 				<img
-				src="gallery::getThumbnailById($params['id'], null, 700, Thumbnail::CONSTRAIN_HEIGHT)"
+				src="gallery::get_image($params['id'], 700, Thumbnail::CONSTRAIN_HEIGHT)"
 				alt="$params['title'][$language]"
 				cms:eval="src,alt"
 				class="desktop"
@@ -14,7 +14,7 @@
 		<div class="desktop">
 			<!--Container and img form gallery  -->
 				<img
-				src="gallery::getThumbnailById($params['id'], null, 150, Thumbnail::CONSTRAIN_HEIGHT)"
+				src="gallery::get_image($params['id'], 150, Thumbnail::CONSTRAIN_HEIGHT)"
 				alt="$params['title'][$language]"
 				cms:eval="src,alt"
 				class="desktop"

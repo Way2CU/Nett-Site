@@ -3,7 +3,7 @@
 		<div class="mobile">
 			<cms:markdown param="description" multilanguage="yes"/>
 			<img
-			src="gallery::getThumbnailById($params['id'], null, 165, Thumbnail::CONSTRAIN_HEIGHT)"
+			src="gallery::get_image($params['id'], 165, Thumbnail::CONSTRAIN_HEIGHT)"
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 			/>
@@ -12,7 +12,7 @@
 	<cms:mobile>
 		<div class="mobile">
 			<img
-			src="gallery::getThumbnailById($params['id'], null, 230, Thumbnail::CONSTRAIN_BOTH)"
+			src="gallery::get_image($params['id'], 230, Thumbnail::CONSTRAIN_BOTH)"
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 			/>
