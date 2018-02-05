@@ -5,6 +5,7 @@
 		<head>
 			<cms:collection  include="page_control"/>
 			<cms:module name="head_tag" action="show"/>
+			<cms:template file="parts/ga.txt"/>
 		</head>
 
 		<body>
