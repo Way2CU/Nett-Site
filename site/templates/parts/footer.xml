@@ -57,4 +57,6 @@
 				/>
 		</a>
 	</div>
+
+	<cms:raw file="parts/remarketing.txt"/>
 </document>
